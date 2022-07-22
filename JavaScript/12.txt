@@ -1,0 +1,4 @@
+mysql -u root
+ show databases;
+--> entrar; use mysql
+    -> show tables;
