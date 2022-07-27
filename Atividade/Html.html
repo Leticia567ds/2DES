@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <label>Digite a placa de um veículo:</label>
+            <input type="text" placeholder="Placa" id="busca">
+            <button id="btn">Validar</button>
+            <textarea id="placaRes" cols="30" rows="2"></textarea>
+        </div>
+        <div class="container">
+            <label>Digite CPF:</label>
+            <input type="text" placeholder="CPF" id="buscar">
+            <button id="btn2" onclick="validaCPF()">Validar</button>
+            <textarea id="cpfRes" cols="30" rows="2"></textarea>
+        </div>
+        <div class="container">
+            <label>Digite quantos números de telefone deseja gerar:</label>
+            <input type="text" placeholder="(##) ####-####" id="tel">
+            <button id="btn3">Gerar</button>
+            <textarea  id="vtl" cols="30" rows="10"></textarea>
+        </div>
+        <div class="container">
+            <label>Digite quantos números de CPF deseja gerar:</label>
+            <input type="text" id="alcpf" placeholder="###.###.###-##">
+            <button id="btn4">Gerar</button>
+            <textarea id="cpfs" cols="30" rows="10"></textarea>
+            <button id="solta" onmouseup="limpar()">Limpa dados</button>
+        </div>
+    </main>
+</body>
+<script src="Script.js">
+</script>
+
+</html>

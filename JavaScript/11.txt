@@ -1,0 +1,2 @@
+A função parseInt converte seu primeiro argumento para uma string
+ parseInt() para converter uma string em um número inteiro

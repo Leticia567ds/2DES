@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(200, 172, 172);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 2.42857143;
+    color: rgb(18, 18, 18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+}                                   
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+textarea{
+    margin-top: 15px;
+}
