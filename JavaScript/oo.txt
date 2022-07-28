@@ -1,0 +1,10 @@
+Vendedor --> pedidos e clientes
+atributos --> id_cliente	
+nome_cliente	
+endereço_cliente	
+telefone_cliente	
+numero_do_pedido	
+data_pedido	
+valor_pedido	
+descrição_pedido
+cliente pode fazer diversoa pedidos
