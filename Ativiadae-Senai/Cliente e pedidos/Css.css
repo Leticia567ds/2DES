@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(23, 136, 201), rgb(17, 54, 71));
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:  rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    margin: 10%;
+  
+}
+.input-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+fieldset{
+    border-radius: 1 solid white;
+   
+}

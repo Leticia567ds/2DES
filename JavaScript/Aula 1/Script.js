@@ -1,14 +1,14 @@
-// var a = 20;
-// var b = 20;
-// var c = 5;
-// if (a == b && b == c) {
-//   console.log("Equilatero");
-// }
-// if (a != b && b != c) {
-//   console.log("Escaleno");
-// }
-// if (a == b && b != c) 
-// console.log("Isósceles");
+var a = 20;
+var b = 20;
+var c = 5;
+if (a == b && b == c) {
+  console.log("Equilatero");
+}
+if (a != b && b != c) {
+  console.log("Escaleno");
+}
+if (a == b && b != c) 
+console.log("Isósceles");
 
 var salario = [1500,3000, 4000];
  salario.forEach((salarios) => {

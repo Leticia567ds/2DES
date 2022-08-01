@@ -1,4 +1,34 @@
-//input
+// input
+// var inplaca = document.querySelector("#placa");
+// var retorno = document.querySelector("#retorno");
+// var placa = inplaca.value;
+
+// function ex1(){
+//   if(validarPlaca(inplaca.value)){
+//     retorno.innerHTML = "Placa válida"
+//     retorno.style.color = "green";
+//   }else{
+//     retorno.innerHTML = "Placa inválida"
+//     retorno.style.color = "red";
+//   }
+// }
+ 
+// function validarPlaca(placa){
+//   if(placa.length == 7){
+//     let p1 = placa.substring(0,3);
+//     let p2 = placa.substring(5,7);
+
+//     if(isNaN(p1) && !isNaN(p2) && !isNaN(placa[3]) && isNaN(placa[4])){
+//       return true;
+//     }else{
+//       return  false;
+//     }
+//   }else{
+//     return false;
+//   }
+// }
+
+
 var busca = document.querySelector("#busca")
 //botão buscar
 var btBuscar = document.querySelector('#btn')
@@ -31,103 +61,108 @@ btBuscar.addEventListener("click",validarPlaca)
   }
 
 //cpf
-var buscar = document.querySelector("#buscar");
-var btBuscar = document.querySelector("#btn2");
-btBuscar.addEventListener("click", validaCPF);
+// var buscar = document.querySelector("#buscar");
+// var btBuscar = document.querySelector("#btn2");
+// btBuscar.addEventListener("click", validaCPF);
 
 
-function validaCPF(cpf) {
-  var Cpf = document.getElementById("cpfRes");
-  cpf = buscar.value;
+// function validaCPF(cpf) {
+//   var Cpf = document.getElementById("cpfRes");
+//   cpf = buscar.value;
 
-  cpf = cpf.replace(".", "");
+//   cpf = cpf.replace(".", "");
 
-  cpf = cpf.replace(".", "");
+//   cpf = cpf.replace(".", "");
 
-  cpf = cpf.replace("-", "");
+//   cpf = cpf.replace("-", "");
 
-  cpf = cpf.replace("/", "");
+//   cpf = cpf.replace("/", "");
 
-  if (
-    cpf.lenght == 0 ||
-    cpf == "00000000000" ||
-    cpf == "11111111111" ||
-    cpf == "22222222222" ||
-    cpf == "33333333333" ||
-    cpf == "44444444444" ||
-    cpf == "55555555555" ||
-    cpf == "66666666666" ||
-    cpf == "77777777777" ||
-    cpf == "88888888888" ||
-    cpf == "99999999999"
-  ) {
-    cpfRes.style.color= 'purple'
-    return (cpfRes.innerHTML = "inválido");
-  } else {
-    var soma = 0;
-    soma = soma + parseInt(cpf.substring(0, 1)) * 10;
-    soma = soma + parseInt(cpf.substring(1, 2)) * 9;
-    soma = soma + parseInt(cpf.substring(2, 3)) * 8;
-    soma = soma + parseInt(cpf.substring(3, 4)) * 7;
-    soma = soma + parseInt(cpf.substring(4, 5)) * 6;
-    soma = soma + parseInt(cpf.substring(5, 6)) * 5;
-    soma = soma + parseInt(cpf.substring(6, 7)) * 4;
-    soma = soma + parseInt(cpf.substring(7, 8)) * 3;
-    soma = soma + parseInt(cpf.substring(8, 9)) * 2;
-  }
-  var resto = (soma * 10) % 11;
-  if (resto == 10 || resto == 11) {
-    resto = 0;
-  }
-  var soma = 0;
+//   if (
+//     cpf.lenght == 0 ||
+//     cpf == "00000000000" ||
+//     cpf == "11111111111" ||
+//     cpf == "22222222222" ||
+//     cpf == "33333333333" ||
+//     cpf == "44444444444" ||
+//     cpf == "55555555555" ||
+//     cpf == "66666666666" ||
+//     cpf == "77777777777" ||
+//     cpf == "88888888888" ||
+//     cpf == "99999999999"
+//   ) {
+//     cpfRes.style.color= 'purple'
+//     return (cpfRes.innerHTML = "inválido");
+//   } else {
+//     var soma = 0;
+//     soma = soma + parseInt(cpf.substring(0, 1)) * 10;
+//     soma = soma + parseInt(cpf.substring(1, 2)) * 9;
+//     soma = soma + parseInt(cpf.substring(2, 3)) * 8;
+//     soma = soma + parseInt(cpf.substring(3, 4)) * 7;
+//     soma = soma + parseInt(cpf.substring(4, 5)) * 6;
+//     soma = soma + parseInt(cpf.substring(5, 6)) * 5;
+//     soma = soma + parseInt(cpf.substring(6, 7)) * 4;
+//     soma = soma + parseInt(cpf.substring(7, 8)) * 3;
+//     soma = soma + parseInt(cpf.substring(8, 9)) * 2;
+//   }
+//   var resto = (soma * 10) % 11;
+//   if (resto == 10 || resto == 11) {
+//     resto = 0;
+//   }
+//   var soma = 0;
 
-  soma = soma + parseInt(cpf.substring(0, 1)) * 11;
-  soma = soma + parseInt(cpf.substring(1, 2)) * 10;
-  soma = soma + parseInt(cpf.substring(2, 3)) * 9;
-  soma = soma + parseInt(cpf.substring(3, 4)) * 8;
-  soma = soma + parseInt(cpf.substring(4, 5)) * 7;
+//   soma = soma + parseInt(cpf.substring(0, 1)) * 11;
+//   soma = soma + parseInt(cpf.substring(1, 2)) * 10;
+//   soma = soma + parseInt(cpf.substring(2, 3)) * 9;
+//   soma = soma + parseInt(cpf.substring(3, 4)) * 8;
+//   soma = soma + parseInt(cpf.substring(4, 5)) * 7;
 
-  soma = soma + parseInt(cpf.substring(5, 6)) * 6;
-  soma = soma + parseInt(cpf.substring(6, 7)) * 5;
-  soma = soma + parseInt(cpf.substring(7, 8)) * 4;
-  soma = soma + parseInt(cpf.substring(8, 9)) * 3;
-  soma = soma + parseInt(cpf.substring(9, 10)) * 2;
+//   soma = soma + parseInt(cpf.substring(5, 6)) * 6;
+//   soma = soma + parseInt(cpf.substring(6, 7)) * 5;
+//   soma = soma + parseInt(cpf.substring(7, 8)) * 4;
+//   soma = soma + parseInt(cpf.substring(8, 9)) * 3;
+//   soma = soma + parseInt(cpf.substring(9, 10)) * 2;
 
-  var resto2 = (soma * 10) % 11;
+//   var resto2 = (soma * 10) % 11;
 
-  if (resto2 == 10 || resto2 == 11) {
-    resto2 = 0;
-  }
-  if (
-    resto == parseInt(cpf.substring(9, 10)) &&
-    resto2 == parseInt(cpf.substring(10, 11))
-  ) {
-    cpfRes.style.color= 'green'
-    return (cpfRes.innerHTML = "CPF válido");
-  } else {
-    cpfRes.style.color= 'red'
-    return (cpfRes.innerHTML = "CPF inválido");
-  }
-}
+//   if (resto2 == 10 || resto2 == 11) {
+//     resto2 = 0;
+//   }
+//   if (
+//     resto == parseInt(cpf.substring(9, 10)) &&
+//     resto2 == parseInt(cpf.substring(10, 11))
+//   ) {
+//     cpfRes.style.color= 'green'
+//     return (cpfRes.innerHTML = "CPF válido");
+//   } else {
+//     cpfRes.style.color= 'red'
+//     return (cpfRes.innerHTML = "CPF inválido");
+//   }
+// }
+
+
+
 
 //telefone
-var tel = document.querySelector("#tel");
-var btTel = document.querySelector("#btn3");
-btTel.addEventListener("click", telefone);
+// var tel = document.querySelector("#tel");
+// var btTel = document.querySelector("#btn3");
+// btTel.addEventListener("click", telefone);
 
-function telefone(qtd) {
-  qtd = tel.value;
-  var vlt = document.getElementById("vtl");
-  var ddd = 19;
-  var d = 99;
-  for (var j = 0; j < qtd; j++) {
-    var telefone = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
-    var telefone1 = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+// function telefone(qtd) {
+//   qtd = tel.value;
+//   var vlt = document.getElementById("vtl");
+//   var ddd = 19;
+//   var d = 99;
+//   for (var j = 0; j < qtd; j++) {
+//     var telefone = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+//     var telefone1 = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
  
-    vtl.innerHTML += `(${ddd})${d}${telefone}-${telefone1}                                                                       `
+//     vtl.innerHTML += `(${ddd})${d}${telefone}-${telefone1}                                                                       `
 
-  }
-}
+//   }
+// }
+
+
 
 //aleátorio cpf
 var alcpf = document.querySelector("#alcpf");
