@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&display=swap');
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'inter',sans-serif;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1419404d;
+}
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0,.212);
+}
+.form-img{
+    width: 45%;
+    display: flex;
+    background-color:#0f6ba1d7 ;
+    padding:1rem;
+}
+.form-img img{
+    width: 32rem;
+    height: 34rem;
+}
+.box{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#fff ;
+    padding: 3rem;
+}
+.form-header{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.login-button{
+    display: flex;
+    align-items: center;
+}
+.login-button button{
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-button button:hover{
+    background-color: #6fc374f1;
+}
+.login-button button a{
+    text-decoration: none;
+    font-weight: 510;
+    color: #fff;
+}
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #74a3dd ;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.input-box{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+/* padding: 1rem 0rem; */
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.1rem;
+}
+
