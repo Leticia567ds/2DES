@@ -3,6 +3,37 @@
 // var retorno = document.querySelector("#retorno");
 // var placa = inplaca.value;
 
+//Telefone modo 3
+// var ddd = document.querySelector("#ddd")
+// var qtd = document.getElementById("qtd")
+// // var numerosGerados = document.querySelector("")
+// var textNumeros = document.querySelector("#numeros")
+
+// var btn5 = document.querySelector("#btn5")
+
+// btn5.addEventListener("click",ex3)
+
+// function ex3(){
+//   let DDD = ddd.value;
+//   let QTD = qtd.value;
+//   let numerosGerados = gerarCelular(DDD, QTD);
+
+//   numerosGerados.forEach(numeros => {
+//     textNumeros.value += numeros + "\n"
+//   })
+// }
+
+// function gerarCelular(ddd,qtd) {
+//   let numeros = new Array();
+  
+//   for(let i = 0; i < qtd; i++){
+//     numeros.push(ddd + "-9" + Math.floor(Math.random() * 8999+1000) + "-" + Math.floor(Math.random() *8999+1000)); 
+
+//   }
+//   return numeros;
+// }
+
+
 // function ex1(){
 //   if(validarPlaca(inplaca.value)){
 //     retorno.innerHTML = "Placa válida"
@@ -143,7 +174,7 @@ btBuscar.addEventListener("click",validarPlaca)
 
 
 
-//telefone
+// telefone
 // var tel = document.querySelector("#tel");
 // var btTel = document.querySelector("#btn3");
 // btTel.addEventListener("click", telefone);
@@ -161,7 +192,6 @@ btBuscar.addEventListener("click",validarPlaca)
 
 //   }
 // }
-
 
 
 //aleátorio cpf
