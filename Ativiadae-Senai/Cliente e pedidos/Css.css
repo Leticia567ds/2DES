@@ -8,13 +8,17 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color:  rgba(0, 0, 0, 0.8);
+    background-image: url(size-box\ Vendas.png);
     padding: 15px;
     border-radius: 10px;
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 10%;
   
 }
+.box{
+    background-color: rgba(69, 65, 65, 0.423);
+}
+
 .input-box{
     display: flex;
     align-items: center;
