@@ -7,25 +7,55 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-image: url(size-box\ Vendas.png);
+    background-color:rgba(0, 255, 255, 0.151);
     padding: 15px;
     border-radius: 10px;
     color: rgb(255, 255, 255);
     margin: 10%;
+    padding: 30px;
   
-}
-.box{
-    background-color: rgba(69, 65, 65, 0.423);
-}
-
-.input-box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   
 }
 fieldset{
     border-radius: 1 solid white;
    
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline: none;
+    color: rgb(1, 1, 1);
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+/* .text{
+   
+    texto-items: center;
+} */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnon {
+    background: #364fda;
+
+    color: rgb(255, 250, 250);
+
+    border: 1px solid #eee;
+
+    font-size: 15px;
+
+    border-radius: 60px;
+
+    box-shadow: 5px 5px 5px rgb(113, 93, 93);
+
+    text-shadow: none;
+    padding: 5px;
+    margin: 10px;
+}
+.btnon:hover{
+    cursor: pointer;
+    background-color: rgb(84, 196, 84);
 }
