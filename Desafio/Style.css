@@ -21,12 +21,12 @@ body {
     font-size: 14px;
     width: 100%;
     letter-spacing: 2px;
-    /* margin: 2px; */
+    margin: 2px; */
 
 }
 
 .input {
-    color: white;
+ color: white;
 }
 
 .btn {
@@ -53,4 +53,21 @@ body {
 .btnon:hover{
     cursor: pointer;
     background-color: rgb(84, 196, 84);
+ } 
+
+
+/* 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 4% 43%;
+   
 }
+
+th,
+td {
+    padding: 10px 20px;
+    border: 1px solid black;
+
+} */
+

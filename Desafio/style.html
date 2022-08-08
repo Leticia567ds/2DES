@@ -8,11 +8,22 @@
     <title>Document</title>
 </head>
 <body>
+    <table>
+        <thead>
+       <tr>
+        <th>Nome</th>
+        <th>Cargo</th>
+        <th>Salário</th>
+       </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
     <div class="main">
         <form action="">
                 <div class="input">
                     <label class="label" for="name">Nome completo:</label>
-                    <input class="inputUser" type="text" id="name">
+                    <input class="inputUser" type="text" id="nome">
                 </div>
                 <br>
                 <div class="input">
@@ -26,9 +37,10 @@
                 </div>
                 <br>
                 <div class="btn">
-                   <button class="btnon">Cadastrar</button>
+                   <button class="btnon" onClick="cadastrar()">Cadastrar</button>
                 </div>
         </form>
-    </div>
+    </div> 
 </body>
+<script src="Script.js"></script>
 </html>

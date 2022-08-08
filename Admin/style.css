@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.item-admin{
+    width: 30vw;
+    height:15vh;
+    border: 1px solid rgb(228, 1, 1);
+    border-radius:10px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin: 10px;
+    padding: 0 15px;
+}
+
+#img-item{
+width: 8vh;
+height:8vh;
+}
+.item-admin > button > img{
+    width: 20px;
+}
+/* .modelo{
+    visibility: hidden;
+    display: none;
+} */
