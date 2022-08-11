@@ -3,29 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-
-.item-admin{
-    width: 30vw;
-    height:15vh;
-    border: 1px solid rgb(228, 1, 1);
-    border-radius:10px;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    margin: 10px;
-    padding: 0 15px;
-}
-
-#img-item{
-width: 8vh;
-height:8vh;
-}
-.item-admin > button > img{
-    width: 20px;
-}
-/* .modelo{
-    visibility: hidden;
-    display: none;
-} */
+ .item-admin{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 15px;
+ }
+ #img-item{
+    /* padding: 15px; */
+    width: 9vh;
+    height: 8vh;
+ }
+ #img{
+    width: 7vh;
+    height: 7vh;
+ }
+ .input{
+     display:flex;
+      width:15%;
+      height: 10%;
+ }
