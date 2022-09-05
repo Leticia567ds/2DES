@@ -1,6 +1,0 @@
-parentNode --> ele achará o pai
-objeto dentro de objeto{{}
-}
-(true) retornar tooda area do nome
-
-forEach-- percorendo o vetor

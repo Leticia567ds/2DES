@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\Users\Aluno.DSN5131112167\Desktop\work\.metadata\.plugins\org.eclipse.jdt.core
-1166845669.index
-1932541906.index
