@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clientes</title>
+</head>
+<body>
+    <div class="modelo">
+        <div onLoad="showTable_Clinte()"  class="cli">
+            <span>
+                <input type="number" id="cod_cli" readonly>
+                <input type="text" id="nome" readonly>
+                <input type="text" id="endereco" readonly>
+            </span>
+            <span>
+                <input type="text" id="bairro" readonly>
+                <input type="text" id="uf" readonly>
+                <button onClick="showModal()"  class="telefone" ><img src="telephonel.png" alt="telefone"></button>
+            </span>
+        </div>
+    </div>
+    <div class="telefones model ">
+        <div class="tele modal ">
+            <div class="form-model ">
+                <h1>Tipo:  e Telefone:</h1>
+                <input type="text" id="tipo"  readonly>
+                <input type="text" id="tele" readonly>
+                <button id="cancel" onClick="showModal()">X</button>
+            </div>
+        </div>
+    </div>
+        <button onClick="showTable_Clinte()"  id="btnShow">Mostrar tabela do cliente:</button>
+        <button  id="btn">Remover tabela</button>
+        <div class="main"></div>
+       
+  
+</body>
+<script src="javascript.js"></script>
+</html>

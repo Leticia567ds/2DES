@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#p {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin: 26px;
+}
+
+/* #main{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+} */
+
+table,
+th,
+td {
+    border: 2px solid rgb(45, 5, 38);
+    
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    width: 60px;
+
+}
+
+table{
+    margin: 10px;
+  
+}
+  
+.tabela{
+    display: flex;
+ justify-content: space-around;
+ justify-content: center;
+
+}
+/*  */
+/* th{
+    font-weight: bold;
+    } */
+/* .model{
+    display: none;
+    visibility: hidden;
+} */

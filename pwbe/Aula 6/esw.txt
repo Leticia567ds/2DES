@@ -1,0 +1,7 @@
+const clientes = (listas)=>{
+    
+}
+--IGUAIS
+function clientes(listas){
+    
+}
