@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>lojinhajapa</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
 </head>
 
-<body onload="ler()">
-    <div class="main">
-        <p id="p">Livro Caixa</p>
-        <div class="tabela">
+<body  onload="ll()">
+    <h1>Lojinha Japa</h1><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Japanese_icon_%28for_user_box%29.svg/1024px-Japanese_icon_%28for_user_box%29.svg.png">
+    <div class="b">
+    <p id="filtro">Filtro: <input id='f' onblur="filtrar()" type='text'></p>
+    <p id="new">Novo lançamento</p>
+    <button  id="ic"><img class="icone" src="https://iconarchive.com/download/i95921/iconsmind/outline/Double-Circle.ico"></button>
+   </div>
+    <div id="main">
+        <div class="tabela1">
             <table>
                 <thead>
+                    <p id="debito"></p>
+                    <a id="q"></a>
                     <tr>
                         <th>n_Lancamentos</th>
                         <th>Data</th>
@@ -23,8 +30,9 @@
                         <th>Tipo</th>
                     </tr>
                 </thead>
+                
                 <tbody id="corpo">
-                    <tr class="coluna model">
+                    <tr class='coluninhas modal'>
                         <td id="numero"></td>
                         <td id="data"></td>
                         <td id="descricao"></td>
@@ -32,34 +40,34 @@
                         <td id="tipo"></td>
                     </tr>
                 </tbody>
+            </table>
         </div>
-
         <div class="tabela2">
-        <table>
-            <thead>
-                <tr>
-                    <th>n_Lancamentos</th>
-                    <th>Data</th>
-                    <th>Descrição</th>
-                    <th>Valor</th>
-                    <th>Tipo</th>
-                </tr>
-            </thead>
-
-            <tbody id="corpo2">
-                <tr class="coluna2 model">
-                    <td id="numero"></td>
-                    <td id="data"></td>
-                    <td id="descricao"></td>
-                    <td id="valor"></td>
-                    <td id="tipo"></td>
-                </tr>
-            </tbody>
+            <table>
+                <thead>
+                    <a id="q"></a>
+                    <p id="credido"></p>
+                    <tr>
+                        <th>n_Lancamentos</th>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="corpinho">
+                    <tr class='coluninhas1 modal'>
+                        <td id="nu"></td>
+                        <td id="da"></td>
+                        <td id="des"></td>
+                        <td id="val"></td>
+                        <td id="ti"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-
 </body>
-
 <script src="script.js"></script>
 
 </html>

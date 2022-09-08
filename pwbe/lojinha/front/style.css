@@ -12,20 +12,18 @@
     margin: 26px;
 }
 
-/* #main{
+.principal {
     display: flex;
     flex-direction: row;
-    width: 50vw;
     align-items: center;
-    justify-content: center;
-    margin: 10px;
-} */
+    background-color: pink;
+} 
 
 table,
 th,
 td {
     border: 2px solid rgb(45, 5, 38);
-    
+
 }
 
 th,
@@ -37,16 +35,35 @@ td {
 }
 
 table{
+    width: 50vw;
+  
+}
+
+
+
+
+.tabela2 {
+    width: 50vw;
     margin: 10px;
   
 }
-  
-.tabela{
-    display: flex;
- justify-content: space-around;
- justify-content: center;
 
+#credito {
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin: 26px;
 }
+
+#debito {
+    display: flex;
+    justify-content: end;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin: 26px;
+}
+
 /*  */
 /* th{
     font-weight: bold;
