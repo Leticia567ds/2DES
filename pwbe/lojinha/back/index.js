@@ -25,7 +25,7 @@ app.get('/lancamento', (req, res)=>{
 });
 
 app.post('/lancamento', (req, res)=>{
-    let query = `INSERT INTO lancamento VALUES (${req.body.n_lancamento}, '${req.body.data}', '${req.body.descricao}', ${req.body.valor}, '${req.body.tipo}')`;
+    let query = `INSERT INTO lancamento VALUES (DEFAULT, curdate(), '${req.body.descricao}', ${req.body.valor}, '${req.body.tipo}')`;
 
     con.query(query, (err, result) => {
         if(err == null) {

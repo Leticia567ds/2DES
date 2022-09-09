@@ -4,7 +4,7 @@ CREATE DATABASE lojinhajapa charset=UTF8 collate utf8_general_ci;
 USE lojinhajapa;
 
 CREATE TABLE lancamento (
-    n_lancamento INTEGER NOT NULL PRIMARY KEY,
+    n_lancamento INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     data DATE NOT NULL,
     descricao VARCHAR(20) NOT NULL,
     valor FLOAT(6, 2) NOT NULL,

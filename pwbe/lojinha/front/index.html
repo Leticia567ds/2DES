@@ -10,11 +10,27 @@
 </head>
 
 <body  onload="ll()">
-    <h1>Lojinha Japa</h1><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Japanese_icon_%28for_user_box%29.svg/1024px-Japanese_icon_%28for_user_box%29.svg.png">
+    <div class="main model">
+        <div class="dados modal ">
+        <button onClick="fechar-Modal"><img src="https://cdn-icons-png.flaticon.com/512/458/458594.png" alt="x"></button>
+        <div class="form-model">
+            <input id="des" type="text" placeholder="descrição">
+            <input id="valor" type="number" placeholder="valor">
+            <input id="tipo" type="text" placeholder="tipo">
+        </div>
+        <div class="modal-content-footer">
+            <button onClick="cadastrar()" class="btn confirm">Cadastrar</button>
+            <button onClick="fechar()" class="btn cancel">Cancelar</button>
+        </div>
+    </div>
+    </div>
+    <div  class="titulo">
+    <h1>Lojinha Japa</h1><img class="japan" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Japanese_icon_%28for_user_box%29.svg/1024px-Japanese_icon_%28for_user_box%29.svg.png">
+   </div>
     <div class="b">
     <p id="filtro">Filtro: <input id='f' onblur="filtrar()" type='text'></p>
-    <p id="new">Novo lançamento</p>
-    <button  id="ic"><img class="icone" src="https://iconarchive.com/download/i95921/iconsmind/outline/Double-Circle.ico"></button>
+    <p id="new" >Novo lançamento</p>
+    <button  id="ic" onClick="showModal()"><img class="icone" src="https://iconarchive.com/download/i95921/iconsmind/outline/Double-Circle.ico"></button>
    </div>
     <div id="main">
         <div class="tabela1">
@@ -30,9 +46,8 @@
                         <th>Tipo</th>
                     </tr>
                 </thead>
-                
                 <tbody id="corpo">
-                    <tr class='coluninhas modal'>
+                    <tr class='coluninhas model'>
                         <td id="numero"></td>
                         <td id="data"></td>
                         <td id="descricao"></td>
@@ -56,7 +71,7 @@
                     </tr>
                 </thead>
                 <tbody id="corpinho">
-                    <tr class='coluninhas1 modal'>
+                    <tr class='coluninhas1 model'>
                         <td id="nu"></td>
                         <td id="da"></td>
                         <td id="des"></td>
@@ -67,6 +82,7 @@
             </table>
         </div>
     </div>
+
 </body>
 <script src="script.js"></script>
 

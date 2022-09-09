@@ -21,13 +21,14 @@ td {
     visibility: hidden;
 } 
 
- /*.tabela1{
+ .tabela1{
     width: 50vw;
-    /* margin: 10px; */
+          /* margin-left: -150px;   */
+    
 } 
 .tabela2{
     width: 100vw;
-    /* margin-left: -150px; */
+     /* margin-left: -150px;  */
   
 }
 
@@ -81,8 +82,22 @@ td {
     justify-content:center;
     padding: 10px;
 }
+.titulo{
+    display: flex;
+    justify-content:center;
+    /* padding: 10px; */
+}
 .icone{
     width: 30px;
+}
+.japan{
+    margin: 5px;
+    width: 50px;
+    background-color: #F0E68C;
+    
+    width: 5vw;
+    border-radius: 10px;
+    
 }
 button{
     background: none;
@@ -95,4 +110,27 @@ button:hover{
     background-color: rgb(122, 253, 122);
     width:5vw;
     border-radius:10px ;
+}
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100vw;
+   height:100vh;
+   background-color:rgba(0, 0, 0, 0.034);
+}   
+.form-model{
+
+  width:15%;
+  height:15%;
+  background-color:#ffff;
+  border-radius:30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding:60px 120px;
+
 }
