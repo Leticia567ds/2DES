@@ -10,31 +10,38 @@
 </head>
 
 <body  onload="ll()">
-    <div class="main model">
-        <div class="dados modal ">
-        <button onClick="fechar-Modal"><img src="https://cdn-icons-png.flaticon.com/512/458/458594.png" alt="x"></button>
-        <div class="form-model">
-            <input id="des" type="text" placeholder="descrição">
-            <input id="valor" type="number" placeholder="valor">
-            <input id="tipo" type="text" placeholder="tipo">
-        </div>
-        <div class="modal-content-footer">
-            <button onClick="cadastrar()" class="btn confirm">Cadastrar</button>
-            <button onClick="fechar()" class="btn cancel">Cancelar</button>
-        </div>
+    <!-- <button class='cadastrar' onclick='abrirModalCadastro()'>Cadastrar</button> -->
+    
+
+    <div class="modal editar model"> 
+        <div class="modal-content">
+            <button onclick="fecharModalCadastro()"><img class="icone" src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"  alt="Icone de Fechar"> </button>
+         <div class="modal-content-body"> 
+        <input type="text" class="input" id="descricao" placeholder="descricao">
+        <input type="text"  class="input" id="valor" placeholder="valor">
+        <input type="text"  class="input" id="tipo" placeholder="tipo">
+     </div> 
+    <div class="modal-content-footer">
+        <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
+        <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
     </div>
-    </div>
+</div>
+</div>
+</div> 
+
     <div  class="titulo">
-    <h1>Lojinha Japa</h1><img class="japan" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Japanese_icon_%28for_user_box%29.svg/1024px-Japanese_icon_%28for_user_box%29.svg.png">
+    <img class="japan" src="Comida_Japonesa_frase_post_para_instagram-removebg-preview.png">
    </div>
     <div class="b">
-    <p id="filtro">Filtro: <input id='f' onblur="filtrar()" type='text'></p>
+    <p id="filtro">Filtro: <input id='f' onblur="datas()" type='text'></p>
     <p id="new" >Novo lançamento</p>
-    <button  id="ic" onClick="showModal()"><img class="icone" src="https://iconarchive.com/download/i95921/iconsmind/outline/Double-Circle.ico"></button>
+    <button  id="ic"  onclick='abrirModalCadastro()'><img class="icone" src="https://iconarchive.com/download/i95921/iconsmind/outline/Double-Circle.ico"></button>
    </div>
+
+
     <div id="main">
         <div class="tabela1">
-            <table>
+            <table class="table1">
                 <thead>
                     <p id="debito"></p>
                     <a id="q"></a>
@@ -58,7 +65,7 @@
             </table>
         </div>
         <div class="tabela2">
-            <table>
+            <table >
                 <thead>
                     <a id="q"></a>
                     <p id="credido"></p>
@@ -75,13 +82,16 @@
                         <td id="nu"></td>
                         <td id="da"></td>
                         <td id="des"></td>
-                        <td id="val"></td>
-                        <td id="ti"></td>
+                        <td id="valor"></td>
+                        <td id="tip"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <!-- <span onClick="getTotal()">R$ =<p id="saldo"></p></span> -->
     </div>
+   
+
 
 </body>
 <script src="script.js"></script>
