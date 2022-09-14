@@ -22,17 +22,18 @@ fetch("http://localhost:3000/funcionarios")
         colunas[1].innerHTML = funcionario.matricula;
         colunas[2].innerHTML = funcionario.nome;
         colunas[3].innerHTML = funcionario.cargo;
-        colunas[4].innerHTML = "R$ " + funcionario.valor;
+        colunas[4].innerHTML = funcionario.salario.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
         colunas[5].innerHTML = funcionario.cpf;
 
         linha.querySelector("#exclui").addEventListener("click", () => {
             modalExcluir.classList.remove("model");
-            modalExcluir.querySelector("#id").innerHTML = funcionario.id;
+            modalExcluir.querySelector("#matricula").innerHTML = funcionario.matricula;
         })
 
         linha.querySelector("#edita").addEventListener("click", () => {
-            modalEditar.classList.remove("model"); 
-            inputId.value = funcionario.id;
+            modalEditar.classList.remove("model");
+            btnc.innerHTML = 'Editar' 
+            btnc.onclick = ()=>{ editarFunc() }
             inputMatricula.value = funcionario.matricula;
             inputNome.value = funcionario.nome;
             inputValor.value = funcionario.valor;
@@ -51,9 +52,19 @@ function fecharModalEditar() {
     modalEditar.classList.add("model");
 }
 
-function editar() {
+function abrirModalCadastro(){
+    btnc.innerHTML = 'Cadastrar'
+    btnc.onclick = ()=> {cadastrarFunc()}
+    matricula.value = ''
+    nome.value=''
+    cargo.value=''
+    salario.value = ''
+    cpf.value = ''
+    modalEditar.classList.remove('model')
+}
+
+function editarFunc() {
     let funcionario = {
-        "id":inputId.value,
         "matricula":inputMatricula.value,
         "nome":inputNome.value,
         "valor":inputValor.value,
@@ -78,9 +89,9 @@ function editar() {
     })
 }
 
-function excluir() {
+function excluirFunc() {
     let data = {
-        "id":document.querySelector("#id").innerHTML
+        "matricula":document.querySelector("#matricula").innerHTML
     }
 
     fetch("http://localhost:3000/funcionarios", {
@@ -100,4 +111,34 @@ function excluir() {
         }
     })
 }
+function cadastrarFunc() {
+    let funcionario  = {
+        "matricula": matricula.value,
+        "nome": nome.value,
+        "cargo": cargo.value,
+        "salario": salario.value,
+        "cpf": cpf.value
+    };
 
+    fetch("http://localhost:3000/funcionarios", {
+        "method":"POST",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": JSON.stringify(funcionario)
+    })
+    .then(res => {return res.json()})
+    .then(resp => {
+        if(resp.matricula !== undefined){
+            alert("Funcionario Cadastrado Com Sucesso !");
+            window.location.reload();
+        }else {
+            alert("Falha ao cadastrar Funcionario");
+        }
+     })
+}
+
+
+function gerenciadorProdutos(){
+    window.location.href = '.././gerenciar_ptodutos/index.html'
+}
