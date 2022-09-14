@@ -19,9 +19,9 @@ CREATE TABLE filmes(
 
 CREATE TABLE locacao(
      id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-       cod integer not null,
-       cod_filmes integer not,
-      multa FLOAT(5, 2)not null,
+     cod integer not null,
+     cod_filmes integer not null,
+      multa FLOAT(5,2)not null,
       data_locacao DATE not null,
       data_devolucao DATE  not null
 );
@@ -57,3 +57,12 @@ IGNORE 1 ROWS;
 select * from usuarios;
 select * from filmes;
 select * from locacao;
+
+
+create view vw_devolucoes as 
+
+select l.id, u.nome, u.telefone, f.nome as filme, l.data_locacao from usuarios u
+inner join locacao l on u.cod = u.cod 
+inner join filmes f on l.cod_filmes = f.cod_filmes where l.data_devolucao is null ;
+
+select * from vw_devolucoes;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body onload="carregar()">
+    <header>
+        <ul>
+            <li>Clientes</li>
+            <li>/</li>
+            <li><a href="">Devoluções</a></li>
+        </ul>
+    </header>
+    <main>
+        <button
+            onclick="modais.setAttribute('style','display:flex')">Novo Cliente +
+        </button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </main>
+    <div id="modais">
+        <div id="modal_Criar">
+            <div id="modalHeader"><label>Cadastro do Cliente</label>
+                <button onclick="modais.setAttribute('style','display:none')">X</button>
+            </div>
+            <div> Nome: <input type="text" id="nome" /></div>
+            <div>Endereço: <input type="text" id="end" /></div>
+            <div>Telefone: <input type="text" id="tel" /></div>
+            <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+    </div>
+
+    <script src="../Cliente/index.js"></script>
+</body>
+
+</html>
