@@ -12,6 +12,8 @@ const con = mysql.createConnection ({
     database: 'lojinhajapa'
 });
 
+
+
 app.get('/lancamento', (req, res)=>{
     let query = "SELECT * FROM lancamento";
 
@@ -23,6 +25,15 @@ app.get('/lancamento', (req, res)=>{
         }
     })
 });
+
+// app.get('/lancamento/:data', (req, res)=>{
+//     let string = `select * from lancamento where = '${req.params.data}'`;
+//     con.query(string, (err, result) =>{
+//         if(err == null){
+//             res.json(result)
+//         }
+//     });
+// })
 
 app.post('/lancamento', (req, res)=>{
     let query = `INSERT INTO lancamento VALUES (DEFAULT, curdate(), '${req.body.descricao}', ${req.body.valor}, '${req.body.tipo}')`;

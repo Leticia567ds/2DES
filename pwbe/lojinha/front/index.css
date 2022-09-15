@@ -6,8 +6,10 @@
 table,
 th,
 td {
+    /* border: 1px solid rgba(0, 0, 0, 0.301); */
     border: 2px solid rgb(51, 12, 44);
     margin:20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 th,
@@ -15,6 +17,7 @@ td {
     padding: 10px;
     text-align: center;
     width: 60px;
+    /* border-collapse: collapse; */
 }
 .model{
     display: none;
@@ -23,27 +26,22 @@ td {
 
  .tabela1{
     width: 50vw;
-          /* margin-left: -150px;   */
     
 } 
 .tabela2{
     width: 100vw;
-     /* margin-left: -150px;  */
-  
 }
 
 #main{
     display: flex;
     flex-direction: row;
-    width: 100vw;
-    justify-content: center;
-}
-
-.tabela {
     width: 50vw;
-
-
+    margin: 10px 15vw;
+    /* overflow-y: scroll; */
+    /* max-height: 600vh; */
+   
 }
+
  #debito{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -71,11 +69,14 @@ td {
  #filtro{
     text-align: center;
     font-size: 20px;
+  
+    /* padding: 10px; */
 }
 
 #new{
     text-align: center;
     font-size: 20px;
+    /* padding: 10px; */
 }
 .b{
     display:flex;
@@ -91,14 +92,10 @@ td {
     width: 30px;
 }
 .japan{
-    margin: 5px;
-    width: 50px;
-    background-color: #F0E68C;
-    
-    width: 5vw;
-    border-radius: 10px;
-    
+   align-items: center;
+    width:17vw;  
 }
+
 button{
     background: none;
     border: none;
@@ -113,24 +110,103 @@ button:hover{
 }
 .modal{
     display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(64, 22, 75, 0.247);
     align-items: center;
     justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100vw;
-   height:100vh;
-   background-color:rgba(0, 0, 0, 0.034);
-}   
-.form-model{
-
-  width:15%;
-  height:15%;
-  background-color:#ffff;
-  border-radius:30px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding:60px 120px;
-
 }
+.modal-content {
+    width: 40vw;
+    height: 30vh;
+    background-color: #FFF;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    justify-content: space-evenly;
+}
+
+.modal-content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+.modal-content > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px 30px;
+}
+
+.modal-content-body {
+    margin-top: 20px;
+    display:flex ;
+    flex-direction: column;
+}
+
+.confirm {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: #2fd659;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cancel {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: #fa2828; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cancel:hover{
+    background-color: #ff0b0b; 
+}
+.confirm:hover{
+    background-color: #0db136;
+}
+.input{
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid rgb(38, 6, 16);
+    margin: 4px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(221, 221, 221, 0.575);
+}
+
+b{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.saldo {
+    text-align: center;
+}
+
+/* .saldoCon {
+    border-radius: 25px;
+    border: 1px solid black;
+    width: 300px;
+    padding: 10px;
+    /* margin:1000px auto; */
+    background-color: rgba(21, 68, 89, 0.883);
+    color: white;
+    /* font-size: 40pt; */
+
+
+/* .saldoCon p {
+    font-weight: 500;
+}
+
+.saldoCon span {
+    font-weight: 400; */
+} 
