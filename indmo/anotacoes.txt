@@ -1,0 +1,28 @@
+userState - trazer informações
+     nome pega 
+     setNome tipo, atribui ao estado
+ atribui um estado:
+ userState("");
+{}= chaves, chamada do javascript
+map retornar
+
+npm i -g yarn -install yarn
+
+yarn add react-native-screens react-native-safe-area-context 
+yarn add @react-navigation/native-stack
+
+
+
+pages_:
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
+expo start --web = testar
+
+
+Tela um 
+-lista com nome do restaurante e nota
+
+Tela dois 
+-imagem, endereco e tell

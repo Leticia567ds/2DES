@@ -7,10 +7,11 @@ const inputId = document.querySelector("#id");
 const inputNome = document.querySelector("#nome");
 const inputMatricula = document.querySelector("#matricula");
 const inputValor = document.querySelector("#valor");
+const inputCargo = document.querySelector("#cargo");
 const inputCPF = document.querySelector("#cpf");
 const btCadetid = document.querySelector(".btCadetid");
 
-fetch("http://localhost:3000/funcionarios")
+fetch("http://localhost:2500/funcionarios")
 .then(res => { return res.json() })
 .then(funcionarios => {
     funcionarios.forEach(funcionario => {
@@ -25,14 +26,14 @@ fetch("http://localhost:3000/funcionarios")
         colunas[4].innerHTML = funcionario.salario.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
         colunas[5].innerHTML = funcionario.cpf;
 
-        linha.querySelector("#exclui").addEventListener("click", () => {
-            modalExcluir.classList.remove("model");
-            modalExcluir.querySelector("#matricula").innerHTML = funcionario.matricula;
-        })
+        // linha.querySelector("#exclui").addEventListener("click", () => {
+        //     modalExcluir.classList.remove("model");
+        //     modalExcluir.querySelector("#matricula").innerHTML = funcionario.matricula;
+        // });
 
         linha.querySelector("#edita").addEventListener("click", () => {
             modalEditar.classList.remove("model");
-            btnc.innerHTML = 'Editar' 
+            // btnc.innerHTML = 'Editar' 
             btnc.onclick = ()=>{ editarFunc() }
             inputMatricula.value = funcionario.matricula;
             inputNome.value = funcionario.nome;
@@ -55,11 +56,11 @@ function fecharModalEditar() {
 function abrirModalCadastro(){
     btnc.innerHTML = 'Cadastrar'
     btnc.onclick = ()=> {cadastrarFunc()}
-    matricula.value = ''
-    nome.value=''
+    inputMatricula.value = ''
+    inputNome.value=''
     cargo.value=''
-    salario.value = ''
-    cpf.value = ''
+    inputValor.value = ''
+    inputCPF.value = ''
     modalEditar.classList.remove('model')
 }
 
@@ -71,7 +72,7 @@ function editarFunc() {
         "cpf":inputCPF.value
     }
 
-    fetch("http://localhost:3000/funcionarios", {
+    fetch("http://localhost:2500/funcionarios", {
         "method":"PUT",
         "headers": {
             "Content-Type":"application/json"
@@ -94,7 +95,7 @@ function excluirFunc() {
         "matricula":document.querySelector("#matricula").innerHTML
     }
 
-    fetch("http://localhost:3000/funcionarios", {
+    fetch("http://localhost:2500/funcionarios", {
         "method":"DELETE",
         "headers":{
             "Content-Type": "application/json"
@@ -120,7 +121,7 @@ function cadastrarFunc() {
         "cpf": cpf.value
     };
 
-    fetch("http://localhost:3000/funcionarios", {
+    fetch("http://localhost:2500/funcionarios", {
         "method":"POST",
         "headers": {
             "Content-Type": "application/json"
@@ -139,6 +140,3 @@ function cadastrarFunc() {
 }
 
 
-function gerenciadorProdutos(){
-    window.location.href = '.././gerenciar_ptodutos/index.html'
-}

@@ -10,7 +10,7 @@ const inputQuantidade = document.querySelector("#quantidade");
 const inputValor = document.querySelector("#valor");
 const btCadetid = document.querySelector(".btCadetid");
 
-fetch("http://localhost:3000/produtos")
+fetch("http://localhost:2000/produtos")
 .then(res => { return res.json() })
 .then(produtos => {
     produtos.forEach(produto => {
@@ -56,7 +56,7 @@ function editarProduto() {
         "preco":inputValor.value,
     }
 
-    fetch("http://localhost:3000/produtos", {
+    fetch("http://localhost:2000/produtos", {
         "method":"PUT",
         "headers": {
             "Content-Type":"application/json"
@@ -79,7 +79,7 @@ function excluirProduto() {
         "cod":document.querySelector("#cod").innerHTML
     }
 
-    fetch("http://localhost:3000/produtos", {
+    fetch("http://localhost:2000/produtos", {
         "method":"DELETE",
         "headers":{
             "Content-Type": "application/json"

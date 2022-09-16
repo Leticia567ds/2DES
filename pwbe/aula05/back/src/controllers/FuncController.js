@@ -31,7 +31,7 @@ function listafun(req, res) {
 };
 
 function cadastrar(req, res) {
-    let query = `INSERT INTO funcionarios VALUES (DEFAULT, '${req.body.id}', '${req.body.matricula}', ${req.body.nome}, ${req.body.cargo}, ${req.body.salario}, ${req.body.cpf})`;
+    let query = `INSERT INTO funcionarios VALUES (DEFAULT,'${req.body.matricula}', '${req.body.nome}', '${req.body.cargo}', ${req.body.salario}, '${req.body.cpf}')`;
 
     conDB.query(query, (err, result) => {
         if(err == null) {

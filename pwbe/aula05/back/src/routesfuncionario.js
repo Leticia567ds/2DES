@@ -6,8 +6,8 @@ const FuncController = require("./controllers/FuncController");
 
 router.get("/funcionarios", FuncController.listar);
 router.get("/funcionarios/:cod", FuncController.listafun);
-router.post("/funcionrios", FuncController.cadastrar);
-router.delete("/funionrios",FuncController.excluir);
+router.post("/funcionarios", FuncController.cadastrar);
+router.delete("/funcionarios",FuncController.excluir);
 router.put("/funcionarios", FuncController.editar);
 
 module.exports = router;
