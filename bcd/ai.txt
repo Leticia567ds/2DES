@@ -1,0 +1,6 @@
+
+
+index é único; não pode repetir
+
+index e key-primary sãao úncios mas 
+key-pramary tem chave estrageira mas inex não
