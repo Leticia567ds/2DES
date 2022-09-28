@@ -1,6 +1,3 @@
--- Banco de dados Pizzasria, Baseado no exemplo do livro Princípios de banco de dados com MySQL 5.7
--- Editora SENAI - 2019
--- Comandos DDL para criar a estrutura do banco de dados
 drop database if exists Pizzaria;
 create database Pizzaria charset=UTF8 collate utf8_general_ci;
 use Pizzaria;
@@ -12,8 +9,7 @@ create table Clientes(
 	numero decimal(5,0),
 	complemento varchar(30),
 	bairro varchar(30),
-	referencia varchar(30),
-
+	referencia varchar(30)
 );
 
 create table Pizzas(
@@ -47,115 +43,113 @@ create table Itens_Pedido(
 	foreign key (pizza_id) references Pizzas(pizza_id)
 );
 
-
-
 -- Comandos DML para alimentar o banco de dados com registros
 insert into Clientes(nome, logradouro, numero, complemento, bairro, referencia) values
 ("Adelcio Biazi","Rua Wellington Martins",1204,"Fundos","Dom Bosco","Igreja"),
-("Adriano da Silva Ferreira","Rua Walter Paulo Costenaro",1206,"","Bela Vista","Farmácia"),
-("Alisson Linhares de Carvalho","Rua Viviane Mello Bonadia dos Santos",1208,"","Zambom",""),
-("Amanda Cristina davi Resende","Rua Thamires de Campos Luz",1210,"","Santa Cruz","Escola"),
-("Ana Cláudia de Moura Laurentino","Rua Taynara Cerigueli Dutra",1212,"","Dom Bosco",""),
+("Adriano da Silva Ferreira","Rua Walter Paulo Costenaro",1206,null,"Bela Vista","Farmácia"),
+("Alisson Linhares de Carvalho","Rua Viviane Mello Bonadia dos Santos",1208,null,"Zambom",null),
+("Amanda Cristina davi Resende","Rua Thamires de Campos Luz",1210,null,"Santa Cruz","Escola"),
+("Ana Cláudia de Moura Laurentino","Rua Taynara Cerigueli Dutra",1212,null,"Dom Bosco",null),
 ("Ana Claudia Maciel","Rua Suéllen Rodolfo Martinelli",1214,"Frente","Dom Bosco","Campinho"),
-("Argemiro Pentian Junior","Rua Silvia Roberta de Jesus Garcia",1216,"","Dom Bosco","",),
-("Bento Rafael Siqueira","Rua Sergio Willians Poneli",1218,"","Dom Bosco","","56294582997"),
-("Bernardo Moreira Zabadal","Rua Sara Luzia de Melo",1220,"","Dom Bosco","suermercado",),
-("Carlos Roberto de Oliveira Cazelatto Junior","Rua Raphael Hungaro Moretti",1222,"","Dom Bosco",""),
-("Carlos Roberto Do Nascimento Costa","Rua Ramon Simões Abílio",1224,"","Dom Bosco",""),
-("Cesar Augusto Pascali Rago","Rua Rafaela de Jesus Alencar",1226,"","Dom Bosco",""),
-("Claudemir de Souza Freitas Junior","Rua Rafael Tomé de Souza",507,"","Dom Bosco",""),
-("Claudiane Mendes Trigueiro Silva","Rua Paula Leticia Santos Lima",601,"","Dom Bosco",""),
-("Claudiney Ramos Tinoco","Rua Patrícia Fernanda da Silva Freitas",695,"Fundos","Dom Bosco",""),
-("Danilo César Pereira","Rua Ovídio José Francisco",789,"","Dom Bosco",""),
-("Darvin Ames","Rua Murilo Gleyson Gazzola",883,"","Dom Bosco","Igreja"),
-("Debora Barbosa Aires","Rua Marcelo José Vigorito Campara",977,"","Dom Bosco","Farmácia"),
-("Deivison Shindi Takatu","Rua Marcelo Do Carmo Vieira Scomparim",1071,"Fundos","Zambom",""),
+("Argemiro Pentian Junior","Rua Silvia Roberta de Jesus Garcia",1216,null,"Dom Bosco",null),
+("Bento Rafael Siqueira","Rua Sergio Willians Poneli",1218,null,"Dom Bosco",null),
+("Bernardo Moreira Zabadal","Rua Sara Luzia de Melo",1220,null,"Dom Bosco","suermercado"),
+("Carlos Roberto de Oliveira Cazelatto Junior","Rua Raphael Hungaro Moretti",1222,null,"Dom Bosco",null),
+("Carlos Roberto Do Nascimento Costa","Rua Ramon Simões Abílio",1224,null,"Dom Bosco",null),
+("Cesar Augusto Pascali Rago","Rua Rafaela de Jesus Alencar",1226,null,"Dom Bosco",null),
+("Claudemir de Souza Freitas Junior","Rua Rafael Tomé de Souza",507,null,"Dom Bosco",null),
+("Claudiane Mendes Trigueiro Silva","Rua Paula Leticia Santos Lima",601,null,"Dom Bosco",null),
+("Claudiney Ramos Tinoco","Rua Patrícia Fernanda da Silva Freitas",695,"Fundos","Dom Bosco",null),
+("Danilo César Pereira","Rua Ovídio José Francisco",789,null,"Dom Bosco",null),
+("Darvin Ames","Rua Murilo Gleyson Gazzola",883,null,"Dom Bosco","Igreja"),
+("Debora Barbosa Aires","Rua Marcelo José Vigorito Campara",977,null,"Dom Bosco","Farmácia"),
+("Deivison Shindi Takatu","Rua Marcelo Do Carmo Vieira Scomparim",1071,"Fundos","Zambom",null),
 ("Denis Henrique Caixeta","Rua Luciano Rovanni Do Nascimento",1165,"Fundos","Zambom","Escola"),
-("Deysiane Matos Sande","Rua Luciano Rossi",1259,"","Zambom",""),
-("Diego Rafael Moraes","Rua Lucas Hermann Negri",1353,"","Zambom","Campinho"),
-("Diogo Matos da Silva","Rua Liliam Sayuri Sakamoto",1447,"Segundo andar","Zambom",""),
-("Diogo Paulino da Cruz dos Santos","Rua Juliana de Sousa Ribeiro",1541,"","Zambom",""),
-("Douglas Brito damalio","Rua Josiane Rosa de Oliveira Gaia Pimenta",1635,"","Zambom","suermercado"),
-("Draylson Micael de Souza","Rua José Santiago Moreira de Mello",205,"","Zambom",""),
-("Eder Almeida Batista de Oliveira","Rua José Renato Paviotti",206,"","Zambom",""),
-("Ederlon Barbosa Cruz","Rua José Rafael Pilan",207,"","Zambom",""),
-("Edinei Peres Legaspe","Rua José Eugênio de Mira",208,"Fundos","Zambom",""),
-("Ednei Jose de Almeida Junior","Rua Jessé Italo Silva",209,"","Zambom",""),
-("Eduardo de Paula Lima Nascimento","Rua Jefferson Carlos Pedroso",210,"","Zambom",""),
-("Eduardo Henrique Spies","Rua Jefferson Barbosa Belo da Silva",2293,"","Zambom",""),
-("Elaine Cecília Gatto","Rua Jeane Aparecida Menegueli",2387,"","Santa Cruz","Igreja"),
-("Elias Adriano Nogueira da Silva","Rua Ingrid Marçal",2481,"","Santa Cruz","Farmácia"),
-("Elis Cristina Montoro Hernandes Ervolino","Rua Icaro Cavalcante Dourado",2575,"","Santa Cruz",""),
-("Erica Aparecida Martins Siqueira","Rua Higor Antonio delsoto",2669,"","Santa Cruz","Escola"),
-("Erika Arias Barrado","Rua Hiago Araujo Silva",2763,"","Santa Cruz",""),
-("Esteic Janaina Santos Batista","Rua Helder Pestana",2857,"","Santa Cruz","Campinho"),
-("Everaldo Costa Silva Neto","Rua Gustavo Moreira Calixto",2951,"","Santa Cruz",""),
-("Everaldo Silva de Freitas","Rua Giovanna Nascimento Antonieti",3045,"","Santa Cruz",""),
-("Ewerton José da Silva","Rua Giovani Bertolla Sampaio",3139,"","Santa Cruz","suermercado"),
-("Fabio Luiz de Paula","Rua Gerson Luiz Camillo",3233,"","Santa Cruz",""),
-("Fabio Serafim","Rua Gabriel Spadon de Souza",3327,"","Santa Cruz",""),
-("Felipe Gobo Bruno","Rua Gabriel Sgorlon Tininis",3421,"","Bela Vista","Igreja"),
-("Fernanda Zampieri Canaver","Rua Gabriel Morais Silveira",3515,"","Bela Vista","Farmácia"),
-("Fernando Claudio dos Santos Junior","Rua Gabriel Ferreira Teles Gomes",201,"","Bela Vista",""),
-("Fernando Henrique Campos","Rua Francisco José Nardi Filho",202,"","Bela Vista","Escola"),
-("Flávia Zenaro Nogueira E Silva","Rua Francisco Edigleison da Silva Barbosa",203,"","Bela Vista",""),
-("Floriano Ferreira dos Reis Filho","Rua Francisco Assis da Silva",204,"","Bela Vista","Campinho"),
-("Frances Albert Santos","Rua Frances Albert Santos",205,"","Bela Vista",""),
-("Francisco Assis da Silva","Rua Floriano Ferreira dos Reis Filho",206,"","Bela Vista",""),
-("Francisco Edigleison da Silva Barbosa","Rua Flávia Zenaro Nogueira E Silva",207,"","Zambom","suermercado"),
-("Francisco José Nardi Filho","Rua Fernando Henrique Campos",208,"","Zambom",""),
-("Gabriel Ferreira Teles Gomes","Rua Fernando Claudio dos Santos Junior",209,"","Zambom",""),
-("Gabriel Morais Silveira","Rua Fernanda Zampieri Canaver",210,"","Zambom",""),
-("Gabriel Sgorlon Tininis","Rua Felipe Gobo Bruno",211,"","Zambom",""),
-("Gabriel Spadon de Souza","Rua Fabio Serafim",212,"","Zambom",""),
-("Gerson Luiz Camillo","Rua Fabio Luiz de Paula",213,"","Zambom",""),
-("Giovani Bertolla Sampaio","Rua Ewerton José da Silva",1917,"","Zambom",""),
-("Giovanna Nascimento Antonieti","Rua Everton Jose de Souza",2011,"","Santa Cruz",""),
-("Gustavo Moreira Calixto","Rua Everaldo Silva de Freitas",2105,"","Santa Cruz","Igreja"),
-("Helder Pestana","Rua Everaldo Costa Silva Neto",2199,"","Santa Cruz","Farmácia"),
-("Hiago Araujo Silva","Rua Esteic Janaina Santos Batista",2293,"","Santa Cruz",""),
-("Higor Antonio delsoto","Rua Erika Arias Barrado",2387,"","Santa Cruz","Escola"),
-("Icaro Cavalcante Dourado","Rua Erica Aparecida Martins Siqueira",2481,"","Santa Cruz",""),
-("Ingrid Marçal","Rua Elis Cristina Montoro Hernandes Ervolino",2575,"","Santa Cruz","Campinho"),
-("Jeane Aparecida Menegueli","Rua Elias Adriano Nogueira da Silva",222,"","Santa Cruz",""),
-("Jefferson Barbosa Belo da Silva","Rua Elaine Cecília Gatto",223,"","Santa Cruz",""),
-("Jefferson Carlos Pedroso","Rua Eduardo Henrique Spies",224,"","Santa Cruz","suermercado"),
-("Jessé Italo Silva","Rua Eduardo de Paula Lima Nascimento",225,"","Santa Cruz",""),
-("José Eugênio de Mira","Rua Ednei Jose de Almeida Junior",226,"","Bela Vista",""),
-("José Rafael Pilan","Rua Edinilson da Silva Vida",227,"","Bela Vista",""),
-("José Renato Paviotti","Rua Edinei Peres Legaspe",228,"","Bela Vista",""),
-("José Santiago Moreira de Mello","Rua Ederlon Barbosa Cruz",229,"","Bela Vista",""),
-("Josiane Rosa de Oliveira Gaia Pimenta","Rua Eder Almeida Batista de Oliveira",230,"","Bela Vista",""),
-("Juliana de Sousa Ribeiro","Rua Dyogo Porfirio Almeida Santos",231,"","Dom Bosco",""),
-("Liliam Sayuri Sakamoto","Rua Draylson Micael de Souza",232,"","Dom Bosco","Igreja"),
-("Lucas Hermann Negri","Rua Douglas Brito damalio",233,"","Dom Bosco","Farmácia"),
-("Luciano Rossi","Rua Diogo Paulino da Cruz dos Santos",234,"","Dom Bosco",""),
-("Luciano Rovanni Do Nascimento","Rua Diogo Matos da Silva",235,"","Dom Bosco","Escola"),
-("Marcelo Do Carmo Vieira Scomparim","Rua Diego Rafael Moraes",236,"","Zambom",""),
-("Marcelo José Vigorito Campara","Rua Deysiane Matos Sande",237,"","Zambom","Campinho"),
-("Murilo Gleyson Gazzola","Rua Denis Henrique Caixeta",238,"","Zambom",""),
-("Ovídio José Francisco","Rua Deivison Shindi Takatu",239,"","Dom Bosco",""),
-("Patrícia Fernanda da Silva Freitas","Rua Debora Barbosa Aires",240,"","Dom Bosco","suermercado"),
-("Paula Leticia Santos Lima","Rua Darvin Ames",241,"","Dom Bosco",""),
-("Rafael Tomé de Souza","Rua Danilo César Pereira",242,"","Dom Bosco",""),
-("Rafaela de Jesus Alencar","Rua Claudiney Ramos Tinoco",243,"","Dom Bosco","Igreja"),
-("Ramon Simões Abílio","Rua Claudiane Mendes Trigueiro Silva",244,"","Dom Bosco","Farmácia"),
-("Raphael Hungaro Moretti","Rua Claudemir de Souza Freitas Junior",245,"","Dom Bosco",""),
-("Sara Luzia de Melo","Rua Cesar Augusto Pascali Rago",246,"","Dom Bosco","Escola"),
-("Sergio Willians Poneli","Rua Carlos Roberto Do Nascimento Costa",247,"","Dom Bosco",""),
-("Silvia Roberta de Jesus Garcia","Rua Carlos Roberto de Oliveira Cazelatto Junior",248,"","Dom Bosco","Campinho"),
-("Suéllen Rodolfo Martinelli","Rua Carlos César Farias de Souza",249,"","Zambom",""),
-("Taynara Cerigueli Dutra","Rua Bernardo Moreira Zabadal",250,"","Zambom",""),
-("Thamires de Campos Luz","Rua Bento Rafael Siqueira",251,"","Zambom","suermercado"),
-("Viviane Mello Bonadia dos Santos","Rua Argemiro Pentian Junior",252,"","Zambom",""),
-("Walter Paulo Costenaro","Rua Anisio Alfredo da Silva Junior",253,"","Zambom",""),
-("Wellington Fabio de Oliveira Martins","Rua André Luyde da Silva Souza",254,"","Zambom",""),
-("André Luyde da Silva Souza","Rua Ana Claudia Maciel",255,"","Zambom",""),
-("Anisio Alfredo da Silva Junior","Rua Ana Cláudia de Moura Laurentino",256,"","Zambom",""),
-("Carlos César Farias de Souza","Rua Amanda Cristina davi Resende",257,"","Zambom",""),
-("Dyogo Porfirio Almeida Santos","Rua Alisson Linhares de Carvalho",258,"","Zambom",""),
-("Edinilson da Silva Vida","Rua Adriano da Silva Ferreira",259,"","Zambom",""),
-("Everton Jose de Souza","Rua Adelcio Biazi",260,"","Zambom","");
+("Deysiane Matos Sande","Rua Luciano Rossi",1259,null,"Zambom",null),
+("Diego Rafael Moraes","Rua Lucas Hermann Negri",1353,null,"Zambom","Campinho"),
+("Diogo Matos da Silva","Rua Liliam Sayuri Sakamoto",1447,"Segundo andar","Zambom",null),
+("Diogo Paulino da Cruz dos Santos","Rua Juliana de Sousa Ribeiro",1541,null,"Zambom",null),
+("Douglas Brito damalio","Rua Josiane Rosa de Oliveira Gaia Pimenta",1635,null,"Zambom","suermercado"),
+("Draylson Micael de Souza","Rua José Santiago Moreira de Mello",205,null,"Zambom",null),
+("Eder Almeida Batista de Oliveira","Rua José Renato Paviotti",206,null,"Zambom",null),
+("Ederlon Barbosa Cruz","Rua José Rafael Pilan",207,null,"Zambom",null),
+("Edinei Peres Legaspe","Rua José Eugênio de Mira",208,"Fundos","Zambom",null),
+("Ednei Jose de Almeida Junior","Rua Jessé Italo Silva",209,null,"Zambom",null),
+("Eduardo de Paula Lima Nascimento","Rua Jefferson Carlos Pedroso",210,null,"Zambom",null),
+("Eduardo Henrique Spies","Rua Jefferson Barbosa Belo da Silva",2293,null,"Zambom",null),
+("Elaine Cecília Gatto","Rua Jeane Aparecida Menegueli",2387,null,"Santa Cruz","Igreja"),
+("Elias Adriano Nogueira da Silva","Rua Ingrid Marçal",2481,null,"Santa Cruz","Farmácia"),
+("Elis Cristina Montoro Hernandes Ervolino","Rua Icaro Cavalcante Dourado",2575,null,"Santa Cruz",null),
+("Erica Aparecida Martins Siqueira","Rua Higor Antonio delsoto",2669,null,"Santa Cruz","Escola"),
+("Erika Arias Barrado","Rua Hiago Araujo Silva",2763,null,"Santa Cruz",null),
+("Esteic Janaina Santos Batista","Rua Helder Pestana",2857,null,"Santa Cruz","Campinho"),
+("Everaldo Costa Silva Neto","Rua Gustavo Moreira Calixto",2951,null,"Santa Cruz",null),
+("Everaldo Silva de Freitas","Rua Giovanna Nascimento Antonieti",3045,null,"Santa Cruz",null),
+("Ewerton José da Silva","Rua Giovani Bertolla Sampaio",3139,null,"Santa Cruz","suermercado"),
+("Fabio Luiz de Paula","Rua Gerson Luiz Camillo",3233,null,"Santa Cruz",null),
+("Fabio Serafim","Rua Gabriel Spadon de Souza",3327,null,"Santa Cruz",null),
+("Felipe Gobo Bruno","Rua Gabriel Sgorlon Tininis",3421,null,"Bela Vista","Igreja"),
+("Fernanda Zampieri Canaver","Rua Gabriel Morais Silveira",3515,null,"Bela Vista","Farmácia"),
+("Fernando Claudio dos Santos Junior","Rua Gabriel Ferreira Teles Gomes",201,null,"Bela Vista",null),
+("Fernando Henrique Campos","Rua Francisco José Nardi Filho",202,null,"Bela Vista","Escola"),
+("Flávia Zenaro Nogueira E Silva","Rua Francisco Edigleison da Silva Barbosa",203,null,"Bela Vista",null),
+("Floriano Ferreira dos Reis Filho","Rua Francisco Assis da Silva",204,null,"Bela Vista","Campinho"),
+("Frances Albert Santos","Rua Frances Albert Santos",205,null,"Bela Vista",null),
+("Francisco Assis da Silva","Rua Floriano Ferreira dos Reis Filho",206,null,"Bela Vista",null),
+("Francisco Edigleison da Silva Barbosa","Rua Flávia Zenaro Nogueira E Silva",207,null,"Zambom","suermercado"),
+("Francisco José Nardi Filho","Rua Fernando Henrique Campos",208,null,"Zambom",null),
+("Gabriel Ferreira Teles Gomes","Rua Fernando Claudio dos Santos Junior",209,null,"Zambom",null),
+("Gabriel Morais Silveira","Rua Fernanda Zampieri Canaver",210,null,"Zambom",null),
+("Gabriel Sgorlon Tininis","Rua Felipe Gobo Bruno",211,null,"Zambom",null),
+("Gabriel Spadon de Souza","Rua Fabio Serafim",212,null,"Zambom",null),
+("Gerson Luiz Camillo","Rua Fabio Luiz de Paula",213,null,"Zambom",null),
+("Giovani Bertolla Sampaio","Rua Ewerton José da Silva",1917,null,"Zambom",null),
+("Giovanna Nascimento Antonieti","Rua Everton Jose de Souza",2011,null,"Santa Cruz",null),
+("Gustavo Moreira Calixto","Rua Everaldo Silva de Freitas",2105,null,"Santa Cruz","Igreja"),
+("Helder Pestana","Rua Everaldo Costa Silva Neto",2199,null,"Santa Cruz","Farmácia"),
+("Hiago Araujo Silva","Rua Esteic Janaina Santos Batista",2293,null,"Santa Cruz",null),
+("Higor Antonio delsoto","Rua Erika Arias Barrado",2387,null,"Santa Cruz","Escola"),
+("Icaro Cavalcante Dourado","Rua Erica Aparecida Martins Siqueira",2481,null,"Santa Cruz",null),
+("Ingrid Marçal","Rua Elis Cristina Montoro Hernandes Ervolino",2575,null,"Santa Cruz","Campinho"),
+("Jeane Aparecida Menegueli","Rua Elias Adriano Nogueira da Silva",222,null,"Santa Cruz",null),
+("Jefferson Barbosa Belo da Silva","Rua Elaine Cecília Gatto",223,null,"Santa Cruz",null),
+("Jefferson Carlos Pedroso","Rua Eduardo Henrique Spies",224,null,"Santa Cruz","suermercado"),
+("Jessé Italo Silva","Rua Eduardo de Paula Lima Nascimento",225,null,"Santa Cruz",null),
+("José Eugênio de Mira","Rua Ednei Jose de Almeida Junior",226,null,"Bela Vista",null),
+("José Rafael Pilan","Rua Edinilson da Silva Vida",227,null,"Bela Vista",null),
+("José Renato Paviotti","Rua Edinei Peres Legaspe",228,null,"Bela Vista",null),
+("José Santiago Moreira de Mello","Rua Ederlon Barbosa Cruz",229,null,"Bela Vista",null),
+("Josiane Rosa de Oliveira Gaia Pimenta","Rua Eder Almeida Batista de Oliveira",230,null,"Bela Vista",null),
+("Juliana de Sousa Ribeiro","Rua Dyogo Porfirio Almeida Santos",231,null,"Dom Bosco",null),
+("Liliam Sayuri Sakamoto","Rua Draylson Micael de Souza",232,null,"Dom Bosco","Igreja"),
+("Lucas Hermann Negri","Rua Douglas Brito damalio",233,null,"Dom Bosco","Farmácia"),
+("Luciano Rossi","Rua Diogo Paulino da Cruz dos Santos",234,null,"Dom Bosco",null),
+("Luciano Rovanni Do Nascimento","Rua Diogo Matos da Silva",235,null,"Dom Bosco","Escola"),
+("Marcelo Do Carmo Vieira Scomparim","Rua Diego Rafael Moraes",236,null,"Zambom",null),
+("Marcelo José Vigorito Campara","Rua Deysiane Matos Sande",237,null,"Zambom","Campinho"),
+("Murilo Gleyson Gazzola","Rua Denis Henrique Caixeta",238,null,"Zambom",null),
+("Ovídio José Francisco","Rua Deivison Shindi Takatu",239,null,"Dom Bosco",null),
+("Patrícia Fernanda da Silva Freitas","Rua Debora Barbosa Aires",240,null,"Dom Bosco","suermercado"),
+("Paula Leticia Santos Lima","Rua Darvin Ames",241,null,"Dom Bosco",null),
+("Rafael Tomé de Souza","Rua Danilo César Pereira",242,null,"Dom Bosco",null),
+("Rafaela de Jesus Alencar","Rua Claudiney Ramos Tinoco",243,null,"Dom Bosco","Igreja"),
+("Ramon Simões Abílio","Rua Claudiane Mendes Trigueiro Silva",244,null,"Dom Bosco","Farmácia"),
+("Raphael Hungaro Moretti","Rua Claudemir de Souza Freitas Junior",245,null,"Dom Bosco",null),
+("Sara Luzia de Melo","Rua Cesar Augusto Pascali Rago",246,null,"Dom Bosco","Escola"),
+("Sergio Willians Poneli","Rua Carlos Roberto Do Nascimento Costa",247,null,"Dom Bosco",null),
+("Silvia Roberta de Jesus Garcia","Rua Carlos Roberto de Oliveira Cazelatto Junior",248,null,"Dom Bosco","Campinho"),
+("Suéllen Rodolfo Martinelli","Rua Carlos César Farias de Souza",249,null,"Zambom",null),
+("Taynara Cerigueli Dutra","Rua Bernardo Moreira Zabadal",250,null,"Zambom",null),
+("Thamires de Campos Luz","Rua Bento Rafael Siqueira",251,null,"Zambom","suermercado"),
+("Viviane Mello Bonadia dos Santos","Rua Argemiro Pentian Junior",252,null,"Zambom",null),
+("Walter Paulo Costenaro","Rua Anisio Alfredo da Silva Junior",253,null,"Zambom",null),
+("Wellington Fabio de Oliveira Martins","Rua André Luyde da Silva Souza",254,null,"Zambom",null),
+("André Luyde da Silva Souza","Rua Ana Claudia Maciel",255,null,"Zambom",null),
+("Anisio Alfredo da Silva Junior","Rua Ana Cláudia de Moura Laurentino",256,null,"Zambom",null),
+("Carlos César Farias de Souza","Rua Amanda Cristina davi Resende",257,null,"Zambom",null),
+("Dyogo Porfirio Almeida Santos","Rua Alisson Linhares de Carvalho",258,null,"Zambom",null),
+("Edinilson da Silva Vida","Rua Adriano da Silva Ferreira",259,null,"Zambom",null),
+("Everton Jose de Souza","Rua Adelcio Biazi",260,null,"Zambom",null);
 
 insert into Telefones(cliente_id, Telefone) values
 (1,"19993452345"),
@@ -641,18 +635,149 @@ update Pedidos set valor=(select sum(quantidade * valor) from Itens_Pedido where
 update Pedidos set valor=(select sum(quantidade * valor) from Itens_Pedido where pedido_id = 25) where pedido_id = 25;
 update Pedidos set valor=(select sum(quantidade * valor) from Itens_Pedido where pedido_id = 26) where pedido_id = 26;
 
-
-select * from Clientes limit 10;
+select * from Clientes;
 select * from Pizzas;
 select * from Telefones;
 select * from Pedidos;
 select * from Itens_Pedido;
 
+-- Utilizar o BD Pizzaria da aula anterior
+use pizzaria;
+
+-- Criar uma tabela a partir de outra
+create table dados_cli
+select nome, logradouro, bairro
+from clientes;
+
+show tables;
+select * from dados_cli;
+describe dados_cli;
+
+-- Alterar a tabela de dados_cli adicionando uma coluna CPF
+alter table dados_cli add cpf varchar(15);
+alter table dados_cli drop cpf;
+alter table dados_cli add cpf varchar(15) first;
+
+select * from dados_cli;
+
+-- Criar um índice para uma tabela
+create index i_nome on dados_cli(nome);
+
+-- Se precisar exportar dados de uma consulta
+select nome from dados_cli into outfile 'd:/nomes.txt' CHARACTER SET utf8;
+
+-- Alterar os CPFs de NULL para cpfs válidos
+update dados_cli set cpf="59620146263" where nome = "Adelcio Biazi";
+update dados_cli set cpf="35221690420" where nome = "Adriano da Silva Ferreira";
+update dados_cli set cpf="40341659100" where nome = "Alisson Linhares de Carvalho";
+update dados_cli set cpf="57715972363" where nome = "Amanda Cristina davi Resende";
+update dados_cli set cpf="23503742034" where nome = "Ana Cl?udia de Moura Laurentin";
+update dados_cli set cpf="32249152500" where nome = "Ana Claudia Maciel";
+update dados_cli set cpf="05684559085" where nome = "Andr? Luyde da Silva Souza";
+update dados_cli set cpf="63857448091" where nome = "Anisio Alfredo da Silva Junior";
+update dados_cli set cpf="58187868899" where nome = "Argemiro Pentian Junior";
+update dados_cli set cpf="41505293456" where nome = "Bento Rafael Siqueira";
+update dados_cli set cpf="11323379096" where nome = "Bernardo Moreira Zabadal";
+update dados_cli set cpf="81596370203" where nome = "Carlos C?sar Farias de Souza";
+update dados_cli set cpf="59356610207" where nome = "Carlos Roberto de Oliveira Caz";
+update dados_cli set cpf="19510668044" where nome = "Carlos Roberto Do Nascimento C";
+update dados_cli set cpf="63310635287" where nome = "Cesar Augusto Pascali Rago";
+update dados_cli set cpf="41905808054" where nome = "Claudemir de Souza Freitas Jun";
+update dados_cli set cpf="65962509897" where nome = "Claudiane Mendes Trigueiro Sil";
+update dados_cli set cpf="65631096595" where nome = "Claudiney Ramos Tinoco";
+update dados_cli set cpf="16307236655" where nome = "Danilo C?sar Pereira";
+update dados_cli set cpf="33322594580" where nome = "Darvin Ames";
+update dados_cli set cpf="16011802257" where nome = "Debora Barbosa Aires";
+update dados_cli set cpf="33400620807" where nome = "Deivison Shindi Takatu";
+update dados_cli set cpf="55835186770" where nome = "Denis Henrique Caixeta";
+update dados_cli set cpf="00892685042" where nome = "Deysiane Matos Sande";
+update dados_cli set cpf="80908849974" where nome = "Diego Rafael Moraes";
+update dados_cli set cpf="08451114261" where nome = "Diogo Matos da Silva";
+update dados_cli set cpf="68700843431" where nome = "Diogo Paulino da Cruz dos Sant";
+update dados_cli set cpf="57964315102" where nome = "Douglas Brito damalio";
+update dados_cli set cpf="51880964554" where nome = "Draylson Micael de Souza";
+update dados_cli set cpf="73761292350" where nome = "Dyogo Porfirio Almeida Santos";
+update dados_cli set cpf="48907378550" where nome = "Eder Almeida Batista de Olivei";
+update dados_cli set cpf="81314516825" where nome = "Ederlon Barbosa Cruz";
+update dados_cli set cpf="78473489187" where nome = "Edinei Peres Legaspe";
+update dados_cli set cpf="12573066002" where nome = "Edinilson da Silva Vida";
+update dados_cli set cpf="33664640624" where nome = "Ednei Jose de Almeida Junior";
+update dados_cli set cpf="70534333664" where nome = "Eduardo de Paula Lima Nascimen";
+update dados_cli set cpf="41956562222" where nome = "Eduardo Henrique Spies";
+update dados_cli set cpf="51662341970" where nome = "Elaine Cec?lia Gatto";
+update dados_cli set cpf="50751226203" where nome = "Elias Adriano Nogueira da Silv";
+update dados_cli set cpf="37522845106" where nome = "Elis Cristina Montoro Hernande";
+update dados_cli set cpf="66877463838" where nome = "Erica Aparecida Martins Siquei";
+update dados_cli set cpf="03222856079" where nome = "Erika Arias Barrado";
+update dados_cli set cpf="56043483840" where nome = "Esteic Janaina Santos Batista";
+update dados_cli set cpf="33817885156" where nome = "Everaldo Costa Silva Neto";
+update dados_cli set cpf="53829363664" where nome = "Everaldo Silva de Freitas";
+update dados_cli set cpf="69898336293" where nome = "Everton Jose de Souza";
+update dados_cli set cpf="13149703727" where nome = "Ewerton Jos? da Silva";
+update dados_cli set cpf="07452589211" where nome = "Fabio Luiz de Paula";
+update dados_cli set cpf="24827600112" where nome = "Fabio Serafim";
+update dados_cli set cpf="80544303458" where nome = "Felipe Gobo Bruno";
+update dados_cli set cpf="34560807434" where nome = "Fernanda Zampieri Canaver";
+update dados_cli set cpf="96742384174" where nome = "Fernando Claudio dos Santos Ju";
+update dados_cli set cpf="86810820515" where nome = "Fernando Henrique Campos";
+update dados_cli set cpf="43146708949" where nome = "Fl?via Zenaro Nogueira E Silva";
+update dados_cli set cpf="56721927268" where nome = "Floriano Ferreira dos Reis Fil";
+update dados_cli set cpf="78711690925" where nome = "Frances Albert Santos";
+update dados_cli set cpf="95911475030" where nome = "Francisco Assis da Silva";
+update dados_cli set cpf="81194698107" where nome = "Francisco Edigleison da Silva ";
+update dados_cli set cpf="99097046505" where nome = "Francisco Jos? Nardi Filho";
+update dados_cli set cpf="39319960348" where nome = "Gabriel Ferreira Teles Gomes";
+update dados_cli set cpf="97722654002" where nome = "Gabriel Morais Silveira";
+update dados_cli set cpf="61641812400" where nome = "Gabriel Sgorlon Tininis";
+update dados_cli set cpf="06016914908" where nome = "Gabriel Spadon de Souza";
+update dados_cli set cpf="94611911462" where nome = "Gerson Luiz Camillo";
+update dados_cli set cpf="05835097034" where nome = "Giovani Bertolla Sampaio";
+update dados_cli set cpf="97071759740" where nome = "Giovanna Nascimento Antonieti";
+update dados_cli set cpf="33280916615" where nome = "Gustavo Moreira Calixto";
+update dados_cli set cpf="13725001200" where nome = "Helder Pestana";
+update dados_cli set cpf="65410945514" where nome = "Hiago Araujo Silva";
+update dados_cli set cpf="16494115373" where nome = "Higor Antonio delsoto";
+update dados_cli set cpf="28496679942" where nome = "Icaro Cavalcante Dourado";
+update dados_cli set cpf="90125912528" where nome = "Ingrid Mar?al";
+update dados_cli set cpf="61661102786" where nome = "Jeane Aparecida Menegueli";
+update dados_cli set cpf="06752948941" where nome = "Jefferson Barbosa Belo da Silv";
+update dados_cli set cpf="05776292123" where nome = "Jefferson Carlos Pedroso";
+update dados_cli set cpf="27525655693" where nome = "Jess? Italo Silva";
+update dados_cli set cpf="26261520801" where nome = "Jos? Eug?nio de Mira";
+update dados_cli set cpf="93759345433" where nome = "Jos? Rafael Pilan";
+update dados_cli set cpf="57278288991" where nome = "Jos? Renato Paviotti";
+update dados_cli set cpf="27962543213" where nome = "Jos? Santiago Moreira de Mello";
+update dados_cli set cpf="01495299880" where nome = "Josiane Rosa de Oliveira Gaia ";
+update dados_cli set cpf="68488513372" where nome = "Juliana de Sousa Ribeiro";
+update dados_cli set cpf="31805598619" where nome = "Liliam Sayuri Sakamoto";
+update dados_cli set cpf="96614313452" where nome = "Lucas Hermann Negri";
+update dados_cli set cpf="13239318482" where nome = "Luciano Rossi";
+update dados_cli set cpf="40461429284" where nome = "Luciano Rovanni Do Nascimento";
+update dados_cli set cpf="77485328859" where nome = "Marcelo Do Carmo Vieira Scompa";
+update dados_cli set cpf="18056542418" where nome = "Marcelo Jos? Vigorito Campara";
+update dados_cli set cpf="30089493397" where nome = "Murilo Gleyson Gazzola";
+update dados_cli set cpf="97412545639" where nome = "Ov?dio Jos? Francisco";
+update dados_cli set cpf="67276669629" where nome = "Patr?cia Fernanda da Silva Fre";
+update dados_cli set cpf="50031183174" where nome = "Paula Leticia Santos Lima";
+update dados_cli set cpf="56709691624" where nome = "Rafael Tom? de Souza";
+update dados_cli set cpf="39464383771" where nome = "Rafaela de Jesus Alencar";
+update dados_cli set cpf="86243225968" where nome = "Ramon Sim?es Ab?lio";
+update dados_cli set cpf="78485398734" where nome = "Raphael Hungaro Moretti";
+update dados_cli set cpf="50315959142" where nome = "Sara Luzia de Melo";
+update dados_cli set cpf="48071660930" where nome = "Sergio Willians Poneli";
+update dados_cli set cpf="54058020504" where nome = "Silvia Roberta de Jesus Garcia";
+update dados_cli set cpf="70079079202" where nome = "Su?llen Rodolfo Martinelli";
+update dados_cli set cpf="38135794924" where nome = "Taynara Cerigueli Dutra";
+update dados_cli set cpf="07341310383" where nome = "Thamires de Campos Luz";
+update dados_cli set cpf="33710576822" where nome = "Viviane Mello Bonadia dos Sant";
+update dados_cli set cpf="05045619950" where nome = "Walter Paulo Costenaro";
+update dados_cli set cpf="00201026821" where nome = "Wellington Fabio de Oliveira M";
+
+-- Criar um índice para o CPF
+create index in_nome on dados_cli(cpf);
 
 select * from Clientes where nome = "Cesar Augusto Pascali Rago";
 select * from Telefones where cliente_id = 12;
-
-
 
 DELETE FROM Telefones 
  WHERE cliente_id = 12; 
@@ -717,10 +842,97 @@ select * from vw_pedidos order by pedido_id desc;
 
 
 --18, 22
+select * from Clientes where  nome like "%thamires%";
+--id=96
+select  * from pizzas where nome like "%Vie%";
+--id=41
+insert into pedidos values(null,96,curdate(),curtime(),null);
+insert into itens_pedido values (27,41,1,29.09);
+
+--procedimento 
+drop procedure if exists set_total_pedido;
+create procedure set_total_pedido(id int)
+update pedidos
+set valor = (select sum(quantidade * valor) from itens_pedido where pedido_id = id)
+where pedido_id = id;
+
+--chama aqui|
+call set_total_pedido(27);
+select * from pedidos where pedido_id = 27;
+
+
+
+select * from clientes where  nome like "%Everton%";
+--id=105
+select  * from pizzas where nome like "%Toscana%";
+--id=39 p= 29.41
+insert into pedidos values(null,105,curdate(),curtime(),null);
+insert into itens_pedido values (28,39,2,29.41);
+call set_total_pedido(28);
+select * from pedidos order by pedido_id desc limit 1;
+
+select * from clientes where  nome like "%Silvia Roberta%";
+--id=93
+select  * from pizzas where nome like "%Canadense%";
+select  * from pizzas where nome like "%Cubana%";
+--canadense = 11  p=31.33
+--cubana  = 14  p=30.85
+
+insert into pedidos values(null,93,curdate(),curtime(),null);
+select last_insert_id();
+insert into itens_pedido values (30,11,1,31.33);
+insert into itens_pedido values (30,14,2,30.85);
+call set_total_pedido(30);
+select * from pedidos order by pedido_id desc limit 1;
+
+
+-- Criada uma view para mostrar o resultado do Procedimento  a seguir:
+create view vw_pedidos_itens as
+select  p.pedido_id, c.nome, p.data, p.hora, pz.nome as pizza, i.quantidade, i.valor, p.valor as total
+from pedidos p inner join clientes c on p.cliente_id = c.cliente_id
+inner join itens_pedido i on p.pedido_id = i.pedido_id
+inner join pizzas pz on i.pizza_id = pz.pizza_id;
+
+
+-- Crie uma procedure que receba como parâmetros cliente_id, pizza_id e quantidade e gere um pedido com um item, coloque o nome de "new_pedido_1item()"
+drop procedure if exists new_pedido_1item();
+delimiter //
+create procedure new_pedido_1item(idc int,idp int, qtd int)
+begin
+insert into pedidos value(default,idc,curdate(),curtime(),null);
+set @preco = (select valor from pizzas where pizza_id = idp);
+insert into itens_pedido value(last_insert_id(),idp,qtd,@preco);
+ select * from vw_pedidos_itens  where p.pedido_id = last_insert_id();
+end //
+delimiter ;
+
+call new_pedido_1item(26,2,3)
+-- where p.pedido_id = last_insert_id()
 
 
 
 
+-- Com tratamento de erros e condicionais (ver se o pedido é true or false)
+drop procedure if exists new_pedido_1item;
+delimiter //
+create procedure new_pedido_1item(idc int,idp int,qtd int)
+begin
+	declare erro_sql tinyint default false;
+	declare continue handler for sqlexception set erro_sql = true;
+	insert into pedidos value(default, idc, curdate(), curtime(), null);
+	set @preco = (select valor from pizzas where pizza_id = idp);
+	insert into itens_pedido value(last_insert_id(),idp,qtd,@preco);
+	IF erro_sql = false THEN
+		select * from vw_pedidos_itens where pedido_id = last_insert_id();
+		select 'Pedido cadastrado com sucesso' as 'Sucesso';
+	ELSE
+		select 'Erro ao inserir pedido' as 'Erro';
+	END IF;
+end //
+delimiter ;
+
+--supor que existe para testar
+call new_pedido_1item(200,3,1);
 -- Mostrar todas as tabelas no fim do script
 show tables;
 
