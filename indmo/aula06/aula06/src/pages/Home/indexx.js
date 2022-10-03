@@ -1,16 +1,23 @@
-import { View, Text } from 'react-native';
 
-import style from './style'
-import FiltrarChamados from '../../components/FiltrarChamados/index.js';
-import ListarChamados from '../../components/ListarChamados/index.js';
 
-export default function Home({routes}) {
- 
+
+import React from 'react'
+import { View, Text, TouchableOpacity } from 'react-native'
+import style from './style.js'
+
+export default function Home({ navigation, route }) {
+    const { login, detalhes } = route.params;
     return (
-        <View style={style.container}>
-            <FiltrarChamados />
-            <ListarChamados/>
-            {}
-        </View>
+        <View>
+        <TouchableOpacity style={style.container}>
+            <View>
+                <Text style={{ fontWeight: 'bold' }}>Manutenção de Roteador</Text>
+            </View>
+            <View>
+                <Text style={style.text}>
+                {"Cliente reclamou que está sem internet, pissível troca"}</Text>
+            </View>
+        </TouchableOpacity>
+    </View>
     )
 }

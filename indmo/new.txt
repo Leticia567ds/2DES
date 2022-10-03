@@ -1,0 +1,4 @@
+Press:A FUNÇÃO QUE VOU EXECUTAR
+variável s,b,l,oi,ui.....
+
+nome cargo salario  ---salvar o locl storege formato de  json
