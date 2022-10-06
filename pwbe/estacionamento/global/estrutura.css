@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: #ffffff
+}
+
+aside {
+    width: 15vw;
+    height: 100vh;
+    background-color: #3d84afe1;
+}
+
+ul {
+    list-style: none;
+    /* padding: 20px; */
+    margin: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-size:20px;
+}
+
+ul > li {
+    margin: 15px;
+    /* font-weight: bold; */
+}
+
+main {
+    width: 80vw;
+    height: 100vh;
+    padding: 15px;
+}

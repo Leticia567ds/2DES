@@ -1,0 +1,13 @@
+@import url('/global/estrutura.css');
+h1{
+   text-align: center;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+a:hover{ 
+    color: #fcfcfc;
+    border: 2px solid rgb(95, 238, 95);
+    border-radius:5px;
+}
