@@ -5,11 +5,22 @@ h1{
 table{
     width: 100%;
     margin: 30px;
+    border: 1px solid rgb(75, 232, 243);
+    border-radius: 5px;
+    background-color: rgba(41, 172, 233, 0.815);
 }
 table > tbody > tr > td {
     text-align: center;
      margin: 10px;
      /* padding: 20px; */
+}
+tbody tr:nth-child(odd) {
+  
+    background-color: rgba(255, 255, 255, 0.925);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(131, 164, 172, 0.39);
 }
 
 button{

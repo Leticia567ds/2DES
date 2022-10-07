@@ -93,37 +93,52 @@ Select Year(curdate()) as ano;
 Select month(curdate()) as mes;
 
 
+create view vw_produto as
+select p.Nome_produto, d.Nome_Depto from Produtos p 
+inner join Departamentos d ;
 
 
 select * from Solicitacoes where data_Sol like  "%2018%";
 
-create view vw_pr as 
-select f.Nome_Func,p.Cod_Produto, p.nome_Produto, t.Qtde , t.Valor, t.num_Sol 
-from Funcionarios f 
-inner join Produtos p 
-inner join Itens_Solicitacao t
-on p.Cod_Produto = t.Cod_Produto;
-
-select * from vw_pr order by num_Sol desc;
+select * from vw_produto where Nome_produto like ="%para%";
 
 
-
-select * from produtos;
-select * from Solicitacoes where data_Sol like "%2018%";
+-- select * from produtos;
+-- select * from Solicitacoes where data_Sol like "%2018%";
  
-select * from Produtos where Nome_produto like "%Parafu%";
+-- select * from Produtos where Nome_produto like "%Parafu%";
 
-select * from Produtos where Nome_produto like "%Difu%";
+-- select * from Produtos where Nome_produto like "%Difu%";
 
+
+create view vw_solicitacoes as
+select s.Num_Sol, s.Data_sol , s.Cod_Depto, d.Nome_Depto,
+s.Cod_Func, f.Nome_Func, i.Cod_Produto, p.Nome_produto,
+i.Qtde, i.valor from solicitacoes s
+inner join departamentos d on s.Cod_Depto = d.Cod_Depto
+inner join funcionarios f on s.Cod_Func = f.Cod_Func
+inner join itens_solicitacao i on s.Num_Sol = i.Num_Sol
+inner join produtos p on i.Cod_Produto = p.Cod_Produto
+order by num_sol desc;
 
 drop procedure if exists solicita_um_item;
-create procedure solicita_um_item(n_sol int ,depto varchar,func varchar,prod int,qtd int,total int)
-update Itens_Solicitacao
-set valor = (select sum(quantidade * valor) from Itens_Solicitacao where Num_Sol = n_sol),
-where Num_Sol = n_sol;
+delimiter //
+create procedure solicita_um_item(n_sol int,depto int,func int,prod int,qtd int,total float)
+BEGIN
+	declare erro_sql tinyint default false;
+	declare continue handler for sqlexception set erro_sql = true;
+	insert into Solicitacoes values (n_sol,curdate(),depto,func);
+	insert into Itens_Solicitacao values (n_sol,prod,qtd,total);
+	IF erro_sql = false THEN
+		select * from vw_solicitacoes where Num_Sol = n_sol;
+		select 'Solicitação cadastrada com sucesso' as 'Sucesso';
+	ELSE
+		select 'Erro ao inserir solicitação' as 'Erro';
+	END IF;
+end //
+delimiter ;
 
-call solicita_um_item(1000);
-select * from Itens_Solicitacao where Num_Sol = 1000;
+call solicita_um_item(1055,1000,100,125,1,10);
 
 
 show tables;
