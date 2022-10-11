@@ -42,28 +42,28 @@ select c.id, c.nome_cliente, c.telefone, c.endereco, v.placa as veiculo from cli
 inner join veiculos v
 on c.id = v.placa;
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento/clientes.csv'
+LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/2DES/pwbe/estacionamento/clientes.csv'
 INTO TABLE clientes
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento/veiculo.csv'
+LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/2DES/pwbe/estacionamento/veiculo.csv'
 INTO TABLE veiculos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento/vagas.csv'
+LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/2DES/pwbe/estacionamento/vagas.csv'
 INTO TABLE vagas
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento/entrada.csv'
+LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/2DES/pwbe/estacionamento/entrada.csv'
 INTO TABLE entrada
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'

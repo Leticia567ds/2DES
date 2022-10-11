@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="loadCli()">
     <aside>
         <nav>
             <ul>
@@ -19,29 +19,31 @@
         </nav>
     </aside>
     <main>
-        <button class="cadastrar">Novo Cliente <img class="icone" src="https://cdn-icons-png.flaticon.com/512/666/666201.png"></button>
+        <button class="cadastrar" onclick='abrirModalCadastro()'>Novo Cliente <img class="icone" src="https://cdn-icons-png.flaticon.com/512/666/666201.png"></button>
         <table>
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Nome</th>
                     <th>Endereco</th>
-                    <th>Rua</th>
                     <th>Telefone</th>
                 </tr>
             </thead>
-            <tbody id="lista-produtos">
-                <tr class="linhamodelo model">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <!-- <td> <button>oi</button></td>
-                    <td> <button>oi</button> </td> -->
-                </tr>
-            </tbody>
+                <tbody id="allCli"></tbody>
         </table>
     </main>
+    <div class="modal editar model"> 
+        <div class="modal-content">
+            <button onclick="fecharModalCadastro()"><img class="icone" src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"  alt="Icone de Fechar"> </button>
+         <div class="modal-content-body"> 
+        <input type="text" class="input" id="nome" placeholder="nome">
+        <input type="text"  class="input" id="endereco" placeholder="endereco">
+        <input type="text"  class="input" id="telefone" placeholder="telefone">
+     </div> 
+    <div class="modal-content-footer">
+        <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
+        <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
+    </div>
 </body>
 <script src="index.js"></script>
 </html>

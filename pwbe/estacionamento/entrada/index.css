@@ -1,13 +1,13 @@
-@import url('/global/estrutura.css');
+@import url('/todos/estrutura.css');
 h1{
    text-align: center;
 }
 table{
     width: 100%;
     margin: 30px;
-    border: 1px solid rgb(75, 232, 243);
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: rgba(41, 172, 233, 0.815);
+    background-color: rgba(95, 150, 245, 0.729);
 }
 table > tbody > tr > td {
     text-align: center;
@@ -16,11 +16,12 @@ table > tbody > tr > td {
 }
 tbody tr:nth-child(odd) {
   
-    background-color: rgba(255, 255, 255, 0.925);
+    background-color: #fff;
+
 }
 
 tbody tr:nth-child(even) {
-    background-color: rgba(131, 164, 172, 0.39);
+    background-color: #ddd;
 }
 
 button{
