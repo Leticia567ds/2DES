@@ -1,6 +1,6 @@
 var uriClientes = `http://localhost:5000/estacionamento/clientes`;
 var clientes = [];
-var nom = document.querySelector('#nome')
+var nome = document.querySelector('#nome')
 var end = document.querySelector('#endereco')
 var tel = document.querySelector('#telefone')
 
@@ -38,38 +38,45 @@ function preencheTabela() {
 }
 
 function abrirModalCadastro() {
-    btCadedit.onclick = () => { cadastrar(); }
-    nom.value = "";
-    end.value = "";
-    tel.value = "";
+  
+    btCadedit.onclick = () => { cadastrar()}
+    document.querySelector("#nome").value= "";
+    document.querySelector("#endereco").value="";
+    document.querySelector("#telefone").value= "";
     editar.classList.remove("model");
   }
+
   function fecharModalCadastro(){
     editar.classList.add('model')
   }
+
   function cadastrar(){ 
-    let lanc = {
-        "nome":nom.value,
-        "endereco":end.value,
-        "telefone":tel.value
-  }
-   fetch(uriClientes, {
-      "method":"POST",
-      "headers": {
-          "Content-Type": "application/json"
-      },
-      "body": JSON.stringify(lanc)
-  })
-  .then(res => {return res.json()})
-  .then(resp => {
-      if(resp.id !== undefined){
-          alert("Lancamentos Cadastrado Com Sucesso !");
-          window.location.reload();
-      }else {
-          alert("Falha ao cadastrar Lancamentos");
-      }
-   })
-  }
+    console.log("a");
+    let corpo = {
+        "nome": document.querySelector("#nome").value,
+        "endereco": document.querySelector("#endereco").value,
+        "telefone": document.querySelector("#telefone").value
+    }
+    const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    };
 
-
-
+    options.body = JSON.stringify(corpo);
+    //Faz efetivamente a requisição ao back-end
+    if (corpo.nome.length > 0 && corpo.endereco.length > 0 && corpo.telefone.length > 0) {
+        fetch(uriClientes, options)
+            .then(resp => resp.status)
+            .then(resp => {
+                if (resp == 201) {
+                    window.location.reload();
+                } else {
+                    alerta('Erro ao enviar dados ao Banco de dados:' + resp);
+                    window.location.reload();
+                }
+            })
+            .catch(err => alerta(err));
+    } else {
+        alerta('Preencha os campos obrigatórios');
+    }
+}
