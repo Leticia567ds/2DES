@@ -1,6 +1,6 @@
 var uriClientes = `http://localhost:5000/estacionamento/clientes`;
 var clientes = [];
-var nome = document.querySelector('#nome')
+// var nome = document.querySelector('#nome')
 var end = document.querySelector('#endereco')
 var tel = document.querySelector('#telefone')
 
@@ -53,7 +53,7 @@ function abrirModalCadastro() {
   function cadastrar(){ 
     console.log("a");
     let corpo = {
-        "nome": document.querySelector("#nome").value,
+        "nome_cliente": document.querySelector("#nome").value,
         "endereco": document.querySelector("#endereco").value,
         "telefone": document.querySelector("#telefone").value
     }
@@ -61,22 +61,23 @@ function abrirModalCadastro() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
     };
-
+    
     options.body = JSON.stringify(corpo);
     //Faz efetivamente a requisição ao back-end
-    if (corpo.nome.length > 0 && corpo.endereco.length > 0 && corpo.telefone.length > 0) {
+    if (corpo.nome_cliente.length > 0 && corpo.endereco.length > 0 && corpo.telefone.length > 0) {
         fetch(uriClientes, options)
             .then(resp => resp.status)
             .then(resp => {
                 if (resp == 201) {
+                    console.log(corpo);
                     window.location.reload();
                 } else {
-                    alerta('Erro ao enviar dados ao Banco de dados:' + resp);
+                    alert('Erro ao enviar dados ao Banco de dados:' + resp);
                     window.location.reload();
                 }
             })
             .catch(err => alerta(err));
     } else {
-        alerta('Preencha os campos obrigatórios');
+        alert('Preencha os campos obrigatórios');
     }
 }

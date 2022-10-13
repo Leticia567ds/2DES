@@ -837,9 +837,46 @@ on c.Cliente_id = p.cliente_id;
 
 select * from vw_pedidos order by pedido_id desc;
 -- Se quisessemos somar o total
+create view vw_pedido as
+select p.pedido_id,p.cliente_id, p.data, p.hora,i.quantidade,p.valor
+from pedidos p
+inner join Itens_pedido i 
+on p.pedido_id = i.pedido_id;
+select * from vw_pedido;
 
 
 
+drop procedure if exists insere_pedidos();
+delimiter //
+create procedure insere_pedidos()
+	begin
+	declare erro_sql tinyint default false;
+	declare continue handler for sqlexception set erro_sql = true;
+	start transaction;
+    delete from Pedidos;
+    insert into Pedidos values
+    (default, last_insert_id(), curdate(), curtime(), null);
+    select * from Pedidos;
+    delete from Itens_Pedido;
+    insert into Itens_Pedido values
+    (last_insert_id(), 6, 2, (select valor from Pizzas where pizza_id = 6)),
+    (last_insert_id(), 8, 3, (select valor from Pizzas where pizza_id = 8)),
+    (last_insert_id(), 7, 1, (select valor from Pizzas where pizza_id = 7));
+    update Pedidos set valor=(select sum(quantidade * valor) from Itens_Pedido where pedido_id = last_insert_id()) where pedido_id = last_insert_id();
+    if erro_sql = false then
+  commit;
+			select 'Transação efetivada com sucesso' as Resultado;
+		else
+			rollback;
+			select 'Erro na transação' as Resultado;
+		end if;
+end//
+delimiter ;
+call insere_pedidos();
+
+
+
+select * from Itens_Pedido;
 
 --18, 22
 select * from Clientes where  nome like "%thamires%";
