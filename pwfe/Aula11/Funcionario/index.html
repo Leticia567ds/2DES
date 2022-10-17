@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+<body onload="loadCli()">
+    <aside>
+        <nav>
+            <ul>
+                <li>Departamentos</li>
+                <li>Produtos</li>
+                <li>Solicitacoes</li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <button class="cadastrar" onclick='abrirModalCadastro()'>Novo Cliente <img class="icone" src="https://cdn-icons-png.flaticon.com/512/666/666201.png"></button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cod do departamento</th>
+                    <th>Nome do produto</th>
+                </tr>
+            </thead>
+                <tbody id="sol"></tbody>
+        </table>
+    </main>
+    <!-- <div class="modal editar model"> 
+        <div class="modal-content">
+            <button onclick="fecharModalCadastro()"><img class="icone" src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"  alt="Icone de Fechar"> </button>
+         <div class="modal-content-body"> 
+        <input type="text" class="input" id="nome" placeholder="nome">
+        <input type="text"  class="input" id="endereco" placeholder="endereco">
+        <input type="text"  class="input" id="telefone" placeholder="telefone">
+     </div> 
+    <div class="modal-content-footer">
+        <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
+        <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
+    </div> -->
+</body>
+</html>

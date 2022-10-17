@@ -1,0 +1,4 @@
+listar departamneto
+exluir departamento
+listar e cadastrar produtos
+cadastrar solicitacao
