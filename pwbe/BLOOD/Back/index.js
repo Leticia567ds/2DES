@@ -1,14 +1,14 @@
-
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
-const routes = require('../Back/src/modells/routes');
+const routes = require('./src/routes/routes');
 
-const app = express();
-app.use(express.json());
-app.use(cors());
-app.use(routes);
+const app = express()
+    app.use(express.json())
+    app.use(cors())
+    app.use(routes);
 
-app.listen(5000, () => {
-    console.log("Respondendo na porta 5000");
+app.listen(4000, () => {
+    console.log("Belé");
 });

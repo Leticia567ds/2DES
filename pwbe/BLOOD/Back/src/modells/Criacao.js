@@ -1,27 +1,35 @@
-const toCreate = (dados,file) =>{
-    if (file != null){
-        dados.foto = file.buffer.toString('base64');
-        return `insert into clientes values (default,'${dados.pri_nome}','${dados.login}','${dados.nascimento}','${dados.telefone}','${dados.foto}')`;
-    }else
-     return `insert into clientes values (default,'${dados.pri_nome}','${dados.login}','${dados.nascimento}','${dados.telefone}',null)`;
+const create = (dados) => {
+    return `insert into clientes values ('${dados.login}','${dados.nome}','${dados.nascimento}','${dados.telefone}','${dados.avatar}')`;
 }
 
-const toReadAll = ()=>{
-    return "select * from clientes order by id desc";
+const read = (login) => {
+    return `select * from clientes where login = '${login}'`;
 }
-const toDel = (dados)=>{
-    return `delete from clientes where id = ${dados.id}`
+
+const readAll = () => {
+    return "select * from clientes";
 }
-const toAscii = (dados)=>{
-    dados.forEach(d => {
-        if(d.foto != null) d.foto = d.foto.toString('ascii');
+
+const update = (dados) => {
+    return `update clientes set nome = '${dados.nome}', nascimento = '${dados.nascimento}', telefone = '${dados.telefone}', avatar = '${dados.avatar}' where login ='${dados.login}'`;
+}
+
+const del = (login) => {
+    return `delete from clientes where login = '${login}'`
+}
+
+const blobToAscii = (dados) => {
+    dados.forEach(e => {
+        if (e.avatar != null) e.avatar = e.avatar.toString('ascii');
     });
     return dados;
 }
 
-module.exports={
-    toCreate,
-    toReadAll,
-    toDel,
-    toAscii
+module.exports = {
+    create,
+    readAll,
+    read,
+    update,
+    del,
+    blobToAscii
 }

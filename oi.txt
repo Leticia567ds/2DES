@@ -1,0 +1,10 @@
+
+
+1- cadastre um cliente 
+2-inserir a foto do clinte
+3-aparacer o cadastro e a foto 
+
+
+Multer é um middleware 
+node.js para manipulação de dados multipart/form-data, 
+que é usado principalmente para fazer upload de arquivos. 
