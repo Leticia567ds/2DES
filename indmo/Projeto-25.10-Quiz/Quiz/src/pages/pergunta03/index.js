@@ -37,10 +37,11 @@ export default function Quiz ({ navigation })  {
         onPress={() => setChecked('leticia') }
       />
        </View>
-        <Button title="Next" onPress={() =>{ navigation.navigate("Quiz2")}}/>
+        <Button title="Next" onPress={() =>{ navigation.navigate("Home")}}/>
         </View>
     )
 }
+
 
 const styles = StyleSheet.create({
     container:{
@@ -66,4 +67,3 @@ const styles = StyleSheet.create({
      fontSize: 18,
     }
 });
-
