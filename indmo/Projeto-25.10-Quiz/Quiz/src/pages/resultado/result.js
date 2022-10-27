@@ -1,9 +1,34 @@
-import { View, Text,StyleSheet,Button, TouchableOpacity ,Image} from 'react-native';
-import pergunta01 from './src/pages/pergunta01/index.js';
-import pergunta02 from './src/pages/pergunta02/index.js';
-import pergunta03 from './src/pages/pergunta03/index.js';
+import {useState} from 'react';
+import {View, Text, Button} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
+export default function Final({navigation, route}) {
+    const [resp, setResp] = useState([]);
 
-if('first' === 'second'){
-    <Text>Certo</Text>
+    const gabarito = ["second", "second", "second"];
+
+    const getData = async () => {
+        try {
+            const value = await AsyncStorage.getItem('resp');
+            console.log(value)
+            setResp(value.split(";"));
+        } catch(e) {
+            console.log(e);
+            //error reading value
+        }
+    }
+    if(resp.length === 0) getData();
+
+    return(
+        <View>
+            <Text>Sua pontucao e : {route.params.score}</Text>
+            {
+                resp.map((item, index) => {
+                    return(
+                        <Text key={index}>Questao {index + 1} : {(item === gabarito[index]) ? "Acertou" : "Errou"}</Text>
+                    )
+                })
+            }
+        </View>
+    )
 }

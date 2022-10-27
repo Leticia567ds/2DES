@@ -6,13 +6,16 @@ export default function Quiz ({ navigation })  {
     const [checked, setChecked] = React.useState('first');
     return(
         <View style={styles.container}>
-
             <View  style={styles.Logo}>
             <Image
    style={{width: '200px', height: '200px', border: '5px solid #993399' }}
    source={require('../../../assets/sorrindo.jpg')}/>
            </View>
-            <View><Text  style={styles.texto}>Quantos dentes tem um ser humano na face adulto</Text></View>
+
+        <View>
+            <Text  style={styles.texto}>Quantos dentes tem um ser humano na face adulto</Text>
+        </View>
+
         <View>
         <Text Text  style={styles.texto2}>28</Text>
         <RadioButton
