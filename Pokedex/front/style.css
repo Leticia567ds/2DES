@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-size: 'Oxanium', cursive;
+}
+
+body{
+    text-align: center;
+    background-image: url('./Img/Untitled\ design\ \(1\).png');
+    min-height:100vh;
+    margin-top: 5%;
+}
+
+main{
+  display: inline-block;
+  margin-top: 10%;
+  padding: 15px;
+  position: relative;
+  bottom: 10%;
+}
+
+.poke{
+    width: 100%;
+
+}
+
+.pokemon_image{
+    max-width:180px;
+    position:absolute;
+    bottom:200px;
+    left: 165px;
+}

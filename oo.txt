@@ -1,0 +1,7 @@
+typeof a = ele mostra o que o a é 
+number=)
+Sempre objeto comm const. não muda;
+Só o atributo
+
+palavra = {}
+{palavra:3}
