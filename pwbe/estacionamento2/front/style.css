@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&family=Poppins:wght@400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+     background-color: #2596BE;
+     font-family: 'League Spartan', sans-serif;
+     font-family: 'Poppins', sans-serif;
+     display: flex;
+    align-items: center;
+    flex-direction: column;
+   justify-content: center;
+     
+}
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   justify-content: center;
+}
+#logo{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 20px;
+     width: 35vw;
+}
+#btn{
+    width:2vw;
+    /* height: 5vh; */
+}
+.principal{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(244, 250, 255);
+    width: 40vw;
+    height: 30vh;
+    /* box-shadow: rgba(246, 250, 7, 0.25) 0px 13px 27px -5px, rgba(15, 239, 255, 0.37) 30px 30px 30px -9px; */
+    border-radius: 1vh 1vh 1vh 1vh;
+    margin-right: auto;
+}
+h2{
+    margin: 10px;
+}
+.btn2{
+    display: flex;
+    align-items: flex-start;
+}
+.formulario-adicionarVeiculo p{
+    font-size: 20px;
+    padding-top: 2vh;
+    margin: 10px;
+    font-weight: bold;
+}
+.formulario-adicionarVeiculo input{
+    border-radius: 0.4vw;
+    height: 3vh;
+    width: 20vw;
+    margin-left: .5vh;
+    font-size: 20px;
+    /* letter-spacing: .03vw; */
+    text-indent: 1ch;
+    border: solid .15vw rgba(0, 150, 255, .7);
+}
+.buttonVc{
+   justify-content: center;  
+    border-radius: 1vh;
+    margin:20px;
+    font-size: 1vw;
+    padding-left: 30px;
+    display: flex;
+    
+
+}
+#btnAdicionar{
+ border: none;
+ outline: none;
+}
+
+.btn{
+    color: #fff;
+    background-color: #2f8ada;
+    border-color: #2990eb;
+    height: 5vh;
+    width:5vw;
+    border-radius:10px;
+    box-shadow:rgba(100, 196, 252, 0.911) 0px 3px 10px;
+  
+}
+#btnPrecos{
+    color: #fff;
+    background-color: #2f8ada;
+    border-color: #2990eb;
+    height: 5vh;
+    width:5vw;
+    border-radius:10px;
+    box-shadow:rgba(100, 196, 252, 0.911) 0px 3px 12px;
+}
+.preco{
+    margin: 0 15px;
+}
