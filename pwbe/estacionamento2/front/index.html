@@ -21,10 +21,29 @@
 
         <div class="img2">
             <img id="img" src="../src/img/Parking-amico.png" alt="">
+
+            <div class="tabelaVeiculos">
+                <div class="veiculos">
+                    <table class="tabela-veiculos">
+                        <thead class="campos-veiculo">
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Nome</th>
+                                <th>Placa</th>
+                                <th>Data</th>
+                                <th>Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody class="registros-veiculo" id="registros">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
         </div>
 
         <div class="principal">
-            <h2 id="h2">Entrada de veículos</h2>
+            <h2 id="h2">Procurar veículos</h2>
             <div class="sub">
             <p>Placa:</p>
             <input type="text" id="placa" placeholder="Insira a placa">
@@ -32,35 +51,30 @@
             <input type="password" id="psw" placeholder="Insira seu nome">
 
             <div class="footer">
-                <button>Adicionar</button>
-                <button>Preços</button>
+                <button>Procurar</button>
+                <button onclick='abrirModalCadastro()'>Cadastrar</button>
             </div>
 
         </div>
         <div id="btnRelatorio">
-            <button class="Relatorio1" title="Ver Relatório">Ver Relatório Diário</button>
+            <button class="Relatorio1" title="Ver clientes"><a id="oi" href="clientes/index.html">Clientes</a></button>
+            <button class="Relatorio1" title="Ver Relatório">Registro de entrada</button>
             <button class="Relatorio1" title="Vagas">Vagas disponível</button>
         </div>
           <!-- TABELA DOS VEICULOS -->
-          <div class="tabelaVeiculos">
-            <div class="veiculos">
-                <table class="tabela-veiculos">
-                    <thead class="campos-veiculo">
-                        <tr>
-                            <th>Codigo</th>
-                            <th>Nome</th>
-                            <th>Placa</th>
-                            <th>Data</th>
-                            <th>Hora</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody class="registros-veiculo" id="registros">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
     </main>
+    <div class="modal editar model"> 
+        <div class="modal-content">
+            <button onclick="fecharModalCadastro()"><img class="icone" src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"  alt="Icone de Fechar"> </button>
+         <div class="modal-content-body"> 
+        <input type="text" class="input" id="nome" placeholder="nome">
+        <input type="text"  class="input" id="endereco" placeholder="endereco">
+        <input type="text"  class="input" id="telefone" placeholder="telefone">
+     </div> 
+    <div class="modal-content-footer">
+        <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
+        <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
+    </div>
 </body>
+   <script src="script.js"></script>
 </html>
