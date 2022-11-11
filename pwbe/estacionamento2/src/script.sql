@@ -34,6 +34,12 @@ CREATE TABLE entrada (
 );
 
 
+create view vw_cli as
+select c.nome_cliente, c.endereco, c.telefone, v.tipo, v.placa,
+from clientes c inner join veiculos v
+on c.id_cliente = v.id_veiculo
+
+
 
 LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento2/src/clientes.csv'
 INTO TABLE clientes
@@ -67,6 +73,6 @@ select * from clientes;
 select * from veiculos;
 select * from vagas;
 select * from entrada;
-select * from vw_clientes;
+select * from vw_cli;
 
 

@@ -2,7 +2,8 @@ const Item = require('../models/item');
 const con = require('../models/estacionamentoDAO');
 
 const criarItem = (req, res) => {
-    con.query(Item.toCreateClientes(req.body), (err, result) => {
+    con.query(Item.toCreateClientes(req.body), 
+    con.query (Item.toCreateVeiculos(req.body), (err, result) => {
         if (err == null)
             res.status(201).end();
         else
@@ -10,11 +11,21 @@ const criarItem = (req, res) => {
                 res.status(406).json(err).end();
             else
                 res.status(500).json(err).end();
-    });
+    }));
 }
+
 
 const listarItens = (req, res) => {
     con.query(Item.toReadAllClientes(), (err, result) => {
+        if (err == null)
+            res.json(result).end();
+        else
+            res.status(500).end();
+    });
+}
+
+const listar = (req, res) => {
+    con.query(Item.toReadAllCli(), (err, result) => {
         if (err == null)
             res.json(result).end();
         else
@@ -49,6 +60,7 @@ const excluirItem = (req, res) => {
 module.exports = {
     criarItem,
     listarItens,
+    listar,
     alterarItem,
     excluirItem
 }

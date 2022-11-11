@@ -1,9 +1,16 @@
 const toCreateClientes = (model) => {
     return `INSERT INTO clientes VALUES (DEFAULT,'${model.nome_cliente}','${model.endereco}','${model.telefone}')`;
 }
+const toCreateVeiculos = (model) => {
+    return `INSERT INTO veiculos VALUES (DEFAULT,'${model.placa}','${model.tipo}')`;
+}
 
 const toReadAllClientes = () => {
     return "SELECT * FROM clientes";
+}
+
+const toReadAllCli = () => {
+    return "SELECT * FROM vw_cli";
 }
 
 const toUpdateClientes = (model) => {
@@ -18,9 +25,7 @@ const toDeleteClientes = (model) => {
     return `DELETE FROM clientes WHERE id=${model.id}`;
 }
 
-const toCreateVeiculos = (model) => {
-    return `INSERT INTO veiculos VALUES (DEFAULT,'${model.placa}','${model.tipo}')`;
-}
+
 
 const toReadAllVeiculos = () => {
     return "SELECT * FROM veiculos";
@@ -75,6 +80,7 @@ const toUpdateEntradas = (model) => {
 module.exports = {
     toCreateClientes,
     toReadAllClientes,
+    toReadAllCli,
     toUpdateClientes,
     toDeleteClientes,
     toCreateVeiculos,

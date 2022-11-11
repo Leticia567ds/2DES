@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="loadCli()">
+    <menu>
+    <ul>
+        <li>Home</li>
+    </ul>
+    </menu>
+    <main>
+        <button id="btn" onclick='cadastrarProduto()'>Cadastrar</button>
+        <table>
+        <thead>
+         <th>Foto</th>
+         <th>Nome</th>
+         <th>Descrição</th>
+            </thead>
+                <tbody id="allCli"></tbody>
+        </table>
+
+        <div class="cad model">
+            <div class="cadastrarA model">
+                <input type="text" id="Nome" placeholder="nome">
+                <div class="botoes">
+                    <button id="cancel" onclick="FecharModal()">Cancelar</button>
+                    <button id="confirm">Cadastrar</button>
+                </div>
+            </div>
+    
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>

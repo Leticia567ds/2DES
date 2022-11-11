@@ -12,6 +12,8 @@ function abrirModalCadastro() {
     document.querySelector("#nome").value= "";
     document.querySelector("#endereco").value="";
     document.querySelector("#telefone").value= "";
+    document.querySelector("#tipo").value= "";
+    document.querySelector("#placa").value= "";
     editar.classList.remove("model");
   }
   function fecharModalCadastro(){
@@ -22,7 +24,9 @@ function abrirModalCadastro() {
     let corpo = {
         "nome_cliente": document.querySelector("#nome").value,
         "endereco": document.querySelector("#endereco").value,
-        "telefone": document.querySelector("#telefone").value
+        "telefone": document.querySelector("#telefone").value,
+        "tipo": document.querySelector("#tipo").value,
+        "placa": document.querySelector("#placa").value
     }
     const options = {
         method: 'POST',
@@ -31,13 +35,13 @@ function abrirModalCadastro() {
     
     options.body = JSON.stringify(corpo);
     //Faz efetivamente a requisição ao back-end
-    if (corpo.nome_cliente.length > 0 && corpo.endereco.length > 0 && corpo.telefone.length > 0) {
+    if (corpo.nome_cliente.length > 0 && corpo.endereco.length > 0 && corpo.telefone.length > 0 && corpo.tipo.length > 0 && corpo.placa.length > 0)  {
         fetch(uriClientes, options)
             .then(resp => resp.status)
             .then(resp => {
+                console.log("oi")
                 if (resp == 201) {
-                    console.log(corpo);
-                    window.location.href = "../clientes/index.html";
+                    window.location.href = 'clientes/index.html';
                 } else {
                     alert('Erro no cadastramento:' + resp);
                     window.location.reload();
