@@ -1,5 +1,6 @@
 const Item = require('../models/item');
 const con = require('../models/estacionamentoDAO');
+const conq = require('../controllers/veiculosController')
 
 const criarItem = (req, res) => {
     con.query(Item.toCreateClientes(req.body), 
