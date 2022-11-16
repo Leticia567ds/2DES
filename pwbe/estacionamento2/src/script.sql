@@ -13,7 +13,7 @@ CREATE TABLE clientes (
 CREATE TABLE veiculos (
     id_veiculo  INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_cliente INTEGER NOT NULL,
-    placa VARCHAR(60) NOT NULL UNIQUE,
+    placa VARCHAR(50) NOT NULL UNIQUE,
     tipo VARCHAR(60) NOT NULL,
     foreign key (id_cliente) references clientes(id_cliente)
 
@@ -37,10 +37,24 @@ CREATE TABLE entrada (
 );
 
 
-create view vw_cli as
-select c.nome_cliente, c.endereco, c.telefone, v.tipo, v.placa
+create view vw_clientes as
+select c.id_cliente, c.nome_cliente, c.endereco, c.telefone, v.tipo, v.placa
 from clientes c inner join veiculos v
-on c.id_cliente = v.id_veiculo;
+on c.id_cliente = v.id_cliente;
+
+insert into clientes values(1,"Ana","Varjão","19 9856-765");
+insert into clientes values(2,"Renan","Sertãozinho","19 7756-775");
+insert into clientes values(3,"Yuki","JardimII","19 2756-785");
+
+
+select * from clientes;
+
+insert into veiculos values(1,1,"KCT543","carro");
+insert into veiculos values(2,2,"KPP450","moto");
+insert into veiculos values(3,3,"KTT223","carro");
+
+
+select * from veiculos;
 
 
 -- LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento2/src/clientes.csv'
