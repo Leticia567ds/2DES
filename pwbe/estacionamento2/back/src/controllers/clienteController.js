@@ -47,14 +47,14 @@ const alterarItem = (req, res) => {
 }
 
 const excluirItem = (req, res) => {
-    con.query(Item.toDeleteClientes(req.params), (err, result) => {
+    con.query(Item.toDeleteClientes(req.body), (err, result) => {
         if (err == null)
             if (result.affectedRows > 0)
-                res.status(204).end();
+                res.status(200).end();
             else
                 res.status(404).end();
         else
-            res.status(400).json(err).end();
+            res.status(500).json(err).end();
     });
 }
 

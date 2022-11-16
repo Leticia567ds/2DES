@@ -48,7 +48,7 @@ function abrirModalCadastro() {
                     window.location.reload();
                 }
             })
-            .catch(err => alerta(err));
+            .catch(err => alert(err));
     } else {
         alert('Preencha os campos obrigatórios');
     }

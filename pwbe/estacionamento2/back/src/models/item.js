@@ -22,7 +22,7 @@ const toUpdateClientes = (model) => {
 }
 
 const toDeleteClientes = (model) => {
-    return `DELETE FROM clientes WHERE id=${model.id}`;
+    return `DELETE FROM clientes WHERE id_cliente=${model.id_cliente}`;
 }
 
 
@@ -38,9 +38,9 @@ const toUpdateVeiculos = (model) => {
                 WHERE id = ${model.id}`;
 }
 
-const toDeleteVeiculos = (model) => {
-    return `DELETE FROM veiculos WHERE id=${model.id}`;
-}
+// const toDeleteVeiculos = (model) => {
+//     return ``;
+// }
 
 const toCreateVagas = (model) => {
     return `INSERT INTO vagas VALUES ('${model.id}','${model.disponivel}')`;
@@ -86,7 +86,6 @@ module.exports = {
     toCreateVeiculos,
     toReadAllVeiculos,
     toUpdateVeiculos,
-    toDeleteVeiculos,
     toCreateVagas,
     toReadAllVagas,
     toUpdateVagas,

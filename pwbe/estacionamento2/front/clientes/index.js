@@ -19,6 +19,7 @@ function preencherTabela(){
         let telefone = document.createElement("td");
         let tipo = document.createElement("td");
         let placa = document.createElement("td");
+        let image = document.createElement("img");
         nome.innerHTML = c.nome_cliente;
         endereco.innerHTML = c.endereco;
         telefone.innerHTML = c.telefone;
@@ -32,5 +33,8 @@ function preencherTabela(){
         registros.appendChild(linha);
         indice++;
     } )
+}
+function xMultiImage(){
+ 
 }
 

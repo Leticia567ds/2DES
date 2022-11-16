@@ -12,9 +12,11 @@ CREATE TABLE clientes (
 
 CREATE TABLE veiculos (
     id_veiculo  INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    id_cliente  INTEGER NOT NULL,
+    id_cliente INTEGER NOT NULL,
     placa VARCHAR(60) NOT NULL UNIQUE,
-    tipo VARCHAR(60) NOT NULL
+    tipo VARCHAR(60) NOT NULL,
+    foreign key (id_cliente) references clientes(id_cliente)
+
 );
 
 CREATE TABLE vagas(
@@ -40,40 +42,41 @@ select c.nome_cliente, c.endereco, c.telefone, v.tipo, v.placa
 from clientes c inner join veiculos v
 on c.id_cliente = v.id_veiculo;
 
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/2DES/pwbe/estacionamento2/src/veiculo.csv'
-INTO TABLE veiculos
-FIELDS TERMINATED BY ';'
-ENCLOSED BY '"'
-LINES TERMINATED BY '\r\n'
-IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/2DES/pwbe/estacionamento2/src/clientes.csv'
-INTO TABLE clientes
-FIELDS TERMINATED BY ';'
-ENCLOSED BY '"'
-LINES TERMINATED BY '\r\n'
-IGNORE 1 ROWS;
+-- LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento2/src/clientes.csv'
+-- INTO TABLE clientes
+-- FIELDS TERMINATED BY ';'
+-- ENCLOSED BY '"'
+-- LINES TERMINATED BY '\r\n'
+-- IGNORE 1 ROWS;
+
+-- LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento2/src/veiculo.csv'
+-- INTO TABLE veiculos
+-- FIELDS TERMINATED BY ';'
+-- ENCLOSED BY '"'
+-- LINES TERMINATED BY '\r\n'
+-- IGNORE 1 ROWS;
 
 
 
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/2DES/pwbe/estacionamento2/src/vagas.csv'
-INTO TABLE vagas
-FIELDS TERMINATED BY ';'
-ENCLOSED BY '"'
-LINES TERMINATED BY '\r\n'
-IGNORE 1 ROWS;
+-- LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento2/src/vagas.csv'
+-- INTO TABLE vagas
+-- FIELDS TERMINATED BY ';'
+-- ENCLOSED BY '"'
+-- LINES TERMINATED BY '\r\n'
+-- IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/2DES/pwbe/estacionamento2/src/entrada.csv'
-INTO TABLE entrada
-FIELDS TERMINATED BY ';'
-ENCLOSED BY '"'
-LINES TERMINATED BY '\r\n'
-IGNORE 1 ROWS;
+-- LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/2DES/pwbe/estacionamento2/src/entrada.csv'
+-- INTO TABLE entrada
+-- FIELDS TERMINATED BY ';'
+-- ENCLOSED BY '"'
+-- LINES TERMINATED BY '\r\n'
+-- IGNORE 1 ROWS;
 
-select * from veiculos;
-select * from clientes;
-select * from vagas;
-select * from entrada;
-select * from vw_cli;
+-- select * from veiculos;
+-- select * from clientes;
+-- select * from vagas;
+-- select * from entrada;
+-- select * from vw_cli;
 
 
