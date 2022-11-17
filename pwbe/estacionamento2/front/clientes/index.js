@@ -1,5 +1,8 @@
 var Clientes =  `http://localhost:5000/estacionamento/clientes/view`
+
 var cli = [];
+var editar = document.querySelector('.editar')
+const btCadedit = document.querySelector("#cadastro");
 
 function lendo() {
 
@@ -24,4 +27,45 @@ function lendo() {
         })
 }
 
+function abrirModalCadastro() {
+  
+    btCadedit.onclick = () => {cadastrar()}
+    document.querySelector("#nome").value= "";
+    document.querySelector("#valor").value="";
+    editar.classList.remove("model");
+  }
+  function fecharModalCadastro(){
+    editar.classList.add('model')
+  }
+  
+  function cadastrar(){ 
+    
+    let corpo = {
+        "nome_cliente": document.querySelector("#nome").value,
+        "valor": document.querySelector("#valor").value,
+    }
+    const options = {
+        "method": 'POST',
+        "headers": {"Content-Type": 'application/json' }
+    };
+       options.body = JSON.stringify(corpo);
+   
+    //Faz efetivamente a requisição ao back-end
+
+    if (corpo.nome_cliente != 0 || corpo.valor != 0)  {
+        fetch(entrada, options)
+            .then(resp => resp.status)
+            .then(resp => {
+                if (resp == 201) {
+                    window.location.href = '../Entrada/index.html';
+                } else {
+                    alert('Erro no cadastramento:' + resp);
+                    window.location.reload();
+                }
+            })
+            .catch(err => alert(err));
+    } else {
+        alert('Preencha os campos obrigatórios');
+    }
+}
 

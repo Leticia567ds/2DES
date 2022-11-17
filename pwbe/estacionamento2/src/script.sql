@@ -4,16 +4,18 @@ CREATE DATABASE estacionamento charset=UTF8 collate utf8_general_ci;
 USE estacionamento;
 
 CREATE TABLE clientes (
-    id_cliente INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id INTEGER Not Null PRIMARY KEY AUTO_INCREMENT,
     nome_cliente VARCHAR(50) NOT NULL,
     endereco VARCHAR(60) NOT NULL,
-    telefone VARCHAR(20) NOT NULL UNIQUE
+    telefone VARCHAR(20) NOT NULL 
 );
 
 CREATE TABLE veiculos (
     id_veiculo  INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id INTEGER NOT NULL,
     placa VARCHAR(50) NOT NULL UNIQUE,
-    tipo VARCHAR(60) NOT NULL
+    tipo VARCHAR(60) NOT NULL,
+    foreign key (id) references clientes(id)
 );
 
 CREATE TABLE vagas(
@@ -22,22 +24,25 @@ CREATE TABLE vagas(
 );
 
 CREATE TABLE entrada (
-    id INTEGER  NOT NULL PRIMARY KEY,
-    id_cliente INTEGER NOT NULL,
-    id_veiculo INTEGER NOT NULL,
-    data VARCHAR(15) not null,
-    hora_entrada varchar(15) NOT NULL,
-    hora_saida varchar(15) NOT NULL,
+    id_entrada INTEGER  NOT NULL PRIMARY KEY,
+    id INTEGER NOT NULL,
+    hora_entrada date NOT NULL,
+    hora_saida time NOT NULL,
     valor float(5, 2) not null,
-    foreign key (id_cliente) references clientes(id_cliente),
-    foreign key (id_veiculo) references veiculos(id_veiculo)
+    foreign key (id) references clientes(id)
 );
 
 
 create view vw_client as
-select c.id_cliente, c.nome_cliente, c.endereco, c.telefone, v.tipo, v.placa
+select c.nome_cliente, c.endereco, c.telefone, v.tipo, v.placa
 from clientes c inner join veiculos v
-on c.id_cliente = v.id_veiculo;
+on c.id = v.id;
+
+create view vw_entrada as
+select c.nome_cliente, e.hora_entrada, e.hora_saida, e.valor
+from clientes c inner join entrada e
+on c.id = e.id;
+
 
 insert into clientes values(1,"Ana","Varjão","19 9856-765");
 insert into clientes values(2,"Renan","Sertãozinho","19 7756-775");
@@ -46,12 +51,16 @@ insert into clientes values(3,"Yuki","JardimII","19 2756-785");
 
 select * from clientes;
 
-insert into veiculos values(1,"KCT543","carro");
-insert into veiculos values(2,"KPP450","moto");
-insert into veiculos values(3,"KTT223","carro");
+insert into entrada values(1,1,curdate(),curtime(),20.00);
+select * from entrada;
+
+
+insert into veiculos values(DEFAULT,1,"CCF000","carro");
 
 
 select * from veiculos;
+
+
 
 drop trigger if exists update_valor;
 delimiter //

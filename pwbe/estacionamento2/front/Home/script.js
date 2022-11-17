@@ -14,6 +14,7 @@ function abrirModalCadastro() {
     document.querySelector("#telefone").value= "";
     document.querySelector("#placa").value= "";
     document.querySelector("#tipo").value= "";
+    document.querySelector("#valor").value= "";
     editar.classList.remove("model");
   }
   function fecharModalCadastro(){
@@ -27,7 +28,8 @@ function abrirModalCadastro() {
         "endereco": document.querySelector("#endereco").value,
         "telefone": document.querySelector("#telefone").value,
         "placa": document.querySelector("#placa").value,
-        "tipo": document.querySelector("#tipo").value
+        "tipo": document.querySelector("#tipo").value,
+        "valor": document.querySelector("#valor").value
     }
     const options = {
         "method": 'POST',
@@ -37,12 +39,12 @@ function abrirModalCadastro() {
    
     //Faz efetivamente a requisição ao back-end
 
-    if (corpo.nome_cliente != 0 && corpo.endereco != 0 && corpo.telefone != 0 && corpo.placa != 0 && corpo.tipo != 0)  {
+    if (corpo.nome_cliente != 0 && corpo.endereco != 0 && corpo.telefone != 0 && corpo.placa != 0 && corpo.tipo != 0 || corpo.valor != 0)  {
         fetch(uriClientes, options)
             .then(resp => resp.status)
             .then(resp => {
                 if (resp == 201) {
-                    window.location.href = 'clientes/index.html';
+                    window.location.href = '../clientes/index.html';
                 } else {
                     alert('Erro no cadastramento:' + resp);
                     window.location.reload();

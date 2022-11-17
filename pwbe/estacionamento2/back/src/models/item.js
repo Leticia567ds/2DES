@@ -2,7 +2,11 @@ const toCreateClientes = (model) => {
     return `INSERT INTO clientes VALUES (DEFAULT,'${model.nome_cliente}','${model.endereco}','${model.telefone}')`;
 }
 const toCreateVeiculos = (model) => {
-    return `INSERT INTO veiculos VALUES (DEFAULT,'${model.placa}','${model.tipo}')`;
+    return `INSERT INTO veiculos VALUES (DEFAULT,DEFAULT,'${model.placa}','${model.tipo}')`;
+}
+
+const toCreateEntradas = (model) => {
+    return `INSERT INTO entrada VALUES (DEFAULT,DEFAULT, curdate(),curtime(), ${model.valor} )`;
 }
 
 const toReadAllClientes = () => {
@@ -60,12 +64,12 @@ const toDeleteVagas = (model) => {
     return `DELETE FROM vagas WHERE id=${model.id}`;
 }
 
-const toCreateEntradas = (model) => {
-    return `INSERT INTO entrada VALUES (DEFAULT, ${model.id_cliente}, ${model.id_veiculo}, curdate(), '${model.hora_entrada}', '${model.hora_saida}', ${model.valor} )`;
-}
 
 const toReadAllEntradas = () => {
     return "SELECT * FROM entrada";
+}
+const toReadAl = () => {
+    return "SELECT * FROM vw_entrada";
 }
 
 const toUpdateEntradas = (model) => {
@@ -92,5 +96,6 @@ module.exports = {
     toDeleteVagas,
     toCreateEntradas,
     toReadAllEntradas,
-    toUpdateEntradas
+    toUpdateEntradas,
+    toReadAl
 }

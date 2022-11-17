@@ -14,6 +14,7 @@ router.delete("/estacionamento/clientes/:id", ItemCliente.excluirItem);
 
 router.post("/estacionamento/entrada", ItemEntradas.criarItem);
 router.get("/estacionamento/entrada", ItemEntradas.listarItens);
+router.get("/estacionamento/entrada/v",ItemEntradas.lista);
 router.put("/estacionamento/entrada", ItemEntradas.alterarItem);
 
 router.post("/estacionamento/vagas", ItemVagas.criarItem);

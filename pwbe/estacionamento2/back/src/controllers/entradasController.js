@@ -21,6 +21,14 @@ const listarItens = (req, res) => {
             res.status(500).end();
     });
 }
+const lista = (req, res) => {
+    con.query(Item.toReadAl(), (err, result) => {
+        if (err == null)
+            res.json(result).end();
+        else
+            res.status(500).end();
+    });
+}
 
 const alterarItem = (req, res) => {
     con.query(Item.toUpdateEntradas(req.body), (err, result) => {
@@ -37,5 +45,6 @@ const alterarItem = (req, res) => {
 module.exports = {
     criarItem,
     listarItens,
-    alterarItem
+    alterarItem,
+   lista
 }
