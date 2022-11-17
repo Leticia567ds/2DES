@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,52 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body onload="loadCli()">
-        <div class="veiculos">
-            <table class="tabela-veiculos">
-                <thead class="campos-veiculo">
-                    <tr>
-                        <th>Nome </th>
-                        <th>Endereço </th>
-                        <th>Telefone </th>
-                        <th>Tipo </th>
-                        <th>Placa </th>
-                    </tr>
-                </thead>
-                <tbody class="registros-veiculo" id="registros">
-                </tbody>
-            </table>
+
+<body onload="lendo()">
+    <div class="veiculos model">
+        <table class="tabela-veiculos">
+            <thead class="campos-veiculo">
+                <tr>
+                    <th>Nome </th>
+                    <th>Endereço </th>
+                    <th>Telefone </th>
+                    <th>Tipo </th>
+                    <th>Placa </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="corpinho model">
+                    <td id="a"></td>
+                    <td id="b"></td>
+                    <td id="c"></td>
+                    <td id="d"></td>
+                    <td id="e"></td>
+                    <td><span onclick="apagar()"><img src="../../src/img/remo.png" height="30px"></span></td>
+                    <td><span onclick="apagar()"><img src="https://cdn-icons-png.flaticon.com/512/2874/2874802.png"
+                                height="30px"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="modais">
+            <div id="modalInfo" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Informações</th>
+                            <th align="right"><button class="fechar"
+                                    onclick="modais.setAttribute('style','display:none;')">X</button></th>
+                        </tr>
+                        <tr>
+                            <th>h.Entrada</th>
+                            <th>h.Saida</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="informacoes"></tbody>
+                </table>
+            </div>
         </div>
 </body>
 <script src="index.js"></script>
+
 </html>

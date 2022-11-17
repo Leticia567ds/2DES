@@ -1,0 +1,13 @@
+MVC não é patter
+
+
+IS(MS)
+Apache(linoux)
+
+
+classe abstrata =  só usa para outras classes que a herda, 1Mãe, mas só usa filhos
+Interface = tem metodos, para ser importadosc e não atributo
+
+patter funciona orientado a objeto
+
+condição ?se  _:=else_

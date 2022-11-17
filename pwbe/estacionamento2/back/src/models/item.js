@@ -2,7 +2,7 @@ const toCreateClientes = (model) => {
     return `INSERT INTO clientes VALUES (DEFAULT,'${model.nome_cliente}','${model.endereco}','${model.telefone}')`;
 }
 const toCreateVeiculos = (model) => {
-    return `INSERT INTO veiculos VALUES (DEFAULT,DEFAULT,'${model.placa}','${model.tipo}')`;
+    return `INSERT INTO veiculos VALUES (DEFAULT,'${model.placa}','${model.tipo}')`;
 }
 
 const toReadAllClientes = () => {
@@ -10,7 +10,7 @@ const toReadAllClientes = () => {
 }
 
 const toReadAllCli = () => {
-    return "SELECT * FROM vw_clientes";
+    return "SELECT * FROM vw_client";
 }
 
 const toUpdateClientes = (model) => {
