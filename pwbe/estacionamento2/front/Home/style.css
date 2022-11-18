@@ -196,10 +196,10 @@ main{
 
 .modal{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     position: absolute;
-    top: 9%;
+    top: 0%;
     left: 0%;
     position: fixed;
     width: 100vw;

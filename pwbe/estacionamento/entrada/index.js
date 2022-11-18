@@ -28,7 +28,8 @@ function preencheTabela() {
         Id.innerHTML = e.id;
         Id_cliente.innerHTML = e.id_cliente;
         id_veículo.innerHTML = e.id_veiculo;
-        data2.innerHTML = e.data.split('-').reverse().join('/');;
+        var data = e.data;
+        data2.innerHTML = data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0];
         hr_entrada.innerHTML = e.hora_entrada;
         hr_saida.innerHTML = e.hora_saida;
         valor.innerHTML =e.valor;

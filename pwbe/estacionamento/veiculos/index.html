@@ -31,6 +31,17 @@
             </thead>
             <tbody id="lista_veiculos">
         </table>
+        <div class="modal editar model"> 
+            <div class="modal-content">
+                <button onclick="fecharModalCadastro()"><img class="icone" src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"  alt="Icone de Fechar"> </button>
+             <div class="modal-content-body"> 
+            <input type="text" class="input" id="placa" placeholder="placa">
+            <input type="text"  class="input" id="tipo" placeholder="tipo">
+                     </div> 
+        <div class="modal-content-footer">
+            <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
+            <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
+        </div>
     </main>
 </body>
 <script src="index.js"></script>

@@ -6,7 +6,7 @@ const toCreateVeiculos = (model) => {
 }
 
 const toCreateEntradas = (model) => {
-    return `INSERT INTO entrada VALUES (DEFAULT,DEFAULT, curdate(),curtime(), ${model.valor} )`;
+    return `INSERT INTO entrada VALUES (DEFAULT,DEFAULT, curdate(),curtime(), '${model.valor}')`;
 }
 
 const toReadAllClientes = () => {

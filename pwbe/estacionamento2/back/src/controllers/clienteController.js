@@ -3,8 +3,7 @@ const con = require('../models/estacionamentoDAO');
 const conq = require('../controllers/veiculosController')
 
 const criarItem = (req, res) => {
-    con.query(Item.toCreateClientes(req.body),con.query(Item.toCreateVeiculos(req.body),
-    con.query (Item.toCreateEntradas(req.body), (err, result) => {
+    con.query(Item.toCreateClientes(req.body),(err, result) => {
         if (err == null)
             res.status(201).end();
         else
@@ -12,7 +11,7 @@ const criarItem = (req, res) => {
                 res.status(406).json(err).end();
             else
                 res.status(500).json(err).end();
-    })));
+    });
 }
 
 

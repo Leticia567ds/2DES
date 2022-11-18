@@ -4,7 +4,7 @@ CREATE DATABASE estacionamento charset=UTF8 collate utf8_general_ci;
 USE estacionamento;
 
 CREATE TABLE clientes (
-    id INTEGER Not Null PRIMARY KEY AUTO_INCREMENT,
+    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_cliente VARCHAR(50) NOT NULL,
     endereco VARCHAR(60) NOT NULL,
     telefone VARCHAR(20) NOT NULL 
@@ -15,7 +15,7 @@ CREATE TABLE veiculos (
     id INTEGER NOT NULL,
     placa VARCHAR(50) NOT NULL UNIQUE,
     tipo VARCHAR(60) NOT NULL,
-    foreign key (id) references clientes(id)
+    foreign key(id) references clientes(id)
 );
 
 CREATE TABLE vagas(
@@ -28,10 +28,10 @@ CREATE TABLE entrada (
     id INTEGER NOT NULL,
     hora_entrada date NOT NULL,
     hora_saida time NOT NULL,
-    valor float(5, 2) not null,
-    foreign key (id) references clientes(id)
+    valor VARCHAR(10) not null,
+    foreign key(id) references clientes(id)
 );
-
+ show tables;
 
 create view vw_client as
 select c.nome_cliente, c.endereco, c.telefone, v.tipo, v.placa
