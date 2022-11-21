@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@200;300&family=Merriweather&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Oxanium:wght@200;300&family=Poppins:ital,wght@1,200;1,700&family=Ranga&family=Roboto:wght@400;500&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+body{
+    text-align: center;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    min-height: 100vh;
+}
+
+main{
+    display: inline-block;
+    margin-top: 2%;
+    padding: 15px;
+}
+.pokedex{
+ width: 100%;  
+ max-width: 425px; 
+}
+.pokemon_image{
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-63%,20%);
+    height: 18%;
+}
+.pokedex_data{
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    top: 50.5%;
+    right: 44%;
+    font-size: clamp(8px, 5vw, 25px);
+}
+.pokemon_name{
+    color:#3a444d ;
+    text-transform: capitalize;
+}
+.form{
+    position: absolute;
+    width: 65%;
+    top:59%;
+    left:16.5%
+}
+
+.input_search{
+width: 20%;
+padding: 10px;
+outline: none;
+border: 2px solid #333;
+border-radius: 5px;
+font-weight:600 ;
+color: #3a444d;
+font-size: clamp(8px, 5vw, 1rem);
+box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+}
+.bottons{
+    position: absolute;
+    bottom: 27%;
+    left: 54.4%;
+    width:20%;
+    transform: translate(-58%,0);
+    display: flex;
+    gap: 5px;
+}
+.button{
+    width: 30%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+.button:active{
+   box-shadow: inset -4px 4px 0 #222;
+   font-size: 0.9rem;
+}
+.info{
+    position: absolute;
+    background-color: rgb(255, 253, 253);
+    width: 15%;
+    height: 9%;
+    top:75%;
+    left:31.7%;
+    transform:translate(65%,0);
+}
+.info2{
+    display: flex;
+    color:#131517 ; 
+    text-transform: capitalize;
+    margin-top:10px;
+}
