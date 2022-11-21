@@ -3,7 +3,9 @@ const number = document.querySelector('.pokemon_number')
 const pokemomy = document.querySelector('.pokemon_image');
 const form = document.querySelector('.form');
 const input = document.querySelector('.input_search');
-const aby = document.querySelector('.info2');
+const aby = document.querySelector('.peso');
+const aby2 = document.querySelector('.altura');
+const habili = document.querySelector('.abili');
 const btn =document.querySelector('.btn-prev')
 const btnNext =document.querySelector('.btn-next')
 
@@ -29,9 +31,21 @@ const renderPokemon = async(pokemon) =>{
         pokemonname.innerHTML = data.name;
         number.innerHTML = data.id;
         aby.innerHTML = data.height;
-        pokemomy.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_dafault'];
+        pokemomy.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+        var a = data.height*0.10
+        aby2.innerHTML = a.toFixed(1)
+        aby.innerHTML = data.weight
+        console.log(fetchPokemon)
         input.value = '';
         search = data.id;
+
+
+        habili.innerHTML = data.moves.slice(0,2).map(i => {
+            i.move.name 
+            return i.move.name + '<br>'
+        })
+
+
     }else{
         pokemonname.style.display ='none';
         pokemonname.innerHTML = 'Not Found :(';
