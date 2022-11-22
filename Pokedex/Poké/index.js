@@ -52,6 +52,7 @@ const renderPokemon = async(pokemon) =>{
         number.innerHTML = ''; 
         
     }
+   
 }
 form.addEventListener('submit', (event) =>{
 event.preventDefault();
