@@ -25,7 +25,17 @@ const del = (req, res) => {
 
     });
 }
+
+ const readAll = (req, res) => {
+    con.query(Produto.readAll(), (err, result) => {
+        if (err == null)
+            res.json(result).end();
+        else
+            res.status(500).end();
+    });
+}
 module.exports = {
     create,
-    del
+    del,
+    readAll
 }
