@@ -5,7 +5,7 @@ const PORT = process.env.PORT||3000
 const express = require('express');
 const cors = require('cors');
 
-const Departamento = require('./src/routes/departamento.route')
+const Depar = require('./src/routes/departamento.route')
 // const Produto = require('')
 // const Solicitacao = require('')
 
@@ -14,7 +14,7 @@ const Departamento = require('./src/routes/departamento.route')
 const app = express()
 .use(express.json())
 .use(cors())
-.use('/departamento',Departamento)
+.use('/departamento',Depar)
 
 
 //ligar
