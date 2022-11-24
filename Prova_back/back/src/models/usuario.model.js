@@ -1,5 +1,5 @@
 const create = (model) => {
-    return `INSERT INTO usuario VALUES(DEFAULT,'${model.nome}','${model.email}','${model.senha}')`;
+    return `Select * from usuario nome where email ='${model.email}'`;
 }
 
 const update = (model) => {

@@ -6,7 +6,7 @@ const create = (model) => {
 }
 
 const del = (model) => {
-    return `DELETE FROM carrinho WHERE id_produto = ${model.id_produto}`;
+    return `DELETE FROM carrinho WHERE id_produto =${model.id_produto}`;
 }
 
 module.exports = {

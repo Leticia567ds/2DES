@@ -27,6 +27,7 @@ const listarBuscar = (req, res) => {
 
 const del = (req, res) => {
     con.query(car.del(req.params), (err, result) => {
+        con.query(car.del(req.body), (err, result) => {
         if (err == null)
             if (result.affectedRows > 0)
                 res.status(204).end();
@@ -34,7 +35,7 @@ const del = (req, res) => {
                 res.status(404).end();
         else
             res.status(400).json(err).end();
-    });
+    })});
 }
 
 module.exports = {

@@ -4,7 +4,7 @@ const con = require('../dao/lojinha.dao');
 const create = (req, res) => {
     con.query(User.create(req.body), (err, result) => {
         if (err == null)
-            res.status(201).end();
+            res.status(200).json(result).end();
         else
             if (err.sqlState == 23000)
                 res.status(406).json(err).end();
