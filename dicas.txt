@@ -1,0 +1,9 @@
+minimax
+composite objeto composto
+hdjh
+dhdfjkh{
+dfjdhfjhd
+}
+
+static 
+req.params.id
