@@ -41,4 +41,6 @@ inner join tratamentos t on t.id_consulta = c.id_consulta;
 
 select * from vw_tudo;
 
+UPDATE tratamentos SET id_consulta = 1, tratamento = 's', valor = 100;
+
 show tables;

@@ -7,3 +7,22 @@ dfjdhfjhd
 
 static 
 req.params.id
+
+classe não entra dentro de um: json{
+}
+compisição de dados
+
+Estudar a aula 12
+builder
+vendas.js
+script2.js
+ estudar os metódos de patterns
+
+factory fabrica de objetos
+
+protype varios exemplos
+
+router uso uma vez --> singleton
+
+MVC arquitetura, não um gof patterns,
+é só patterns
