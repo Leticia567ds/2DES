@@ -14,7 +14,7 @@ const Depar = require('./src/routes/departamento.route')
 const app = express()
 .use(express.json())
 .use(cors())
-.use('/departamento',Depar)
+.use(Depar)
 
 
 //ligar

@@ -14,7 +14,7 @@ const create = (req, res) => {
 }
 
 const del = (req, res) => {
-    con.query(Departamento.del(req.params), (err, result) => {
+    con.query(Departamento.del(req.body), (err, result) => {
         if (err == null)
             if (result.affectedRows > 0)
                 res.status(204).end();
@@ -26,12 +26,16 @@ const del = (req, res) => {
     });
 }
 
- const readAll = (req, res) => {
-    con.query(Produto.readAll(), (err, result) => {
+const readAll = (req, res) => {
+    con.query(Departamento.readAll(req.body), (err, result) => {
         if (err == null)
-            res.json(result).end();
+            if (result.affectedRows > 0)
+                res.status(204).end();
+            else
+                res.status(404).end();
         else
-            res.status(500).end();
+            res.status(500).json(err).end();
+
     });
 }
 module.exports = {
