@@ -12,6 +12,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
@@ -20,6 +21,17 @@ header {
     border: 2px solid rgb(244, 217, 217);
 }
 
+.comentarios{
+    background-color:#fff;
+    width:50vw;
+    height: 40vh;
+}
+.comentarios02{
+    margin:15px;
+    background-color:#fff;
+    width:50vw;
+    height: 30vh;
+}
 main {
     background-color: rgb(253, 253, 253);
     width: 20vw;
@@ -57,8 +69,10 @@ button {
 }
 
 #home{
-    width: 35px;
+    width: 33.8px;
 }
+
+
 
 #home2{
     width: 18px;
@@ -76,6 +90,11 @@ h3{
 .info{
     display: flex;
     align-items: center;
+    margin: 15px;
+}
+
+.info > img{
+ width:30px;
 }
 .info > h4{
     margin-left: 10px;
@@ -97,6 +116,8 @@ li{
     margin-bottom: 20px;
     font-size: 1.2vw;
     padding: 10px;
+    font-family: 'Helvetica Neue',cursive;
+
 }
 .li2{
     font-size: 1.0vw;
@@ -115,12 +136,33 @@ li{
     display: none;
     visibility: hidden;
 }
+.linha{
+    border: 1px solid rgb(126, 126, 126);
+}
 
  /* criação do sub menu */
 .sub-menu{
     display: none;
 }
+.fim{
+    margin:10px;
+    display: flex;
+    align-items: center;
+    padding:15px;
+}
 
+.fim  .p{
+ font-size:25px;
+ color: #00bdf7;
+ text-shadow: 0 0 0.2em rgb(50, 223, 236), 0 0 0.2em rgba(87, 178, 206, 0.863);
+}
+.fim h1{
+    padding:10px;
+    font-size:23px;
+  
+}
+
+   
 nav ul li:hover .sub-menu{
     display: block;
     position: flex;

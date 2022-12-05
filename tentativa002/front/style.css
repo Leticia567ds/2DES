@@ -1,0 +1,132 @@
+@import url("https://use.typekit.net/vqp3mgq.css");
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+font-family: 'Poppins', sans-serif;
+background-color:#a8c8f1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(253, 253, 253);
+    height: 70px;
+    border: 2px solid rgba(156, 156, 156, 0.164);
+}
+
+/*==submenu==*/
+.nav{
+    padding: 10px 14px;
+    height: 100vh;
+    width: 17vw;
+    background-color: #fff;
+    background: var(--nav color--)
+}
+
+.nav .text{
+    font-size:17px;
+    font-weight:500;
+}
+
+
+.header-text .name{
+font-weight: 600;
+}
+.header-text .names{
+    color: #0a72b3;
+    text-shadow: 0 0 0.2em rgb(93, 208, 236), 0 0 0.2em rgb(63, 216, 236);
+}
+
+.nav .image-logo img{
+  width: 45px;
+  border-radius: 6px;
+} 
+.nav .image-logo{
+ display: flex;
+ align-items: center;
+  } 
+
+.nav .image-pifa{
+    min-width: 60px;
+    align-items: center;
+}
+
+.nav .toggle{
+  position: absolute;
+  top: 3%;
+  right:-25px;
+  transform: translateY(-50%);
+  height:35px;
+  width: 35px;
+  background-color:#4dd2f3;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  border-radius:50%;
+  color: white;
+  font-size: 25px;
+}
+.nav{
+    position:relative;
+}
+.menu-le .menu-links >li > a{
+    display: flex;
+}
+.nav li{
+    height: 50px;
+    margin-top:10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav li .icon{
+  font-size: 20px;
+}
+
+.nav li .icon,
+.nav li .text{
+    color: black;
+}
+
+
+.nav li a{
+    text-decoration: none;
+}
+/*==header==*/
+.text {
+    display: flex;
+}
+#foto {
+    padding: 0 10px;
+}
+
+.text h2 {
+    color: #0a72b3;
+    text-shadow: 1px 1px #8fd4ff, -1px -1px #5bbcf8;
+    text-shadow: 0 0 0.2em rgb(93, 208, 236), 0 0 0.2em rgb(63, 216, 236);
+    margin-top: 26px;
+
+}
+.btn button {
+    margin: 18px;
+    background-color: rgb(0, 74, 173);
+    text-align: none;
+    color: azure;
+    font-family: 'Nerko One', cursive;
+    height: 3.6vh;
+    width: 7vw;
+    border-radius: 10vh;
+    /* font-weight: bold; */
+    font-size: 1.2vw;
+    border: 1px solid rgb(0, 74, 173);
+
+}
+
+.container {
+    display: flex;
+
+}
