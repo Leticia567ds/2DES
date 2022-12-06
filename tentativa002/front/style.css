@@ -82,9 +82,14 @@ font-weight: 600;
     position:relative;
 }
 
-.menu-le .menu-links >li > a{
+.menu .menu-links >li > a{
     display: flex;
 }
+.menu{
+    display: flex;
+   flex-direction: column;
+}
+
 
 .nav li{
     height: 50px;
@@ -128,6 +133,7 @@ font-weight: 600;
 /*==aba de fechar*/
 .nav.close{
     width: 88px;
+    transition: 1.9s;
 }
 
 .nav.close .texto{
@@ -167,4 +173,35 @@ font-weight: 600;
 .container {
     display: flex;
 
+}
+
+/*==submenus==*/
+
+.sub-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding:10px;
+    /* display: none; */
+}
+
+.sub-menu a{
+    text-decoration: none;
+    color: black;
+}
+.sub-menu a:hover{
+    background-color: #68b9eb5b;
+    border-radius: 2.9px;
+   
+   }
+
+.nav a .dropdow{
+   position:absolute;
+   right: 0;
+   margin:20px;
+   transition: 0.3 ease;
+}
+.nav .sub-menu{
+    background-color:#4dd2f3;
 }
