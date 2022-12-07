@@ -14,7 +14,7 @@ background-color:#a8c8f1;
 header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(253, 253, 253);
+    background-color: rgb(255, 255, 255);
     height: 70px;
     border: 2px solid rgba(156, 156, 156, 0.164);
 }
@@ -104,9 +104,10 @@ font-weight: 600;
     align-items: center;
     justify-content: center;
     min-width:60px;
-  font-size: 20px;
+    font-size: 25px;
 
 }
+
 
 .nav li .icon,
 .nav li .texto{
@@ -128,6 +129,7 @@ font-weight: 600;
 
 .nav li a:hover{
  background-color: #5bbcf8;
+ 
 }
 
 /*==aba de fechar*/
@@ -181,7 +183,7 @@ font-weight: 600;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     padding:10px;
     /* display: none; */
 }
@@ -189,19 +191,91 @@ font-weight: 600;
 .sub-menu a{
     text-decoration: none;
     color: black;
-}
-.sub-menu a:hover{
-    background-color: #68b9eb5b;
-    border-radius: 2.9px;
    
-   }
+}
 
 .nav a .dropdow{
    position:absolute;
-   right: 0;
+   right: 5px;
    margin:20px;
    transition: 0.3 ease;
 }
-.nav .sub-menu{
-    background-color:#4dd2f3;
+.nav
+ .sub-menu{
+    background-color:#68d5f348;
+    /* display: none; */
 }
+
+.nav
+ .sub-menu li a:hover{
+    background-color:#3ccbf371;
+    width:15vw;
+    transition: 0.4 ease;
+    border-radius: 5px;
+    /* display: none; */
+}
+.model{
+    display: none;
+    visibility: hidden;
+}
+.icone{
+    width: 35px;
+}
+.iconew{
+    width: 48px;
+}
+.linha{
+    margin: 15px;
+    border: 1px solid #ccc;
+}
+.icom{
+    width: 10vw;
+}
+
+
+.final  .sub-name{
+    padding:10px;
+    color: #0c7588;
+    text-shadow: 1px 1px #8fd4ff, -1px -1px #5bbcf8;
+    text-shadow: 0 0 0.2em rgb(93, 208, 236), 0 0 0.2em rgb(63, 216, 236);
+
+}
+.final  .name{
+    color: #0c7588;
+    text-shadow: 1px 1px #8fd4ff, -1px -1px #5bbcf8;
+    text-shadow: 0 0 0.2em rgb(93, 208, 236), 0 0 0.2em rgb(63, 216, 236);
+
+}
+.final .sub{
+    font-size:20px ;
+    font-weight:bold
+}
+.final{
+    /* background-color:#4da3f327; */
+    margin:15px;
+}
+
+/*criação de posts*/
+
+
+main{
+position:relative;
+top:20px;
+left: 15%;
+}
+.card{
+position: relative;
+width:55vw;
+height: 400px;
+background-color: #fff;
+box-shadow: 10px 15px 25px rgba(15, 38, 165, 0.1);
+padding:20px;
+}
+.perfil{
+    width: 45px;
+}
+.card .top .user{
+display: flex;
+align-items: center;
+}
+
