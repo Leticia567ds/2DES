@@ -258,46 +258,92 @@ font-weight: 600;
 /*criação de posts*/
 
 
-main{
-position:relative;
-top:20px;
-left: 15%;
+.main{
+display: flex;
+margin-top:30px;
+padding-left: 410px;
 }
+
 .card{
 position: relative;
-width:55vw;
-height: 428px;
+width:35vw;
+height: 460px;
 border-radius: 4px;
 background-color: #fff;
 box-shadow: 10px 15px 25px rgba(15, 38, 165, 0.1);
 padding:20px;
 }
-.perfil{
-    width: 45px;
-}
+
 .card .top .user{
 display: flex;
 align-items: center;
+margin-top: -10px;
+}
+
+.card .top .user .profile_img img{
+position: relative;
+width:40px;
+height:40px;
+margin-right: 8px;
 }
 
 .card .top .user h4{
    font-size: 16px;
    font-weight: 505;
    line-height: 1em;
-    }
-
-span{
-    margin: 10px;
-    font-weight: 505;
-    line-height: 1em;
 }
-.imgBtx .cover
-{
-    position: relative;
+/* .card .top .user h4 span{
+   font-size: 0.em;
+} */
+
+.card .top{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.figura img{
+    display: flex;
+  align-items: center;
+  filter: drop-shadow(5px 5px 5px rgba(39, 212, 243, 0.548));
+}
+.dot{
+    transform: scale(1.8);
+    cursor: pointer;
+}
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 300px;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+}
+.imgBx{
+    position: relative;
+    width:100%;
+    height: 320px;
+    margin:10px 0 15px;
+}
+.imgBx img{
+    border-radius:9px;
+}
+.action{
+    display: flex;
 }
 
+.action img{
+max-width: 34px;
+cursor: pointer;
+}
 
+.action .left img{
+  margin-right:8px;
+}
 
+.likes{
+    font-weight: 500;
+    margin-top:5px;
+    font-size:16px;
+}
