@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/3a2eaf6206.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <main>
+
+
+        <section id="header">
+            <h1>
+                Fórum <span class="forumName">PIFA</span>
+            </h1>
+            <p>Seja <span class="forumName">bem vindo</span> </p>
+        </section>
+
+        <section id="form-login">
+            <div id="formHeader">
+                <h1 style="color: white;">Cadastre <span class="forumName">- se</span></h1>
+            </div>
+            <form action="http://localhost:3000/usuarios/cadastro" method="post" enctype="multipart/form-data" id="align">
+                <input class="inputModel" name="nome"  id="nome" type="text" placeholder="Nome" required>
+                <input class="inputModel" name="email"  id="inpEmail" type="email" placeholder="Email" required>
+                <input type="text" name="role" value="USER" style="display: none;">
+                <input class="inputModel" name="senha" id="inpSenha" type="password" placeholder="Senha" required>
+                <label id="inputTagStyle" for="inputTag">
+                    <span> Selecione uma foto (opcional) </span>
+                    <span class="text">Formatos Permitidos: JPG, JPEG e PNG</span>
+                    <i class="fa fa-2x fa-camera"></i>
+                    <input name="foto" accept="image/jpg, image/jpeg, image/png" onchange="text(this.value)" id="inputTag"
+                        type="file" />
+
+                    <span id="imageName"></span>
+                    <span id="imagePic"></span>
+
+                </label>
+                <button id="btnLogin" type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <img width="300px" src="../assets/Astronauta.png" alt="">
+
+
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>

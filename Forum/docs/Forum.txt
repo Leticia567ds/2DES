@@ -1,0 +1,13 @@
+cadastro de usuario
+criar um topico: {
+	Respostas
+	Respostas de respostas
+ }
+mensagem com subCategorias
+últimas publica��es
+Favoritos: {
+	Usu�rio apenas v� os posts
+	dos seus favoritos
+ }
+
+Opcional: sistema de den�ncias de posts duvidosos

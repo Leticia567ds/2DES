@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  background-color: rgb(20, 20, 20);
+}
+
+#form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px 50px;
+  gap: 50px;
+  width: 500px;
+  height: 400px;
+  background: rgb(0,74,173);
+  border-radius: 20px;
+  margin-top: 200px;
+}
+
+#formHeader {
+  margin-top: -20px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#header {
+  font-size: 30px;
+  color: white;
+  margin: 30px;
+  position: relative;
+}
+
+#align {
+  margin-top: -80px;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+button {
+  margin-top: 50px;
+  outline: none;
+}
+
+input {
+  transition: border 0.2s ease-in-out;
+  border-bottom: 2px solid #ea5fff;
+}
+
+::placeholder {
+  color: rgb(146,224,229);
+  opacity: 1;
+}
+
+input:hover {
+  border-bottom: 2px solid rgb(146,224,229);
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  width: 400px;
+  height: 60px;
+  background: rgb(67,134,223);
+  border-radius: 12px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(146,224,229);
+  scale: 1.05;
+  color: black;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  transition: all 0.2s ease-in-out;
+}
+input:focus {
+  background-color: rgba(67, 135, 223, 0.544);
+  border-radius: 7px;
+  opacity: 0.5;
+}
+.forumName {
+  color: rgb(146,224,229);
+}
+
+img {
+  position: absolute;
+  bottom: 0;
+  margin-left: -200px;
+  width: 600px;
+  height: 600px;
+  z-index: -1;
+}
+
+.text {
+  color: rgba(221, 221, 221, 0.67);
+}
+
+body {
+  background-image: url("../assets/background.png");
+ }
+
+ input, select, textarea{
+  color: #ffffff;
+  font-size: 18px;
+}
+
+textarea:focus, input:focus {
+  color: #d5deff;
+}

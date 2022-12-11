@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://use.fontawesome.com/3a2eaf6206.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body onload="carregar()">
+    <section id="posts">
+        <div class="card model">
+            <div class="cardHeader">
+                <div class="user">
+                    <img id="userImg" style="width: 70px; border-radius: 45px;" class="userImage" src="../assets/download.jpg"
+                        alt="">
+                    <h3 id="nomeUser">Nome</h3>
+                </div>
+                <div>
+                    <h4 id="categoria">Categoria</h4>
+                </div>
+            </div>
+            <div class="cardBody">
+                <h4 id="textoPost">titulo do post</h4>
+                <section class="content">
+                    <img id="imagePost" class="imgPost" src="https://www.collinsdictionary.com/images/full/forest_419496319_1000.jpg"
+                        alt="">
+                </section>
+            </div>
+            <div class="cardFooter">
+                <div class="icon">
+                    <button onclick="like()">
+                        <img class="likeImage" src="../assets/likeEmpty.png" alt="">
+                    </button>
+                    <button class="comments">
+                        <img src="../assets/comment.png" alt="">
+                    </button>
+                </div>
+                <h4 id="dataPost" style="color: black;">Data</h4>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+
+</html>

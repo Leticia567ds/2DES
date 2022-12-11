@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 30px;
+  width: 500px;
+  height: 510px;
+  border-radius: 15px;
+  background-color: rgb(4, 200, 235);
+  color: white;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  width: 97%;
+  justify-content: space-between;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(90deg, rgb(43, 244, 255) 20%, rgb(2, 140, 143));
+  border-image-slice: 80;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 10px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.content {
+  width: fit-content;
+  height: fit-content;
+  margin: 30px;
+}
+
+.model {
+  display: none;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin: 7px;
+  gap: 20px;
+}
+
+.likeImage {
+  width: 35px;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.icon {
+  display: flex;
+}
+
+.post {
+  display: flex;
+  gap: 80px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.comments > img  {
+  width: 25px;
+}
+
+
