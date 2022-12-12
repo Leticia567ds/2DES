@@ -17,7 +17,7 @@ const create = (model) => {
 }
 
 const del = (model) => {
-return `delete from curtidas where id_user = ${model.id_user}`
+return `delete from curtidas where id_user = ${model.id_user} and id_post = ${model.id_post}`
 }
 
 module.exports = {

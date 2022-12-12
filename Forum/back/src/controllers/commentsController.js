@@ -5,7 +5,7 @@ const con = require('../dao/forum')
 const create = (req, res) => {
     con.query(modelos.create(req.body), (err, result) => {
         if (err == null)
-            res.status(201).end()
+            res.status(201).json(result).end()
         else
             if (err.sqlState == 23000)
                 res.status(406).json(err).end()
@@ -36,8 +36,18 @@ const read = (req, res) => {
     })
 }
 
+const readV = (req, res) => {
+    con.query(modelos.lerV(req.body), (err, result) => {
+        if (err == null)
+            res.status(200).json(result).end()
+        else
+            res.status(500).json(err).end()
+    })
+}
+
 module.exports = {
     del,
     create,
-    read
+    read,
+    readV
 }

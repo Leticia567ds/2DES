@@ -1,7 +1,7 @@
 const imgLike = document.querySelector('.likeImage')
 var dadosU = []
 const uriLike = 'http://localhost:3000/curtidas/create'
-const uriDislike = 'http://localhost:3000/curtidas/delete'
+const uriDislike = 'http://localhost:3000/curtidas/del'
 const uriPosts = 'http://localhost:3000/posts/read'
 
 
@@ -13,7 +13,6 @@ function carregar() {
         .then(data => {
 
             dadosU = data
-            console.log(dadosU)
             montaPosts()
         })
         .catch(err => alert("Erro ao carregar dados do BD:" + err));
@@ -63,7 +62,7 @@ const like = () => {
         fetch(uriLike, options)
             .then(resp => { return resp.json() })
             .then(data => {
-                console.log({ msg: 'Liked' })
+                console.log(data)
             })
     } else {
         imgLike.src = '../assets/likeEmpty.png'
@@ -82,7 +81,7 @@ const like = () => {
         fetch(uriDislike, options)
             .then(resp => { return resp.json() })
             .then(data => {
-                console.log({ msg: 'Disliked' })
+                console.log(data)
             })
     }
 

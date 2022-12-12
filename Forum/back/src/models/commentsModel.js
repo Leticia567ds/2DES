@@ -9,9 +9,13 @@ const deletar = (model) => {
 const ler = (model) => {
     return `select * from comentarios where id_post = ${model.id_post}`
 }
+const lerV = (model) => {
+    return `select * from vw_comentarios where id_post = ${model.id_post}`
+}
 
 module.exports = {
     create,
     deletar,
-    ler
+    ler,
+    lerV
 }

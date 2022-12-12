@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body onload="carregar()">
+<body>
     <header>
         <div class="text">
             <img id="foto" src="img/Car_safe__1_-removebg-preview__1_-removebg-preview-removebg-preview.png"
@@ -71,28 +71,15 @@
                                     alt="love">
                             </a></li>
                     </div>
-                    <div class="linha"></div>
                     <div class="menu">
                         <ul class="menu-links">
                             <li class="nav-link">
                                 <a class="sub-btn">
-                                    <i class='bx bxs-cog bx-spin bx-rotate-180 icon' style='color:#474646'></i>
-                                    <span class="texto nav-text">Profile settings
-                                    </span>
+                                    <i class='bx bxs-message-square icon' style='color:#191b1d'></i>
+                                    <span class="texto nav-text">Spoilers</span>
                                 </a>
                             </li>
                         </ul>
-                </ul>
-            </div>
-            <div class="menu">
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a class="sub-btn">
-                            <i class='bx bxs-message-square icon' style='color:#191b1d'></i>
-                            <span class="texto nav-text">Spoilers</span>
-                        </a>
-                    </li>
-                </ul>
                 </ul>
             </div>
             <div class="menu">
@@ -106,10 +93,23 @@
                 </ul>
                 </ul>
             </div>
+            <div class="linha"></div>
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a class="sub-btn">
+                            <i class='bx bxs-cog bx-spin bx-rotate-180 icon' style='color:#474646'></i>
+                            <span class="texto nav-text">Profile settings
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                </ul>
+            </div>
             <div class="final">
                 <span class="texto sub">
-                    Junta-se
-                    <span class="texto sub-name"> Conosco"</span>
+                    Junte-se
+                    <span class="texto sub-name">a nós</span>
                 </span>
                 <img class="texto icom" src="./img/pifou.png" alt="pifa">
             </div>
@@ -118,42 +118,76 @@
         </nav>
         <div class="main">
             <div class="card">
-            <div class="oi modelcard">
-                <div class="top">
-                    <div class="user">
-                        <div class="profile_img">
-                            <img class="perfil" src="./img/imagem de post/perfil.png" alt="perfil">
+                <div class="oi modelcard">
+                    <div class="top">
+                        <div class="user">
+                            <div class="profile_img">
+                                <img class="perfil" src="./img/imagem de post/perfil.png" alt="perfil">
+                            </div>
+                            <span class="idEscondido"></span>
+                            <span class="idEscondidoPost"></span>
+                            <h4>Juliana@<br><span class="textoPost">This is the best movie ever!!!</span></h4>
                         </div>
-                        <h4>Juliana@<br><span class="textoPost">This is the best movie ever!!!</span></h4>
+                        <div>
+                            <h4 class="categoria dot">Categoria</h4>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="categoria dot">Categoria</h4>
+                    <div class="imgBx">
+                        <img src="./img/imagem de post/movie.jpg" class="cover postImage" alt="movie">
                     </div>
-                </div>
-                <div class="imgBx">
-                    <img src="./img/imagem de post/movie.jpg" class="cover" alt="movie">
-                </div>
-                <div class="action">
-                <div class="left">
-                    <img class="heart" src="./img/imagem de post/abre.png"  onclick="like()">
-                    <img src="./img/imagem de post/comment.png" alt="comments">
-                </div>
-                <div class="right">
-                    <h4 id="dataPost" style="color: black;">Data</h4>
-                </div>
-                </div>
-                <h4 class="likes">3,700 likes</h4>
-                <h4 class="comentario">View all 100 mil comentarios</h4>
-                <div class="addcomentarios">
-                  <div class="userImg">
-                    <img class="imf" src="https://cdn-icons-png.flaticon.com/512/4825/4825123.png" >
-                  </div>
-                  <input type="text" class="text" placeholder="Add a comment...">
+                    <div class="action">
+                        <div class="left">
+                            <button onclick="like()">
+                                <img class="heart" src="./img/imagem de post/abre.png">
+                            </button>
+                            <button onclick="abrirModal()">
+                                <img src="./img/imagem de post/comment.png" alt="comments">
+                            </button>
+                        </div>
+                        <div class="right">
+                            <h4 id="dataPost" style="color: black;">Data</h4>
+                        </div>
+                    </div>
+                    <div class="footerCom">
+                        <h4 class="likes">3,700 likes</h4>
+                        <div class="addcomentarios">
+                            <div class="userImg">
+                                <img class="imf" src="https://cdn-icons-png.flaticon.com/512/4825/4825123.png">
+                            </div>
+                            <input  id="inpCom" type="text" class="text" placeholder="Add a comment...">
+                            <button class="send" onclick="enviarCom()"> 
+                                <i class='bx bx-send sendT'></i>
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
+
+    <section class="modal modelModal">
+        <div class="modal_header">
+            <h2>Comentários</h2>
+            <button class="btnFechaModal" onclick="fecharModal()">X</button>
+        </div>
+        <div class="modal_body">
+            <div class="comentarios modelCom">
+                <div class="comHeader">
+                    <img class="imgUserCom" src="img/imagem de post/perfil.png" alt="">
+                    <p class="nomeUserCom">Adriana</p>
+                </div>
+                <div class="comBody">
+                    <p class="textoCom">Legal bacana maneiro</p>
+                </div>
+                <div class="comFooter">
+                    <img class="heart" src="./img/imagem de post/abre.png">
+                    <img src="./img/imagem de post/comment.png" alt="comments">
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="index.js"></script>
 </body>
 

@@ -35,7 +35,7 @@ const del = (req, res) => {
             if (result.affectedRows > 0)
                 res.status(200).json(result).end()
             else
-                res.status(404).end()
+                res.status(404).json(err).end()
         else
             res.status(400).json(err).end()
     })

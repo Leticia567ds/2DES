@@ -54,6 +54,20 @@ create table curtidas(
     foreign key (id_post) references posts (id_post)
 );
 
+drop view if exists vw_comentarios;
+
+create view vw_comentarios as
+select
+    c.id_comment,
+    c.id_post,
+    c.id_user,
+    c.texto,
+    u.nome,
+    u.foto
+from
+    comentarios c
+    inner join usuarios u on c.id_user = u.id_user;
+
 drop view if exists vw_curtidas;
 
 create view vw_curtidas as
