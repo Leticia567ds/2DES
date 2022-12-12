@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body onclick="carregar()">
+<body onload="carregar()">
     <header>
         <div class="text">
             <img id="foto" src="img/Car_safe__1_-removebg-preview__1_-removebg-preview-removebg-preview.png"
@@ -53,7 +53,7 @@
                             <i class='texto bx bx-chevron-right dropdow'></i>
                         </a>
                     </li>
-                    <div class="texto sub-menu model">
+                    <div class="texto sub-menu modelnav">
                         <li><a href="" class="sub-item">Ação
                                 <img class="icone dropdow" src="https://cdn-icons-png.flaticon.com/512/2736/2736136.png"
                                     alt="luta">
@@ -118,7 +118,8 @@
         </nav>
         <div class="main">
             <div class="card">
-                <div class="top model">
+            <div class="oi modelcard">
+                <div class="top">
                     <div class="user">
                         <div class="profile_img">
                             <img class="perfil" src="./img/imagem de post/perfil.png" alt="perfil">
@@ -134,7 +135,7 @@
                 </div>
                 <div class="action">
                 <div class="left">
-                    <img class="heart" src="./img/imagem de post/abre.png"  onclick=" likeButton()">
+                    <img class="heart" src="./img/imagem de post/abre.png"  onclick="like()">
                     <img src="./img/imagem de post/comment.png" alt="comments">
                 </div>
                 <div class="right">
@@ -151,9 +152,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="figura">
-            <img src="./img/Sem_título-removebg-preview.png" alt="pifaaqui">
-        </div> -->
+    </div>
     </div>
     <script src="index.js"></script>
 </body>

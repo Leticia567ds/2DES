@@ -6,6 +6,6 @@ const curtidas = require('../controllers/curtidasController')
 router.get('/read', curtidas.readC)
 router.get('/readId', curtidas.readCById)
 router.post('/create', curtidas.create)
-router.delete('/delete', curtidas.del)
+router.delete('/del', curtidas.del)
 
 module.exports = router

@@ -214,7 +214,7 @@ font-weight: 600;
     border-radius: 5px;
     /* display: none; */
 }
-.model{
+.modelcard{
     display: none;
     visibility: hidden;
 }
@@ -264,7 +264,7 @@ margin-top:30px;
 padding-left: 410px;
 }
 
-.card{
+.oi{
 position: relative;
 width:35vw;
 height: 540px;
@@ -274,29 +274,33 @@ box-shadow: 10px 15px 25px rgba(15, 38, 165, 0.1);
 padding:20px;
 }
 
-.card .top .user{
+.oi .top .user{
 display: flex;
 align-items: center;
 margin-top: -10px;
 }
 
-.card .top .user .profile_img img{
+.oi .top .user .profile_img img{
 position: relative;
 width:40px;
 height:40px;
 margin-right: 8px;
 }
 
-.card .top .user h4{
+.oi .top .user h4{
    font-size: 16px;
    font-weight: 505;
    line-height: 1em;
+}
+.modelnav{
+    display: none;
+    visibility: hidden;
 }
 /* .card .top .user h4 span{
    font-size: 0.em;
 } */
 
-.card .top{
+.oi .top{
     display: flex;
     justify-content:space-between;
     align-items:center;
