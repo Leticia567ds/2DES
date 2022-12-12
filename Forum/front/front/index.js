@@ -17,22 +17,21 @@ function carregar() {
         .then(data => {
 
             dadosU = data
-            console.log(dadosU)
-             montarPosts();
+             montarPosts()
         })
         .catch(err => alert("Erro ao carregar dados do BD:" + err));
 }
 
 function montarPosts() {
     dadosU.forEach(e => {
-        let modelClone = document.querySelector('.card').cloneNode(true)
+        let modelClone = document.querySelector('.top').cloneNode(true)
        
         modelClone.classList.remove('model');
         if (e.content_image != null) {
             modelClone.querySelector('.perfil').src = e.content_image
         }
         modelClone.querySelector('#dataPost').innerHTML = e.data.split("T")[0]
-        modelClone.querySelector('#categoria').innerHTML = e.categoria
+        modelClone.querySelector('.categoria').innerHTML = e.categoria
         modelClone.querySelector('.textoPost').innerHTML = e.conteudo
 
         document.querySelector('.main').appendChild(modelClone)

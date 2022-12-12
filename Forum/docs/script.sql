@@ -72,7 +72,7 @@ values
     (
         default,
         "Convidado",
-        "convidadom@gmail.com",
+        "convidadoy@gmail.com",
         "1234",
         "CONVIDADO",
         null
@@ -86,7 +86,7 @@ values
         "Ana",
         "Ana@gmail.com",
         "4321",
-        "ADMIN"
+        "ADMIN",
         null
     );
 
