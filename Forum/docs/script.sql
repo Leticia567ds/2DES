@@ -68,6 +68,17 @@ from
     comentarios c
     inner join usuarios u on c.id_user = u.id_user;
 
+    create view vw_sub_Comen as
+select
+    c.id_sub_com,
+    c.id_comment,
+    c.texto,
+    u.nome,
+    u.foto
+from
+    sub_comments c
+    inner join usuarios u on c.id_user = u.id_user;
+
 drop view if exists vw_curtidas;
 
 create view vw_curtidas as

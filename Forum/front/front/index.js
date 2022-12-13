@@ -2,7 +2,9 @@ const container = document.querySelector(".container")
 nav = container.querySelector(".nav")
 toggle = container.querySelector(".toggle")
 sub_menu = container.querySelector(".sub-menu")
+
 dropdow = container.querySelector(".dropdow")
+
 
 
 
@@ -14,6 +16,18 @@ const uriCom = 'http://localhost:3000/comments/vw_com'
 const uriLike = 'http://localhost:3000/curtidas/create'
 const uriDislike = 'http://localhost:3000/curtidas/del'
 const uriComPost = 'http://localhost:3000/comments/create'
+
+
+
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("close")
+})
+
+dropdow.addEventListener("click", () => {
+    sub_menu.classList.toggle("modelnav")
+})
+
 
 
 
@@ -85,6 +99,22 @@ function montaCom() {
     })
 }
 
+
+function montasubCom() {
+    dadosP.forEach(e => {
+        let modelClone = document.querySelector('.sb_menu').cloneNode(true)
+        modelClone.classList.remove('modelbtmenu')
+
+        if (e.foto != null) {
+            modelClone.querySelector('.imgUser').src = montaImg(e.foto)
+        }
+        modelClone.querySelector('.say').innerHTML = e.texto
+        modelClone.querySelector('.nomeUser').innerHTML = e.nome
+
+        document.querySelector('.modal_body').appendChild(modelClone)
+    })
+}
+
 // function montaComentario() {
 //     dadosU.forEach(e => {
 //         let modelClone = document.querySelector('.comentarios').cloneNode(true)
@@ -106,16 +136,8 @@ function montaImg(img) {
 
 
 
-toggle.addEventListener("click", () => {
-    nav.classList.toggle("close")
-})
-
-dropdow.addEventListener("click", () => {
-    sub_menu.classList.toggle("modelnav")
-})
-
 // function likeButton(){
-//     let heart = document.querySelector(".heart");
+//     let heart = document.querySelector(".hear");
 //     let likes = document.querySelector(".likes");
 //     if(heart.src.match("abre.png") ){
 //         heart.src = "./img/imagem de post/heart.png";
@@ -129,51 +151,51 @@ dropdow.addEventListener("click", () => {
 // }
 
 
-const like = () => {
+// const like = () => {
 
-    if (likeImg.src.split('/')[7] == 'abre.png') {
-        likeImg.src = 'img/imagem de post/heart.png'
+//     if (likeImg.src.split('/')[7] == 'abre.png') {
+//         likeImg.src = 'img/imagem de post/heart.png'
 
-        let form = {
-            'id_user': 2,
-            'id_post': 1
-        }
+//         let form = {
+//             'id_user': 2,
+//             'id_post': 1
+//         }
 
-        var options = {
-            'method': 'POST',
-            'headers': {
-                'Content-Type': 'application/json'
-            },
-            'body': JSON.stringify(form)
-        }
-        fetch(uriLike, options)
-            .then(resp => { return resp.json() })
-            .then(data => {
-                console.log(data)
-            })
-    } else {
-        likeImg.src = 'img/imagem de post/abre.png'
-        console.log(likeImg);
-        let form = {
-            'id_user': 2,
-            'id_post': 1,
-        }
+//         var options = {
+//             'method': 'POST',
+//             'headers': {
+//                 'Content-Type': 'application/json'
+//             },
+//             'body': JSON.stringify(form)
+//         }
+//         fetch(uriLike, options)
+//             .then(resp => { return resp.json() })
+//             .then(data => {
+//                 console.log(data)
+//             })
+//     } else {
+//         likeImg.src = 'img/imagem de post/abre.png'
+//         console.log(likeImg);
+//         let form = {
+//             'id_user': 2,
+//             'id_post': 1,
+//         }
 
-        var options = {
-            'method': 'DELETE',
-            'headers': {
-                'Content-Type': 'application/json'
-            },
-            'body': JSON.stringify(form)
-        }
-        fetch(uriDislike, options)
-            .then(resp => { return resp.json() })
-            .then(data => {
-                console.log(data)
-            })
-    }
+//         var options = {
+//             'method': 'DELETE',
+//             'headers': {
+//                 'Content-Type': 'application/json'
+//             },
+//             'body': JSON.stringify(form)
+//         }
+//         fetch(uriDislike, options)
+//             .then(resp => { return resp.json() })
+//             .then(data => {
+//                 console.log(data)
+//             })
+//     }
 
-}
+// }
 
 const abrirModal = () => {
     document.querySelector('.modal').classList.remove('modelModal')

@@ -13,6 +13,7 @@ body {
   display: none;
 }
 
+
 header {
   display: flex;
   justify-content: space-between;
@@ -206,6 +207,12 @@ header {
   display: none;
   visibility: hidden;
 }
+
+.modelbtmenu {
+  display: none;
+  visibility: hidden;
+}
+
 .icone {
   width: 35px;
 }
@@ -447,8 +454,20 @@ header {
 }
 
 .comFooter {
+  display: flex;
   border-bottom: 1px solid black;
   width: 94%;
+}
+
+.comFooter button{
+  width: 20px;
+  border: none;
+  outline: none;
+  background:none;
+  cursor: pointer;
+}
+.comFooter img{
+  width: 20px;
 }
 
 .comHeader {
@@ -472,4 +491,22 @@ header {
 .footerCom > i {
     display: flex;
     flex-direction: column;
+}
+
+.sb_menu > .heart {
+  width: 20px;
+}
+.sb_menu > .comBy{
+  display: flex;
+  align-items: center;
+}
+.sb_menu{
+  margin: 10px;
+}
+
+.sb_menu > .comentario {
+  width: 20px;
+}
+.comBy > .imgUser{
+  width: 30px;
 }

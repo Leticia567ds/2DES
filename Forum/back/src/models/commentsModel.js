@@ -12,10 +12,14 @@ const ler = (model) => {
 const lerV = (model) => {
     return `select * from vw_comentarios where id_post = ${model.id_post}`
 }
+const lerF = (model) => {
+    return `select * from vw_vw_sub_Comen where id_comment = ${model.id_comment}`
+}
 
 module.exports = {
     create,
     deletar,
     ler,
-    lerV
+    lerV,
+    lerF
 }

@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #a8c8f1;
+}
+.scare{
+    position: absolute;
+    top: 10%;
+    right: 29%;
+    background-color: #fff;
+    width: 50vw;
+    height: 20vh;
+}

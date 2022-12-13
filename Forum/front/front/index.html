@@ -74,7 +74,7 @@
                     <div class="menu">
                         <ul class="menu-links">
                             <li class="nav-link">
-                                <a class="sub-btn">
+                                <a href="./criticas/index2.html" class="sub-btn">
                                     <i class='bx bxs-message-square icon' style='color:#191b1d'></i>
                                     <span class="texto nav-text">Spoilers</span>
                                 </a>
@@ -137,8 +137,8 @@
                     </div>
                     <div class="action">
                         <div class="left">
-                            <button onclick="like()">
-                                <img class="heart" src="./img/imagem de post/abre.png">
+                            <button onclick='likeButton()'>
+                                <img class="hear" src="./img/imagem de post/abre.png">
                             </button>
                             <button onclick="abrirModal()">
                                 <img src="./img/imagem de post/comment.png" alt="comments">
@@ -155,7 +155,7 @@
                                 <img class="imf" src="https://cdn-icons-png.flaticon.com/512/4825/4825123.png">
                             </div>
                             <input  id="inpCom" type="text" class="text" placeholder="Add a comment...">
-                            <button class="send" onclick="enviarCom()"> 
+                            <button class="send" onclick='enviarCom()'> 
                                 <i class='bx bx-send sendT'></i>
                             </button>
                         </div>
@@ -183,7 +183,19 @@
                 </div>
                 <div class="comFooter">
                     <img class="heart" src="./img/imagem de post/abre.png">
-                    <img src="./img/imagem de post/comment.png" alt="comments">
+                <button onclick="montasubCom()">
+                    <img  src="./img/imagem de post/comment.png" alt="comments">
+                 </button>
+
+                 <div class="sb_menu modelbtmenu">
+                    <div class="comBy">
+                       <img class="imgUser" src="https://cdn-icons-png.flaticon.com/512/4825/4825123.png" alt="">
+                       <p class="nomeUser">João</p>
+                   </div>
+                       <p class="say">Legal bacana maneiro</p>
+                       <img class="heart" src="./img/imagem de post/abre.png">
+                     <img  class="comentario" src="./img/imagem de post/comment.png" alt="comments">
+                   </div>
                 </div>
             </div>
         </div>
