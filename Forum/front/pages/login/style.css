@@ -23,7 +23,7 @@ body {
   padding: 60px 50px;
   gap: 50px;
   width: 500px;
-  height: 400px;
+  height: 500px;
   background: rgb(0,74,173);
   border-radius: 20px;
   margin-top: 200px;
@@ -124,7 +124,7 @@ img {
 }
 
 body {
-  background-image: url("../assets/background.png");
+  background-image: url("../../assets/background.png");
  }
 
  input, select, textarea{
@@ -134,4 +134,25 @@ body {
 
 textarea:focus, input:focus {
   color: #d5deff;
+}
+
+#btRedirect {
+  border: 1px solid black;
+  width: 300px;
+  height: 0px;
+  outline: none;
+  background: none;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+span {
+  transition: all 0.2s ease-in-out;
+}
+
+span:hover {
+  scale: 1.05;
+  color: rgb(146, 224, 229);
 }

@@ -44,19 +44,11 @@ const readV = (req, res) => {
             res.status(500).json(err).end()
     })
 }
-const readF = (req, res) => {
-    con.query(modelos.lerF(req.body), (err, result) => {
-        if (err == null)
-            res.status(200).json(result).end()
-        else
-            res.status(500).json(err).end()
-    })
-}
+
 
 module.exports = {
     del,
     create,
     read,
-    readV,
-    readF
+    readV
 }

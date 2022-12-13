@@ -11,7 +11,7 @@ const deletar = (model) => {
 }
 
 const ler = () => {
-    return 'select * from posts'
+    return 'select * from vw_posts'
 }
 
 const toAscii = (dados) => {

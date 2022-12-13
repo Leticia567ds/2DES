@@ -23,7 +23,7 @@ body {
   padding: 60px 50px;
   gap: 50px;
   width: 500px;
-  height: 555px;
+  height: 600px;
   background: rgb(0, 74, 173);
   border-radius: 20px;
   margin-top: 200px;
@@ -76,8 +76,6 @@ label {
   opacity: 1;
 }
 
-
-
 i {
   margin: 0;
   padding: 0;
@@ -118,7 +116,7 @@ img {
 }
 
 body {
-  background-image: url("../assets/background.png");
+  background-image: url("../../assets/background.png");
 }
 
 .inputModel,
@@ -161,4 +159,26 @@ textarea:focus,
   scale: 1.05;
   color: black;
   background-color: rgb(146,224,229);
+}
+
+
+#btRedirect {
+  border: 1px solid black;
+  width: 200px;
+  height: 50px;
+  outline: none;
+  background: none;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+span {
+  transition: all 0.2s ease-in-out;
+}
+
+span:hover {
+  scale: 1.05;
+  color: rgb(146, 224, 229);
 }

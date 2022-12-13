@@ -8,7 +8,7 @@ const login = () => {
         "email": inpEmail.value,
         "senha": inpSenha.value
     }
-
+   
     var options = {
         'method': 'POST',
         'headers': {
@@ -19,15 +19,19 @@ const login = () => {
     fetch(uriLogin, options)
         .then(resp => { return resp.json() })
         .then(data => {
-            
+           console.log(data);
             if (inpEmail.value.length !== 0 || inpSenha.value.length !== 0)
                 if (data != null) {
                     localStorage.setItem("token", data.token)
-                    // window.location.href = "../home/index.html"
+                    window.location.href = "../home/index.html"
                 } else {
                     alert('Usuário não encontrado')
                 }
             else
                 alert('Preencha todas as informações')
         })
+}
+
+function redirectToCadastro() {
+    window.location.href = '../cadastro/index.html'
 }

@@ -25,27 +25,33 @@
             <div id="formHeader">
                 <h1 style="color: white;">Cadastre <span class="forumName">- se</span></h1>
             </div>
-            <form action="http://localhost:3000/usuarios/cadastro" method="post" enctype="multipart/form-data" id="align">
-                <input class="inputModel" name="nome"  id="nome" type="text" placeholder="Nome" required>
-                <input class="inputModel" name="email"  id="inpEmail" type="email" placeholder="Email" required>
+            <form action="http://localhost:3000/usuarios/cadastro" method="post" enctype="multipart/form-data"
+                id="align">
+                <input class="inputModel" name="nome" id="nome" type="text" placeholder="Nome" required>
+                <input class="inputModel" name="email" id="inpEmail" type="email" placeholder="Email" required>
                 <input type="text" name="role" value="USER" style="display: none;">
                 <input class="inputModel" name="senha" id="inpSenha" type="password" placeholder="Senha" required>
                 <label id="inputTagStyle" for="inputTag">
                     <span> Selecione uma foto (opcional) </span>
                     <span class="text">Formatos Permitidos: JPG, JPEG e PNG</span>
                     <i class="fa fa-2x fa-camera"></i>
-                    <input name="foto" accept="image/jpg, image/jpeg, image/png" onchange="text(this.value)" id="inputTag"
-                        type="file" />
+                    <input name="foto" accept="image/jpg, image/jpeg, image/png" onchange="text(this.value)"
+                        id="inputTag" type="file" />
 
                     <span id="imageName"></span>
-                    <span id="imagePic"></span>
 
                 </label>
                 <button id="btnLogin" type="submit">Cadastrar</button>
+                <div style="display: flex; flex-direction: column; align-items: center;"> 
+                    <h2 style=" color: white;margin-top: 4px;">Já é um <span class="forumName">PIFANO?</span></h2>
+                    <button onclick="redirectToLogin()" id="btRedirect">
+                        <span style="font-size: 17px;" class="text">Entre na sua conta</span>
+                    </button>
+                </div>
             </form>
         </section>
 
-        <img width="300px" src="../assets/Astronauta.png" alt="">
+        <img src="../../assets/Astronauta.png" alt="Astronauta">
 
 
     </main>

@@ -5,7 +5,7 @@ create database forum charset = UTF8 collate utf8_general_ci;
 use forum;
 
 create table usuarios(
-    id_user integer(1) not null primary key auto_increment,
+    id_user integer not null primary key auto_increment,
     nome varchar(50) not null,
     email varchar(30) not null unique,
     senha varchar(20) not null,
@@ -68,7 +68,7 @@ from
     comentarios c
     inner join usuarios u on c.id_user = u.id_user;
 
-    create view vw_sub_Comen as
+create view vw_sub_Comen as
 select
     c.id_sub_com,
     c.id_comment,
@@ -91,6 +91,21 @@ from
     curtidas c
     inner join posts p on p.id_post = c.id_post;
 
+drop view vw_posts;
+create view vw_posts as
+select
+    p.id_user,
+    p.id_post,
+    p.categoria,
+    u.nome,
+    p.data,
+    p.conteudo,
+    p.content_image,
+    u.foto
+from
+    posts p
+    inner join usuarios u on p.id_user = u.id_user;
+    
 insert into
     usuarios
 values

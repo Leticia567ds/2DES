@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
     <header>
         <div class="text">
-            <img id="foto" src="img/Car_safe__1_-removebg-preview__1_-removebg-preview-removebg-preview.png"
+            <img id="foto" src="../img/Car_safe__1_-removebg-preview__1_-removebg-preview-removebg-preview.png"
                 alt="imagem">
             <h2>PIFA"</h2>
         </div>
@@ -25,7 +25,7 @@
         <nav class="nav close">
             <div class="image-logo">
                 <span class="image-pifa">
-                    <img src="./img/Pifa.png" alt="Pifa">
+                    <img src="../img/Pifa.png" alt="Pifa">
                 </span>
                 <div class="texto header-text">
                     <span class="name">
@@ -74,7 +74,7 @@
                     <div class="menu">
                         <ul class="menu-links">
                             <li class="nav-link">
-                                <a href="./criticas/index2.html" class="sub-btn">
+                                <a href="../criticas/index2.html" class="sub-btn">
                                     <i class='bx bxs-message-square icon' style='color:#191b1d'></i>
                                     <span class="texto nav-text">Spoilers</span>
                                 </a>
@@ -99,7 +99,7 @@
                     <li class="nav-link">
                         <a class="sub-btn">
                             <i class='bx bxs-cog bx-spin bx-rotate-180 icon' style='color:#474646'></i>
-                            <span class="texto nav-text">Profile settings
+                            <span class="texto nav-text">Configurações de Perfil
                             </span>
                         </a>
                     </li>
@@ -111,37 +111,38 @@
                     Junte-se
                     <span class="texto sub-name">a nós</span>
                 </span>
-                <img class="texto icom" src="./img/pifou.png" alt="pifa">
+                <img class="texto icom" src="../img/pifou.png" alt="pifa">
             </div>
             <div class="linha"></div>
             <div>
         </nav>
-        <div class="main">
+        <main>
             <div class="card">
-                <div class="oi modelcard">
+                <div class="oi">
                     <div class="top">
                         <div class="user">
                             <div class="profile_img">
-                                <img class="perfil" src="./img/imagem de post/perfil.png" alt="perfil">
+                                <img class="perfil" src="../img/imagem de post/perfil.png" alt="perfil">
                             </div>
                             <span class="idEscondido"></span>
                             <span class="idEscondidoPost"></span>
-                            <h4>Juliana@<br><span class="textoPost">This is the best movie ever!!!</span></h4>
+                            <h4 class="userNome">Juliana@<br><span class="textoPost">This is the best movie
+                                    ever!!!</span></h4>
                         </div>
                         <div>
                             <h4 class="categoria dot">Categoria</h4>
                         </div>
                     </div>
                     <div class="imgBx">
-                        <img src="./img/imagem de post/movie.jpg" class="cover postImage" alt="movie">
+                        <img src="../img/imagem de post/movie.jpg" class="cover postImage" alt="movie">
                     </div>
                     <div class="action">
                         <div class="left">
-                            <button onclick='likeButton()'>
-                                <img class="hear" src="./img/imagem de post/abre.png">
+                            <button onclick='like()'>
+                                <img class="hear" src="../img/imagem de post/abre.png">
                             </button>
                             <button onclick="abrirModal()">
-                                <img src="./img/imagem de post/comment.png" alt="comments">
+                                <img src="../img/imagem de post/comment.png" alt="comments">
                             </button>
                         </div>
                         <div class="right">
@@ -154,8 +155,8 @@
                             <div class="userImg">
                                 <img class="imf" src="https://cdn-icons-png.flaticon.com/512/4825/4825123.png">
                             </div>
-                            <input  id="inpCom" type="text" class="text" placeholder="Add a comment...">
-                            <button class="send" onclick='enviarCom()'> 
+                            <input id="inpCom" type="text" class="text" placeholder="Add a comment...">
+                            <button class="send" onclick='enviarCom()'>
                                 <i class='bx bx-send sendT'></i>
                             </button>
                         </div>
@@ -163,7 +164,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 
 
@@ -175,27 +176,27 @@
         <div class="modal_body">
             <div class="comentarios modelCom">
                 <div class="comHeader">
-                    <img class="imgUserCom" src="img/imagem de post/perfil.png" alt="">
+                    <img class="imgUserCom" src="../img/imagem de post/perfil.png" alt="">
                     <p class="nomeUserCom">Adriana</p>
                 </div>
                 <div class="comBody">
                     <p class="textoCom">Legal bacana maneiro</p>
                 </div>
                 <div class="comFooter">
-                    <img class="heart" src="./img/imagem de post/abre.png">
-                <button onclick="montasubCom()">
-                    <img  src="./img/imagem de post/comment.png" alt="comments">
-                 </button>
+                    <img class="heart" src="../img/imagem de post/abre.png">
+                    <button onclick="montasubCom()">
+                        <img src="../img/imagem de post/comment.png" alt="comments">
+                    </button>
 
-                 <div class="sb_menu modelbtmenu">
-                    <div class="comBy">
-                       <img class="imgUser" src="https://cdn-icons-png.flaticon.com/512/4825/4825123.png" alt="">
-                       <p class="nomeUser">João</p>
-                   </div>
-                       <p class="say">Legal bacana maneiro</p>
-                       <img class="heart" src="./img/imagem de post/abre.png">
-                     <img  class="comentario" src="./img/imagem de post/comment.png" alt="comments">
-                   </div>
+                    <div class="sb_menu modelbtmenu">
+                        <div class="comBy">
+                            <img class="imgUser" src="https://cdn-icons-png.flaticon.com/512/4825/4825123.png" alt="">
+                            <p class="nomeUser">João</p>
+                        </div>
+                        <p class="say">Legal bacana maneiro</p>
+                        <img class="heart" src="../img/imagem de post/abre.png">
+                        <img class="comentario" src="../img/imagem de post/comment.png" alt="comments">
+                    </div>
                 </div>
             </div>
         </div>

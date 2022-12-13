@@ -25,16 +25,21 @@
                 <h1 style="color: white;">Conecte <span class="forumName">- se</span></h1>
             </div>
             <div id="align">
-                <input id="inpEmail" value="leticia@gmail.com" type="email" placeholder="Email" required>
-                <input id="inpSenha" value="ADMIN1234" type="password" placeholder="Senha" required>
+                <input id="inpEmail" value="Ana@gmail.com" type="email" placeholder="Email" required>
+                <input id="inpSenha" value="4321" type="password" placeholder="Senha" required>
                 <button id="btnLogin" onclick="login()">Login</button>
 
-                <h2>Ainda não é um <span>PIFANO?</span> </h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <h2 style=" color: white;margin-top: 15px;">Ainda não é um <span class="forumName">PIFANO?</span></h2>
+                    <button onclick="redirectToCadastro()" id="btRedirect">
+                        <span style="font-size: 25px; margin-bottom: 30px;" class="text">Cadastre - se</span>
+                    </button>
+                </div>
 
             </div>
         </section>
 
-        <img width="300px" src="../assets/Astronauta.png" alt="Atronauta">
+        <img width="300px" src="../../assets/Astronauta.png" alt="Atronauta">
 
     </main>
 </body>

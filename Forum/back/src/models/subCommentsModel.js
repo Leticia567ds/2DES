@@ -10,8 +10,13 @@ const read = (model) => {
     return `select * from sub_comments where id_comment = ${model.id_comment}`
 }
 
+const lerF = (model) => {
+    return `select * from vw_vw_sub_Comen where id_comment = ${model.id_comment}`
+}
+
 module.exports = {
     create,
     deletar,
-    read
+    read,
+    lerF
 }

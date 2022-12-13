@@ -13,11 +13,11 @@ const create = (req, res) => {
         else {
             con.query(modelos.toCreate(req.body, req.file), (err, result) => {
                 if (err == null) {
-                    res.redirect(201, "http://127.0.0.1:5500/front/home/index.html")
+                    res.status(200).json(result)
                 } else {
                     if (err.sqlState == 23000) {
                         res.status(406).json(err).end()
-                    } else {    
+                    } else {
                         res.status(500).json(err).end()
                     }
                 }
@@ -39,24 +39,25 @@ const listaUsu = (req, res) => {
 
 const login = (req, res) => {
     con.query(modelos.login(req.body), (err, result) => {
-
+        console.log(result.length);
         if (result.length > 0) {
             let dataLogin = { ...result[0] }
             delete dataLogin.senha
             delete dataLogin.role
             delete dataLogin.email
+            console.log(dataLogin);
             jwt.sign(dataLogin, process.env.KEY, { expiresIn: '3h' }, function (err, token) {
 
                 if (err == null) {
                     dataLogin["token"] = token
-                    res.status(200).json(data).end()
+                    res.status(200).json(dataLogin).end()
                 } else {
                     res.status(400).json(err).end()
 
                 }
             })
         } else {
-            res.status(404)
+            res.status(404).json(err)
         }
     })
 }
